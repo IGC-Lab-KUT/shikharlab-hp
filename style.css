@@ -40,6 +40,12 @@ nav {
   font-weight: bold;
 }
 
+.nav-logo {
+  height: 50px; /* Adjust as needed */
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
