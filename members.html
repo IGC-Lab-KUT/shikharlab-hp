@@ -8,82 +8,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo"><img src="LOGO.PNG" alt="Shikhar Lab Logo" class="nav-logo"> Shikhar Lab</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="members.html" class="active">Members</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="projects.html">Projects</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div id="header-placeholder"></div>
 
   <main>
     <section>
       <h2>Principal Investigator</h2>
-      <div class="members-grid">
-        <div class="member-card">
-          <img src="" alt="PI Photo">
-          <h3>Prof. John Shikhar</h3>
-          <p class="role">Principal Investigator</p>
-          <p class="email">shikhar@example.edu</p>
-        </div>
-      </div>
+      <div class="members-grid" id="pi-grid"></div>
     </section>
 
     <section>
       <h2>PhD Students</h2>
-      <div class="members-grid">
-        <div class="member-card">
-          <img src="" alt="Student Photo">
-          <h3>Alice Smith</h3>
-          <p class="role">PhD Student (2024-)</p>
-          <p class="email">alice@example.edu</p>
-        </div>
-        <div class="member-card">
-          <img src="" alt="Student Photo">
-          <h3>Bob Johnson</h3>
-          <p class="role">PhD Student (2023-)</p>
-          <p class="email">bob@example.edu</p>
-        </div>
-        <div class="member-card">
-          <img src="" alt="Student Photo">
-          <h3>Carol Williams</h3>
-          <p class="role">PhD Student (2022-)</p>
-          <p class="email">carol@example.edu</p>
-        </div>
-      </div>
+      <div class="members-grid" id="phd-grid"></div>
     </section>
 
     <section>
       <h2>Master Students</h2>
-      <div class="members-grid">
-        <div class="member-card">
-          <img src="" alt="Student Photo">
-          <h3>David Brown</h3>
-          <p class="role">Master Student (2025-)</p>
-          <p class="email">david@example.edu</p>
-        </div>
-      </div>
+      <div class="members-grid" id="master-grid"></div>
     </section>
 
     <section>
       <h2>Alumni</h2>
-      <div class="members-grid">
-        <div class="member-card">
-          <img src="" alt="Alumni Photo">
-          <h3>Eve Davis</h3>
-          <p class="role">PhD 2024 → Company X</p>
-          <p class="email"></p>
-        </div>
-      </div>
+      <div class="members-grid" id="alumni-grid"></div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Shikhar Lab. All rights reserved.</p>
-  </footer>
+  <div id="footer-placeholder"></div>
+  <script src="js/common.js"></script>
+  <script src="js/members.js"></script>
 </body>
 </html>

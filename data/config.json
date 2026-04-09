@@ -1,0 +1,17 @@
+{
+  "labName": "Shikhar Lab",
+  "logo": "LOGO.PNG",
+  "subtitle": "Advancing research in [Your Research Field]",
+  "about": "We are a research group dedicated to exploring cutting-edge topics in our field. Our team combines expertise from various disciplines to tackle challenging problems.",
+  "contact": {
+    "email": "shikhar@example.edu",
+    "address": "Building A, Room 123, University Campus"
+  },
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/" },
+    { "label": "Google Scholar", "url": "https://scholar.google.com/" },
+    { "label": "University Homepage", "url": "https://example.edu/" },
+    { "label": "Department Page", "url": "https://example.edu/department/" }
+  ],
+  "copyright": "Shikhar Lab"
+}

@@ -1,0 +1,46 @@
+{
+  "pi": [
+    {
+      "name": "Prof. John Shikhar",
+      "role": "Principal Investigator",
+      "email": "shikhar@example.edu",
+      "photo": ""
+    }
+  ],
+  "phd": [
+    {
+      "name": "Alice Smith",
+      "role": "PhD Student (2024-)",
+      "email": "alice@example.edu",
+      "photo": ""
+    },
+    {
+      "name": "Bob Johnson",
+      "role": "PhD Student (2023-)",
+      "email": "bob@example.edu",
+      "photo": ""
+    },
+    {
+      "name": "Carol Williams",
+      "role": "PhD Student (2022-)",
+      "email": "carol@example.edu",
+      "photo": ""
+    }
+  ],
+  "master": [
+    {
+      "name": "David Brown",
+      "role": "Master Student (2025-)",
+      "email": "david@example.edu",
+      "photo": ""
+    }
+  ],
+  "alumni": [
+    {
+      "name": "Eve Davis",
+      "role": "PhD 2024 → Company X",
+      "email": "",
+      "photo": ""
+    }
+  ]
+}

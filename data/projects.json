@@ -1,0 +1,30 @@
+{
+  "current": [
+    {
+      "name": "Project Alpha",
+      "description": "Investigating novel methods for solving complex optimization problems using machine learning techniques.",
+      "tags": ["Machine Learning", "Optimization"],
+      "image": ""
+    },
+    {
+      "name": "Project Beta",
+      "description": "Developing scalable algorithms for processing large-scale scientific datasets in real-time.",
+      "tags": ["Big Data", "Algorithms", "Scientific Computing"],
+      "image": ""
+    },
+    {
+      "name": "Project Gamma",
+      "description": "Exploring applications of natural language processing in scientific literature analysis.",
+      "tags": ["NLP", "Text Mining"],
+      "image": ""
+    }
+  ],
+  "past": [
+    {
+      "name": "Project Delta (2022-2024)",
+      "description": "Completed research on automated code generation using deep learning models.",
+      "tags": ["Deep Learning", "Code Generation"],
+      "image": ""
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "year": 2026,
+    "title": "Example Paper Title: A Novel Approach to Problem X",
+    "authors": "Alice Smith, Bob Johnson, John Shikhar",
+    "venue": "International Conference on Example Topics (ICET 2026)",
+    "url": ""
+  },
+  {
+    "year": 2025,
+    "title": "Deep Learning for Scientific Discovery",
+    "authors": "Carol Williams, John Shikhar",
+    "venue": "Journal of Machine Learning Research (JMLR)",
+    "url": ""
+  },
+  {
+    "year": 2025,
+    "title": "Efficient Algorithms for Large-Scale Data Analysis",
+    "authors": "Bob Johnson, Alice Smith, John Shikhar",
+    "venue": "Conference on Neural Information Processing Systems (NeurIPS 2025)",
+    "url": ""
+  },
+  {
+    "year": 2024,
+    "title": "Understanding Complex Systems Through Simulation",
+    "authors": "Eve Davis, John Shikhar",
+    "venue": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2024)",
+    "url": ""
+  },
+  {
+    "year": 2024,
+    "title": "Advances in Natural Language Processing",
+    "authors": "Alice Smith, Carol Williams, John Shikhar",
+    "venue": "Annual Meeting of the Association for Computational Linguistics (ACL 2024)",
+    "url": ""
+  }
+]
