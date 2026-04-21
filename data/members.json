@@ -4,7 +4,6 @@
       "nameJa": "John Shikhar 教授",
       "nameEn": "Prof. John Shikhar",
       "role": "Principal Investigator",
-      "email": "shikhar@example.edu",
       "photo": ""
     }
   ],
@@ -13,21 +12,18 @@
       "nameJa": "アリス・スミス",
       "nameEn": "Alice Smith",
       "role": "PhD Student (2024-)",
-      "email": "alice@example.edu",
       "photo": ""
     },
     {
       "nameJa": "ボブ・ジョンソン",
       "nameEn": "Bob Johnson",
       "role": "PhD Student (2023-)",
-      "email": "bob@example.edu",
       "photo": ""
     },
     {
       "nameJa": "キャロル・ウィリアムズ",
       "nameEn": "Carol Williams",
       "role": "PhD Student (2022-)",
-      "email": "carol@example.edu",
       "photo": ""
     }
   ],
@@ -36,8 +32,7 @@
       "nameJa": "森岡 悠人",
       "nameEn": "Yuto Morioka",
       "role": "修士2年",
-      "email": "david@example.edu",
-      "photo": ""
+      "photo": "imgs/okayu.jpg"
     }
   ],
   "alumni": [
@@ -45,7 +40,6 @@
       "nameJa": "イヴ・デイビス",
       "nameEn": "Eve Davis",
       "role": "PhD 2024 → Company X",
-      "email": "",
       "photo": ""
     }
   ],
@@ -53,7 +47,6 @@
     {
       "name": "Hosokawa Natsuka",
       "role": "bachelor (2026-)",
-      "email": "",
       "photo": ""
     }
   ]

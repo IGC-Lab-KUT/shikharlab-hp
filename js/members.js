@@ -12,10 +12,7 @@ function memberCard(member) {
   const name = (!member.nameJa && !member.nameEn && member.name)
     ? `<h3>${member.name}</h3>`
     : `<div class="name-group">${nameJa}${nameEn}</div>`;
-  const email = member.email
-    ? `<p class="email">${member.email}</p>`
-    : '';
-  return `<div class="member-card">${img}${name}<p class="role">${member.role}</p>${email}</div>`;
+  return `<div class="member-card">${img}${name}<p class="role">${member.role}</p></div>`;
 }
 
 async function renderMembers() {
