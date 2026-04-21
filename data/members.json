@@ -1,7 +1,8 @@
 {
   "pi": [
     {
-      "name": "Prof. John Shikhar",
+      "nameJa": "John Shikhar 教授",
+      "nameEn": "Prof. John Shikhar",
       "role": "Principal Investigator",
       "email": "shikhar@example.edu",
       "photo": ""
@@ -9,19 +10,22 @@
   ],
   "phd": [
     {
-      "name": "Alice Smith",
+      "nameJa": "アリス・スミス",
+      "nameEn": "Alice Smith",
       "role": "PhD Student (2024-)",
       "email": "alice@example.edu",
       "photo": ""
     },
     {
-      "name": "Bob Johnson",
+      "nameJa": "ボブ・ジョンソン",
+      "nameEn": "Bob Johnson",
       "role": "PhD Student (2023-)",
       "email": "bob@example.edu",
       "photo": ""
     },
     {
-      "name": "Carol Williams",
+      "nameJa": "キャロル・ウィリアムズ",
+      "nameEn": "Carol Williams",
       "role": "PhD Student (2022-)",
       "email": "carol@example.edu",
       "photo": ""
@@ -29,7 +33,8 @@
   ],
   "master": [
     {
-      "name": "森岡悠人",
+      "nameJa": "森岡 悠人",
+      "nameEn": "Yuto Morioka",
       "role": "修士2年",
       "email": "david@example.edu",
       "photo": ""
@@ -37,7 +42,8 @@
   ],
   "alumni": [
     {
-      "name": "Eve Davis",
+      "nameJa": "イヴ・デイビス",
+      "nameEn": "Eve Davis",
       "role": "PhD 2024 → Company X",
       "email": "",
       "photo": ""

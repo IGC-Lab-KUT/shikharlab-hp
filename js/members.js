@@ -1,11 +1,21 @@
 function memberCard(member) {
+  const displayName = member.nameJa || member.nameEn || member.name || '';
   const img = member.photo
-    ? `<img src="${member.photo}" alt="${member.name}">`
-    : `<img src="" alt="${member.name}">`;
+    ? `<img src="${member.photo}" alt="${displayName}">`
+    : '';
+  const nameJa = member.nameJa
+    ? `<p class="name-ja">${member.nameJa}</p>`
+    : '';
+  const nameEn = member.nameEn
+    ? `<p class="name-en">${member.nameEn}</p>`
+    : '';
+  const name = (!member.nameJa && !member.nameEn && member.name)
+    ? `<h3>${member.name}</h3>`
+    : `<div class="name-group">${nameJa}${nameEn}</div>`;
   const email = member.email
     ? `<p class="email">${member.email}</p>`
     : '';
-  return `<div class="member-card">${img}<h3>${member.name}</h3><p class="role">${member.role}</p>${email}</div>`;
+  return `<div class="member-card">${img}${name}<p class="role">${member.role}</p>${email}</div>`;
 }
 
 async function renderMembers() {

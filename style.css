@@ -150,6 +150,28 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+.member-card .name-group {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.member-card .name-ja,
+.member-card .name-en {
+  margin: 0;
+}
+
+.member-card .name-ja {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.member-card .name-en {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  margin-top: 0.2rem;
+}
+
 .member-card .role {
   color: #3498db;
   font-weight: bold;
