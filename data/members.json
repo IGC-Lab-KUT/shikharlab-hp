@@ -37,7 +37,7 @@
   ],
   "alumni": [
     {
-      "nameJa": "イヴ・デイビス",
+      "nameJa": "マイルス・デイビス",
       "nameEn": "Eve Davis",
       "role": "PhD 2024 → Company X",
       "photo": ""
@@ -48,7 +48,7 @@
       "nameJa": "細川 夏風",
       "nameEn": "Hosokawa Natsuka",
       "role": "bachelor (2026-)",
-      "photo": ""
+      "photo": "data/imgs/hosokawa.jpg"
     },
     {
       "nameJa": "林 由莉",
