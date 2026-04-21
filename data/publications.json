@@ -1,37 +1,149 @@
 [
   {
+    "year": 2025,
+    "title": "NOVEL BREAKOUT LOCAL SEARCH FOR OFFLOADING TASKS IN MULTI-TIERED CLOUD ENVIRONMENT CONSIDERING TRANSMISSION AND PROCESSING",
+    "authors": "Mina Kato，Tiago Koketsu Rodrigues，SHIKHAR",
+    "venue": "2025 9th IEEE International Conference on Network Intelligence and Digital Content (IEEE IC-NIDC 2025)",
+    "url": "https://ieeexplore.ieee.org/document/11390138"
+  },
+  {
     "year": 2026,
-    "title": "Example Paper Title: A Novel Approach to Problem X",
-    "authors": "Alice Smith, Bob Johnson, John Shikhar",
-    "venue": "International Conference on Example Topics (ICET 2026)",
-    "url": ""
+    "title": "Ensemble Learning-Based Channel Prediction for Real-World Indoor 6G WiGig Networks",
+    "authors": "Mohamed I Ismail，Eslam Hasan，SHIKHAR，Tiago Koketsu Rodrigues，Nei Kato，Muhammad Ismail，Mostafa M. Fouda",
+    "venue": "2025 IEEE 102nd Vehicular Technology Conference (VTC2025-Fall)",
+    "url": "https://doi.org/10.1109/VTC2025-Fall65116.2025.11310749"
   },
   {
     "year": 2025,
-    "title": "Deep Learning for Scientific Discovery",
-    "authors": "Carol Williams, John Shikhar",
-    "venue": "Journal of Machine Learning Research (JMLR)",
-    "url": ""
+    "title": "Empirical Analysis of Statistical Variation in Channel Data of WiGig Networks Towards 6G",
+    "authors": "SHIKHAR，Tiago Koketsu Rodrigues，Nei Kato，Mostafa M Fouda，Muhammad Ismail",
+    "venue": "2025 IEEE 101st Vehicular Technology Conference (VTC2025-Spring)，pp.1-5",
+    "url": "https://doi.org/10.1109/vtc2025-spring65109.2025.11174633"
   },
   {
     "year": 2025,
-    "title": "Efficient Algorithms for Large-Scale Data Analysis",
-    "authors": "Bob Johnson, Alice Smith, John Shikhar",
-    "venue": "Conference on Neural Information Processing Systems (NeurIPS 2025)",
-    "url": ""
+    "title": "Weather Attenuation Dataset Generation Method for Prediction-based Control of Non-Terrestrial High-Frequency Wireless Networks",
+    "authors": "Tiago Koketsu Rodrigues，Norranat Songsriboonsit，SHIKHAR",
+    "venue": "2025 IEEE VTS Asia Pacific Wireless Communications Symposium (APWCS)，pp.1-5",
+    "url": "https://doi.org/10.1109/apwcs67981.2025.11151891"
+  },
+  {
+    "year": 2026,
+    "title": "Proactive Handover Management in 6G Low-Altitude Economy Networks for Aerial Vehicles Using Artificial General Intelligence",
+    "authors": "SHIKHAR，Sayantan Bose，Mostafa M. Fouda，Zubair Md Fadlullah，Diptendu Sinha Roy",
+    "venue": "IEEE Transactions on Cognitive Communications and Networking",
+    "url": "https://doi.org/10.1109/TCCN.2026.3660763"
+  },
+  {
+    "year": 2025,
+    "title": "Joint Optimization of IRS and THz Resource Allocation in 6G IoT Networks: An Adaptive Online MADDPG Approach",
+    "authors": "Iqra Batool，Mostafa M Fouda，Muhammad Ismail，Mohamed I Ibrahem，Khaled Rabie，SHIKHAR，Zubair Md Fadlullah",
+    "venue": "IEEE Internet of Things Journal，Vol.12，No.22，pp.47118-47134",
+    "url": "https://doi.org/10.1109/JIOT.2025.3602389"
+  },
+  {
+    "year": 2026,
+    "title": "AMADRL: Privacy-Aware Attention-Based Multiagent Deep Reinforcement Learning for Optimizing Spectral Allocation in 6G Vehicular Networks",
+    "authors": "Iqra Batool，Mostafa M. Fouda，Muhammad Ismail，Khaled Rabie，SHIKHAR，Zubair Md Fadlullah",
+    "venue": "IEEE Internet of Things Journal，Vol.13，No.3，pp.4792-4808",
+    "url": "https://doi.org/10.1109/JIOT.2025.3637515"
   },
   {
     "year": 2024,
-    "title": "Understanding Complex Systems Through Simulation",
-    "authors": "Eve Davis, John Shikhar",
-    "venue": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2024)",
-    "url": ""
+    "title": "An Efficient Beam Searching in Hybrid Intelligent Reflecting/Refracting Surfaces (IRS)-aided mmWave 6G Network",
+    "authors": "Shikhar Verma，Yuichi Kawamoto，Nei Kato，Takahiro Saiwai，Masamichi Yonehara",
+    "venue": "IEEE Transactions on Vehicular Technology，Vol.73，No.12，pp.19299-19312",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10654551"
   },
   {
     "year": 2024,
-    "title": "Advances in Natural Language Processing",
-    "authors": "Alice Smith, Carol Williams, John Shikhar",
-    "venue": "Annual Meeting of the Association for Computational Linguistics (ACL 2024)",
-    "url": ""
+    "title": "Interference Suppression in HAPS-Based Space-Air-Ground Integrated Networks Using a Codebook-Based Approach",
+    "authors": "SHIKHAR",
+    "venue": "IEEE Transactions on Vehicular Technology，Vol.73，No.12，pp.19252-19262",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10643413"
+  },
+  {
+    "year": 2024,
+    "title": "Simultaneous Multiple Connections and Increased Frequency Efficiency Using Beam Squint Approach for IRS-Based Communication",
+    "authors": "SHIKHAR",
+    "venue": "IEEE Transactions on Vehicular Technology，Vol.73，No.11，pp.17073-17082",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10591450"
+  },
+  {
+    "year": 2024,
+    "title": "Smart Handover With Predicted User Behavior Using Convolutional Neural Networks for WiGig Systems",
+    "authors": "SHIKHAR",
+    "venue": "IEEE Network，Vol.38，No.4，pp.190-196",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10397585"
+  },
+  {
+    "year": 2023,
+    "title": "A Survey on Multi-AP Coordination Approaches Over Emerging WLANs: Future Directions and Open Challenges",
+    "authors": "SHIKHAR",
+    "venue": "IEEE Communications Surveys & Tutorials，Vol.26，No.2，pp.858-889",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10365490"
+  },
+  {
+    "year": 2023,
+    "title": "Traffic-prediction-based dynamic resource control strategy in HAPS-mounted MEC-assisted satellite communication systems",
+    "authors": "SHIKHAR",
+    "venue": "IEEE Internet of Things Journal，Vol.11，No.8，pp.13824-13836",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10339670"
+  },
+  {
+    "year": 2023,
+    "title": "HAPS-Based Interference Suppression Through Null Broadening With Directivity Control in Space-Air-Ground Integrated Networks",
+    "authors": "SHIKHAR",
+    "venue": "IEEE Transactions on Vehicular Technology，Vol.72，No.12，pp.16098-16107",
+    "url": "https://ieeexplore.ieee.org/abstract/document/10192088"
+  },
+  {
+    "year": 2021,
+    "title": "A smart Internet-wide port scan approach for improving IoT security under dynamic WLAN environments",
+    "authors": "SHIKHAR",
+    "venue": "IEEE Internet of Things Journal，Vol.9，No.15，pp.11951-11961",
+    "url": "https://ieeexplore.ieee.org/abstract/document/9634163"
+  },
+  {
+    "year": 2020,
+    "title": "A Network-Aware Internet-Wide Scan for Security Maximization of IPv6-Enabled WLAN IoT Devices",
+    "authors": "SHIKHAR",
+    "venue": "IEEE Internet of Things Journal，Vol.8，No.10，pp.8411-8422",
+    "url": "https://ieeexplore.ieee.org/abstract/document/9298846"
+  },
+  {
+    "year": 2021,
+    "title": "A Novel IoT-Aware WLAN Environment Identification for Efficient Internet-Wide Port Scan",
+    "authors": "SHIKHAR",
+    "venue": "GLOBECOM 2020 - 2020 IEEE Global Communications Conference，pp.1-6",
+    "url": "https://ieeexplore.ieee.org/abstract/document/9348199"
+  },
+  {
+    "year": 2021,
+    "title": "Security Analysis of Network-Oblivious Internet-Wide Scan for IEEE 802.11ah Enabled IoT",
+    "authors": "SHIKHAR",
+    "venue": "2020 IEEE 92nd Vehicular Technology Conference (VTC2020-Fall), Victoria, BC, Canada，pp.1-5",
+    "url": "https://ieeexplore.ieee.org/abstract/document/9348601"
+  },
+  {
+    "year": 2019,
+    "title": "Energy-Efficient Group Paging Mechanism for QoS Constrained Mobile IoT Devices Over LTE-A Pro Networks Under 5G",
+    "authors": "SHIKHAR",
+    "venue": "IEEE Internet of Things Journal，Vol.6，No.5，pp.9187-9199",
+    "url": "https://ieeexplore.ieee.org/abstract/document/8761998"
+  },
+  {
+    "year": 2018,
+    "title": "Novel Group Paging Scheme for Improving Energy Efficiency of IoT Devices over LTE-A Pro Networks with QoS Considerations",
+    "authors": "SHIKHAR",
+    "venue": "2018 IEEE International Conference on Communications (ICC)，pp.1-6",
+    "url": "https://ieeexplore.ieee.org/abstract/document/8422102"
+  },
+  {
+    "year": 2017,
+    "title": "A Survey on Network Methodologies for Real-Time Analytics of Massive IoT Data and Open Research Issues",
+    "authors": "SHIKHAR",
+    "venue": "IEEE Communications Surveys & Tutorials，Vol.19，No.3，pp.1457-1477",
+    "url": "https://ieeexplore.ieee.org/abstract/document/7900337"
   }
 ]
