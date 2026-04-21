@@ -22,6 +22,7 @@ async function renderMembers() {
   document.getElementById('phd-grid').innerHTML = data.phd.map(memberCard).join('');
   document.getElementById('master-grid').innerHTML = data.master.map(memberCard).join('');
   document.getElementById('alumni-grid').innerHTML = data.alumni.map(memberCard).join('');
+  document.getElementById('bachelor-grid').innerHTML = data.alumni.map(memberCard).join('');
 }
 
 renderMembers();
