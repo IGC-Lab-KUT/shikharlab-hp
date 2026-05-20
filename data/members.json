@@ -9,13 +9,17 @@
   ],
   "phd": [
     {
+      "nameJa": "",
+      "nameEn": "Sayatan Bose",
+      "role": "PhD",
+      "photo": ""
     }
   ],
   "master": [
     {
       "nameJa": "森岡 悠人",
       "nameEn": "Yuto Morioka",
-      "role": "修士2年",
+      "role": "master 2年",
       "photo": "data/imgs/okayu.jpg"
     }
   ],
