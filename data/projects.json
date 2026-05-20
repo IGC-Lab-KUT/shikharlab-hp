@@ -1,30 +1,78 @@
 {
   "current": [
     {
-      "name": "Project Alpha",
-      "description": "Investigating novel methods for solving complex optimization problems using machine learning techniques.",
-      "tags": ["Machine Learning", "Optimization"],
+      "name": "Multi-Layer Jamming Mitigation in Satellite–Aerial–Ground Integrated Network (SAGIN)",
+      "description": "The goal is to design adaptive mitigation methods that respond to different jamming situations and improve the reliability of next-generation communication networks. 最終的な目標は、さまざまなジャミング状況に対応できる適応型対策手法を開発し、次世代通信ネットワークの信頼性を向上させることです。",
+      "tags": [
+        "SAGIN",
+        "Jamming",
+        "Machine Learning"
+      ],
       "image": ""
     },
     {
-      "name": "Project Beta",
-      "description": "Developing scalable algorithms for processing large-scale scientific datasets in real-time.",
-      "tags": ["Big Data", "Algorithms", "Scientific Computing"],
+      "name": "Path Planning of Flying Vehicles over Low-Altitude Economy Network",
+      "description": "The goal is to develop a robust DRL-based path planning method that enables aerial vehicles to safely and efficiently operate in future LAE environments. 最終的な目標は、将来のLAE環境において飛行体が安全かつ効率的に移動できるDRLベースの経路計画手法を開発することです。",
+      "tags": [
+        "Low-Altitude Economy",
+        "Path Planning",
+        "Deep Reinforcement Learning"
+      ],
       "image": ""
     },
     {
-      "name": "Project Gamma",
-      "description": "Exploring applications of natural language processing in scientific literature analysis.",
-      "tags": ["NLP", "Text Mining"],
+      "name": "Proactive Handover Management of Flying Vehicles",
+      "description": "The goal is to develop an intelligent handover management method that improves communication stability and performance for flying vehicles in future LAE networks. 最終的な目標は、将来のLAEネットワークにおいて飛行体の通信を安定させるインテリジェントなハンドオーバ管理手法を開発することです。",
+      "tags": [
+        "Handover Management",
+        "Deep Learning",
+        "Low-Altitude Economy"
+      ],
+      "image": ""
+    },
+    {
+      "name": "AI-Native Link Management over Satellite–Aerial–Ground Integrated Network",
+      "description": "The goal is to develop an AI-native link management method that can predict link degradation in advance and maintain reliable communication in future SAGIN networks. 最終的な目標は、リンク品質の低下を事前に予測し、将来のSAGINネットワークにおいて信頼性の高い通信を維持できるAIベースのリンク管理手法を開発することです。",
+      "tags": [
+        "SAGIN",
+        "AI-Native",
+        "Link Management",
+        "LSTM"
+      ],
+      "image": ""
+    },
+    {
+      "name": "Multi-Agent AI for Cooperative Satellite Defense",
+      "description": "The goal is to design a cooperative satellite defense system that can respond to jamming attacks efficiently and scale to large LEO constellations. 最終的な目標は、ジャミング攻撃に協調的に対応でき、大規模なLEO衛星コンステレーションにも適用可能な衛星防御システムを開発することです。",
+      "tags": [
+        "Multi-Agent AI",
+        "Satellite Defense",
+        "MARL",
+        "LEO"
+      ],
+      "image": ""
+    },
+    {
+      "name": "Joint Space Computing and Communication in the Mega LEO Constellation",
+      "description": "The goal is to design an efficient framework that integrates space computing and communication to improve the performance of future satellite networks. 最終的な目標は、宇宙コンピューティングと通信を統合した効率的な仕組みを設計し、将来の衛星ネットワークの性能を向上させることです。",
+      "tags": [
+        "Space Computing",
+        "Mega LEO",
+        "Optimization"
+      ],
+      "image": ""
+    },
+    {
+      "name": "AI-Based Multi-Layer Jammer Localization in SAGIN Using LLM",
+      "description": "The goal is to estimate jammer locations accurately and enable targeted mitigation strategies to improve the security and reliability of SAGIN networks. 最終的な目標は、ジャマーの位置を高精度に推定し、適切な対策を行うことでSAGINネットワークの安全性と信頼性を向上させることです。",
+      "tags": [
+        "SAGIN",
+        "Jammer Localization",
+        "LLM",
+        "AI"
+      ],
       "image": ""
     }
   ],
-  "past": [
-    {
-      "name": "Project Delta (2022-2024)",
-      "description": "Completed research on automated code generation using deep learning models.",
-      "tags": ["Deep Learning", "Code Generation"],
-      "image": ""
-    }
-  ]
+  "past": []
 }
