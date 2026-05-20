@@ -1,5 +1,5 @@
 [
-  { "data": 2026-4-2", "text": "We had a cherry blossom viewing party with the members of the research lab!" },
-  { "data": 2026-4-24", "text": "We held a welcome party for the new students in the lab!" },
+  { "data": "2026-4-2", "text": "We had a cherry blossom viewing party with the members of the research lab!" },
+  { "data": "2026-4-24", "text": "We held a welcome party for the new students in the lab!" },
   { "date": "2026-5-14,15", "text": "Yuto Morioka presented the paper \"Deep Reinforcement Learning-based Aircraft Path Planning Method for Low-Altitude Economy\" (co-authored with Shikhar Varma, Tinghan Wei, and Mikifumi Shikida) at a conference held at the Hiroshima City University Satellite Campus." }
 ] 
