@@ -11,9 +11,7 @@ data/           ← ここを編集するだけでサイトが更新される
   members.json  - メンバー一覧
   publications.json - 論文一覧
   projects.json - プロジェクト一覧
-js/             ← 通常は触らない
-style.css       ← 通常は触らない
-*.html          ← 通常は触らない
+  awards.json   - 受賞一覧
 ```
 
 ## 更新方法
@@ -51,6 +49,18 @@ style.css       ← 通常は触らない
 }
 ```
 `url` は論文ページへのリンク（なければ空文字列）。
+
+### 受賞情報を追加する
+`data/awards.json` に追加:
+```json
+{
+  "year": 2026,
+  "title": "Best Paper Award",
+  "recipients": "受賞者名",
+  "venue": "会議・学会名",
+  "url": "https://..."
+}
+```
 
 ### プロジェクトを追加する
 `data/projects.json` の `current` または `past` に追加:

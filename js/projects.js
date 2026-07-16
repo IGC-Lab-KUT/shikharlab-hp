@@ -1,7 +1,7 @@
 function projectCard(project) {
   const img = project.image
     ? `<img src="${project.image}" alt="${project.name}">`
-    : `<img src="" alt="${project.name}">`;
+    : '';
   const tags = project.tags
     .map(tag => `<span class="tag">${tag}</span>`)
     .join('');

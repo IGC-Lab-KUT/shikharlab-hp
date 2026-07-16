@@ -41,9 +41,15 @@ nav {
 }
 
 .nav-logo {
-  height: 30px; /* Adjust as needed */
+  height: 55px;
   vertical-align: middle;
   margin-right: 15px;
+}
+
+.hero-logo {
+  height: 150px;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
 }
 
 .nav-links {

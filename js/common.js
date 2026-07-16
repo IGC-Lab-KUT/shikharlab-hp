@@ -16,6 +16,7 @@ function renderHeader(config) {
     { href: 'members.html', label: 'Members' },
     { href: 'publications.html', label: 'Publications' },
     { href: 'projects.html', label: 'Projects' },
+    { href: 'awards.html', label: 'Awards' },
   ];
   const navLinks = navItems.map(item => {
     const active = currentPage === item.href ? ' class="active"' : '';
