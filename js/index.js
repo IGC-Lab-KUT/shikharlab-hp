@@ -4,7 +4,6 @@ async function renderIndex() {
     fetch('data/news.json').then(r => r.json()),
   ]);
 
-  document.getElementById('hero-title').textContent = `Welcome to ${config.labName}`;
   document.getElementById('hero-subtitle').textContent = config.subtitle;
   document.getElementById('about-text').textContent = config.about;
   document.getElementById('contact-email').textContent = config.contact.email;
