@@ -24,9 +24,10 @@ function renderHeader(config) {
   }).join('');
 
   return `<header>
-    <nav>
-      <div class="logo"><img src="${config.logo}" alt="${config.labName} Logo" class="nav-logo"> ${config.labName}</div>
-      <ul class="nav-links">${navLinks}</ul>
+      <nav>
+        <a href="index.html" class="logo">
+        <img id="nav-logo" class="nav-logo" alt="Shikhar Lab Logo">
+      </a>
     </nav>
   </header>`;
 }
