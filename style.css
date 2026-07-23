@@ -85,6 +85,10 @@ section {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.logo{
+  margin: 10px;
+}
+
 h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
