@@ -9,10 +9,10 @@
   ],
   "phd": [
 	{
-			"nameJa": "",
-			"nameEn": "Mamillapalli Pujitha",
-			"role": "Ph.D. (International Collaborator)",
-			"photo": "data/imgs/Mamillapaill Pujitha.jpeg"
+	  "nameJa": "",
+	  "nameEn": "Mamillapalli Pujitha",
+	  "role": "Ph.D. (International Collaborator)",
+	  "photo": "data/imgs/Mamillapaill Pujitha.jpeg"
 	},
     {
       "nameJa": "",
@@ -21,10 +21,10 @@
       "photo": "data/imgs/Sayantan Bose.jpg"
 	},
 	{
-		"nameJa": "",
-		"nameEn": "Shradha Kouloorkar",
-		"role": "Ph.D. (International Collaborator)",
-		"photo": "data/imgs/Shradha Kouloorkar.jpg"
+	   "nameJa": "",
+	   "nameEn": "Shradha Kouloorkar",
+	   "role": "Ph.D. (International Collaborator)",
+	   "photo": "data/imgs/Shradha Kouloorkar.jpg"
 	}
 		
   ],
