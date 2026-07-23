@@ -85,8 +85,21 @@ section {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.logo{
-  margin: 10px;
+.hero.banner-section {
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.hero-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: 450px;
 }
 
 h1 {
