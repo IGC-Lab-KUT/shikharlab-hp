@@ -4,6 +4,7 @@ async function renderIndex() {
     fetch('data/news.json').then(r => r.json()),
   ]);
 
+  document.getElementById('hero-logo').src = config.logo;
   document.getElementById('hero-subtitle').textContent = config.subtitle;
   document.getElementById('about-text').textContent = config.about;
   document.getElementById('contact-email').textContent = config.contact.email;
