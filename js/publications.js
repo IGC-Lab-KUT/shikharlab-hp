@@ -1,5 +1,8 @@
 async function renderPublications() {
-  const data = await fetch('data/publications.json').then(r => r.json());
+  const lang = document.documentElement.lang || 'en';
+  // 言語によってJSONのパスを切り替える
+  const dataPath = lang === 'ja' ? '../data/publications.json' : 'data/publications.json';
+  const data = await fetch(dataPath).then(r => r.json());
 
   // Group by year (descending)
   const byYear = {};
