@@ -13,13 +13,15 @@ function getCurrentPage() {
 function renderHeader(config, lang) {
   const currentPage = getCurrentPage();
   
+  // 各ページの情報（hasJa: 日本語版のファイルが存在するかどうか）
   const navItems = [
-    { href: 'index.html', label: lang === 'ja' ? 'ホーム' : 'Home' },
-    { href: 'members.html', label: lang === 'ja' ? 'メンバー' : 'Members' },
-    { href: 'publications.html', label: lang === 'ja' ? '業績' : 'Publications' },
-    { href: 'projects.html', label: lang === 'ja' ? 'プロジェクト' : 'Projects' },
-    { href: 'awards.html', label: lang === 'ja' ? '受賞歴' : 'Awards' },
+    { file: 'index.html', label: lang === 'ja' ? 'ホーム' : 'Home', hasJa: true },
+    { file: 'members.html', label: lang === 'ja' ? 'メンバー' : 'Members', hasJa: true }, // false から true に変更
+    { file: 'publications.html', label: lang === 'ja' ? '業績' : 'Publications', hasJa: true }, // false から true に変更
+    { file: 'projects.html', label: lang === 'ja' ? 'プロジェクト' : 'Projects', hasJa: true }, // false から true に変更
+    { file: 'awards.html', label: lang === 'ja' ? '受賞歴' : 'Awards', hasJa: false }, // awardsだけまだ作っていないならfalseのまま
   ];
+
   const navLinks = navItems.map(item => {
     const active = currentPage === item.href ? ' class="active"' : '';
     return `<li><a href="${item.href}"${active}>${item.label}</a></li>`;

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../LOGO.PNG" type="image/png">
+  <title>メンバー - Shikhar Lab</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <main>
+    <section>
+      <h2>指導教員</h2>
+      <div class="members-grid" id="pi-grid"></div>
+    </section>
+
+    <section>
+      <h2>共同研究者</h2>
+      <!-- 注意: 元のHTMLでid="pi-grid"が重複していたためそのままにしていますが、JSの仕様によってはIDの変更が必要かもしれません． -->
+      <div class="members-grid" id="pi-grid"></div>
+    </section>
+
+    <section>
+      <h2>博士課程</h2>
+      <div class="members-grid" id="phd-grid"></div>
+    </section>
+
+    <section>
+      <h2>修士課程</h2>
+      <div class="members-grid" id="master-grid"></div>
+    </section>
+
+    <section>
+      <h2>学部生</h2>
+      <div class="members-grid" id="bachelor-grid"></div>
+    </section>
+
+    <section>
+      <h2>卒業生</h2>
+      <div class="members-grid" id="alumni-grid"></div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="../js/common.js"></script>
+  <script src="../js/members.js"></script>
+</body>
+</html>
