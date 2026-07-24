@@ -13,23 +13,40 @@ function getCurrentPage() {
 function renderHeader(config, lang) {
   const currentPage = getCurrentPage();
   
-  // 各ページの情報（hasJa: 日本語版のファイルが存在するかどうか）
+  // プロパティ名を file ではなく href に統一してあるよ
   const navItems = [
-    { file: 'index.html', label: lang === 'ja' ? 'ホーム' : 'Home', hasJa: true },
-    { file: 'members.html', label: lang === 'ja' ? 'メンバー' : 'Members', hasJa: true }, // false から true に変更
-    { file: 'publications.html', label: lang === 'ja' ? '業績' : 'Publications', hasJa: true }, // false から true に変更
-    { file: 'projects.html', label: lang === 'ja' ? 'プロジェクト' : 'Projects', hasJa: true }, // false から true に変更
-    { file: 'awards.html', label: lang === 'ja' ? '受賞歴' : 'Awards', hasJa: false }, // awardsだけまだ作っていないならfalseのまま
+    { href: 'index.html', label: lang === 'ja' ? 'ホーム' : 'Home', hasJa: true },
+    { href: 'members.html', label: lang === 'ja' ? 'メンバー' : 'Members', hasJa: true },
+    { href: 'publications.html', label: lang === 'ja' ? '業績' : 'Publications', hasJa: true },
+    { href: 'projects.html', label: lang === 'ja' ? 'プロジェクト' : 'Projects', hasJa: true },
+    { href: 'awards.html', label: lang === 'ja' ? '受賞歴' : 'Awards', hasJa: false },
   ];
 
   const navLinks = navItems.map(item => {
     const active = currentPage === item.href ? ' class="active"' : '';
-    return `<li><a href="${item.href}"${active}>${item.label}</a></li>`;
+    // 日本語ページにいて、かつそのページの日本語版がない場合は1階層上(../)の英語ページを指定する
+    let linkHref = item.href;
+    if (lang === 'ja' && !item.hasJa) {
+      linkHref = '../' + item.href;
+    }
+    return `<li><a href="${linkHref}"${active}>${item.label}</a></li>`;
   }).join('');
 
   const logoPath = lang === 'ja' ? `../${config.logo}` : config.logo;
   
-  const langToggleUrl = lang === 'ja' ? `../${currentPage}` : `ja/${currentPage}`;
+  // 言語切り替えリンクのロジック
+  let langToggleUrl = '';
+  if (lang === 'ja') {
+    langToggleUrl = `../${currentPage}`;
+  } else {
+    const currentItem = navItems.find(item => item.href === currentPage);
+    if (currentItem && currentItem.hasJa) {
+      langToggleUrl = `ja/${currentPage}`;
+    } else {
+      langToggleUrl = 'ja/index.html';
+    }
+  }
+  
   const langToggleText = lang === 'ja' ? 'English' : '日本語';
 
   return `<header>
