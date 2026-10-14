@@ -1,6 +1,7 @@
 {
   "en": {
     "intro": "GIC Lab welcomes enquiries from students, researchers, and organizations whose interests align with intelligent next-generation communication systems. Admission, supervision, funding, and project participation depend on university procedures, academic fit, and available capacity; no position or financial support is guaranteed by this page.",
+    "labLifeIntro": "GIC Lab combines structured research discussion with a supportive shared environment in Room A260. Weekly seminars, progress reviews, collaborative work, and laboratory events help students develop their research and exchange ideas.",
     "pathways": [
       {
         "icon": "🎓",
@@ -127,6 +128,7 @@
   },
   "ja": {
     "intro": "GIC研究室では、次世代知的通信システムに関心を持つ学生・研究者・組織からのお問い合わせを受け付けています。入学、指導、研究費、プロジェクト参加は、大学の制度、研究テーマとの適合性、受入状況に基づいて決定されます。本ページは、ポジションや経済的支援を保証するものではありません。",
+    "labLifeIntro": "GIC研究室では、A260室の協力的な研究環境のもと、体系的な研究討議を行っています。毎週のゼミ、進捗確認、共同作業、研究室イベントを通じて、学生の研究力向上と活発な意見交換を支援します。",
     "pathways": [
       {
         "icon": "🎓",

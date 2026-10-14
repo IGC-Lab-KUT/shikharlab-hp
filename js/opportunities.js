@@ -27,26 +27,6 @@ function iconCard(item, extraClass = '') {
   return card;
 }
 
-function galleryItem(item) {
-  const imageSource = safeImageSource(item.image);
-  if (!imageSource) return null;
-
-  const figure = createElement('figure', { className: 'lab-gallery-item' });
-  figure.append(
-    createElement('img', {
-      className: 'lab-gallery-image',
-      attributes: {
-        src: imageSource,
-        alt: item.alt,
-        loading: 'lazy',
-        decoding: 'async',
-      },
-    }),
-    createElement('figcaption', { text: item.caption }),
-  );
-  return figure;
-}
-
 async function renderOpportunities() {
   const lang = document.documentElement.lang || 'en';
   const main = document.querySelector('main');
@@ -63,15 +43,6 @@ async function renderOpportunities() {
     document.getElementById('collaboration-intro').textContent = content.collaborationIntro;
     document.getElementById('collaboration-options').replaceChildren(
       ...content.collaboration.map(item => iconCard(item, 'collaboration-card')),
-    );
-    document.getElementById('lab-activities').replaceChildren(
-      ...content.labActivities.map(item => iconCard(item, 'lab-life-card')),
-    );
-    document.getElementById('lab-facilities').replaceChildren(
-      ...content.labFacilities.map(item => iconCard(item, 'lab-life-card')),
-    );
-    document.getElementById('lab-gallery').replaceChildren(
-      ...(content.labGallery || []).map(galleryItem).filter(Boolean),
     );
     document.getElementById('opportunity-contact-heading').textContent = content.contactLabel;
     document.getElementById('opportunity-contact-note').textContent = content.contactNote;

@@ -80,12 +80,13 @@ function renderHeader(config, lang) {
     { href: 'projects.html', en: 'Research', ja: '研究', hasJa: true },
     { href: 'publications.html', en: 'Publications', ja: '業績', hasJa: true },
     { href: 'awards.html', en: 'Awards', ja: '受賞歴', hasJa: false },
-    { href: 'opportunities.html', en: 'Opportunities', ja: '進学・共同研究', hasJa: true },
+    { href: 'opportunities.html', en: 'Join & Collaborate', ja: '進学・共同研究', hasJa: true },
+    { href: 'lab-life.html', en: 'Lab Life', ja: '研究室紹介', hasJa: true },
   ];
 
   const header = createElement('header', { className: 'site-header' });
   const utility = createElement('div', { className: 'header-utility' });
-  const bilingualPages = new Set(['index.html', 'members.html', 'projects.html', 'publications.html', 'pi.html', 'opportunities.html']);
+  const bilingualPages = new Set(['index.html', 'members.html', 'projects.html', 'publications.html', 'pi.html', 'opportunities.html', 'lab-life.html']);
   const languageUrl = lang === 'ja'
     ? `../${currentPage}`
     : bilingualPages.has(currentPage) ? `ja/${currentPage}` : 'ja/index.html';
