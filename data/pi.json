@@ -55,15 +55,6 @@
       "verified": true
     },
     {
-      "id": "researchGate",
-      "labelEn": "ResearchGate",
-      "labelJa": "ResearchGate",
-      "urlEn": "",
-      "urlJa": "",
-      "verified": false,
-      "placeholder": "REQUIRED: verified ResearchGate profile URL"
-    },
-    {
       "id": "linkedin",
       "labelEn": "LinkedIn",
       "labelJa": "LinkedIn",
@@ -150,17 +141,17 @@
       {
         "role": "Guest Editor",
         "organization": "IEEE Internet of Things Journal",
-        "period": "2025–"
+        "period": "2025–Present"
       },
       {
         "role": "Associate Editor",
         "organization": "IEEE Communications Surveys & Tutorials",
-        "period": "2024–"
+        "period": "2024–Present"
       },
       {
         "role": "Associate Editor",
-        "organization": "IEEE Internet of Things",
-        "period": "2023–"
+        "organization": "IEEE Internet of Things Journal",
+        "period": "2023–Present"
       },
       {
         "role": "Senior Member",
@@ -261,17 +252,17 @@
       {
         "role": "ゲストエディタ",
         "organization": "IEEE Internet of Things Journal",
-        "period": "2025–"
+        "period": "2025年–現在"
       },
       {
         "role": "アソシエイトエディタ",
         "organization": "IEEE Communications Surveys & Tutorials",
-        "period": "2024–"
+        "period": "2024年–現在"
       },
       {
         "role": "アソシエイトエディタ",
-        "organization": "IEEE Internet of Things",
-        "period": "2023–"
+        "organization": "IEEE Internet of Things Journal",
+        "period": "2023年–現在"
       },
       {
         "role": "シニアメンバー",

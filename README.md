@@ -60,8 +60,7 @@ data/           ← ここを編集するだけでサイトが更新される
 `urlEn` / `urlJa` を空のままにし、`verified: false` としてください。未確認リンクはサイト上に表示されません。
 
 現在、Google Scholar、ORCID、Scopus、IEEE Xplore、LinkedIn、大学教員プロフィール、
-researchmap は確認済みURLを表示しています。ResearchGate は未確認のため `placeholder` として
-登録され、サイト上には表示されません。本人確認済みURLを入力した後にのみ公開してください。
+researchmap は確認済みURLを表示しています。ResearchGate は本人の希望により掲載していません。
 
 ### 研究分野を更新する
 `data/research.json` の `areas` を編集します。各項目には英語・日本語のタイトルと説明を設定します。
@@ -72,6 +71,9 @@ researchmap は確認済みURLを表示しています。ResearchGate は未確�
 望ましい背景、学術・産業共同研究、研究室の日常、設備情報をJSONから更新できます。各カードの
 `icon` には短い絵文字を指定できます。募集枠、奨学金、研究費など、時期により変わる情報は
 確認できた場合にのみ追加してください。
+
+`labGallery` で研究室内の写真、代替テキスト、キャプションを管理します。人物が識別できる写真は、
+公開に必要な同意が確認できた場合のみ追加してください。
 
 ### ホームページのハイライトを更新する
 `data/config.json` と `data/ja/config.json` の `homepage` を編集します。

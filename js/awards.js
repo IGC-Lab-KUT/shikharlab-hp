@@ -24,7 +24,7 @@ async function renderAwards() {
   try {
     const data = await fetchJson('data/awards.json');
     const groups = groupAwardsByYear(data);
-    const years = Object.keys(groups).sort((a, b) => Number(b) - Number(a));
+    const years = Object.keys(groups).sort((a, b) => Number.parseInt(b, 10) - Number.parseInt(a, 10));
     const sections = years.map(year => {
       const section = createElement('section', { className: 'year-section' });
       section.append(createElement('h2', { text: year }));

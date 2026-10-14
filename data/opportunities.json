@@ -38,7 +38,7 @@
       {
         "icon": "🌐",
         "title": "International academic network",
-        "description": "Collaborations include Idaho State University, Western University, National Yang Ming Chiao Tung University, Indian Institute of Technology Hyderabad (Prof. Abhinav), and National Sun Yat-sen University, Taiwan (Prof. Keshav Singh)."
+        "description": "Collaborations include Idaho State University, Western University, National Yang Ming Chiao Tung University, Indian Institute of Technology Hyderabad (Prof. Abhinav Kumar), and National Sun Yat-sen University, Taiwan (Prof. Keshav Singh)."
       },
       {
         "icon": "🤝",
@@ -95,6 +95,28 @@
         "description": "The seminar area includes whiteboards and large displays for research presentations and group discussion."
       }
     ],
+    "labGallery": [
+      {
+        "image": "data/imgs/lab-seminar-space.jpg",
+        "alt": "Seminar area in Room A260 with tables, a large monitor, and an interactive display",
+        "caption": "Seminar and presentation space"
+      },
+      {
+        "image": "data/imgs/lab-entrance.jpg",
+        "alt": "Entrance door to the Global Intelligent Communication Laboratory in Room A260",
+        "caption": "Entrance to Room A260"
+      },
+      {
+        "image": "data/imgs/lab-workspace.jpg",
+        "alt": "Shared laboratory workspace with desks, chairs, and computers",
+        "caption": "Shared research workspace"
+      },
+      {
+        "image": "data/imgs/lab-lounge.jpg",
+        "alt": "Laboratory lounge with sofas and tables",
+        "caption": "Rest and discussion area"
+      }
+    ],
     "contactLabel": "Contact the laboratory",
     "contactNote": "Students and prospective collaborators are welcome to contact Dr. Shikhar directly by email to discuss aligned research interests and possible collaboration."
   },
@@ -137,7 +159,7 @@
       {
         "icon": "🌐",
         "title": "国際学術連携ネットワーク",
-        "description": "Idaho State University、Western University、National Yang Ming Chiao Tung University、インド工科大学ハイデラバード校（Prof. Abhinav）、台湾・国立中山大学（Prof. Keshav Singh）などと連携しています。"
+        "description": "Idaho State University、Western University、National Yang Ming Chiao Tung University、インド工科大学ハイデラバード校（Prof. Abhinav Kumar）、台湾・国立中山大学（Prof. Keshav Singh）などと連携しています。"
       },
       {
         "icon": "🤝",
@@ -192,6 +214,28 @@
         "icon": "🖥️",
         "title": "ゼミスペース",
         "description": "研究発表やグループ討議のためのホワイトボードと大型ディスプレイを備えています。"
+      }
+    ],
+    "labGallery": [
+      {
+        "image": "data/imgs/lab-seminar-space.jpg",
+        "alt": "テーブル、大型モニター、電子黒板を備えたA260室のゼミスペース",
+        "caption": "ゼミ・プレゼンテーションスペース"
+      },
+      {
+        "image": "data/imgs/lab-entrance.jpg",
+        "alt": "A260室グローバル知的通信研究室の入口",
+        "caption": "A260室の入口"
+      },
+      {
+        "image": "data/imgs/lab-workspace.jpg",
+        "alt": "机、椅子、コンピューターを備えた共同研究スペース",
+        "caption": "共同研究スペース"
+      },
+      {
+        "image": "data/imgs/lab-lounge.jpg",
+        "alt": "ソファとテーブルを備えた研究室のラウンジ",
+        "caption": "休憩・交流スペース"
       }
     ],
     "contactLabel": "研究室へのお問い合わせ",
