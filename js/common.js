@@ -31,7 +31,7 @@ function safeExternalUrl(value) {
 }
 
 async function fetchJson(path) {
-  const response = await fetch(contentPath(path));
+  const response = await fetch(contentPath(path), { cache: 'no-cache' });
   if (!response.ok) throw new Error(`Unable to load ${path} (${response.status})`);
   return response.json();
 }
