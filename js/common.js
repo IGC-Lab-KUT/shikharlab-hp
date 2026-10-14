@@ -1,85 +1,163 @@
-async function loadConfig(lang) {
-  const path = lang === 'ja' ? '../data/ja/config.json' : 'data/config.json';
-  const res = await fetch(path);
-  return res.json();
+const SITE_ROOT = document.documentElement.lang === 'ja' ? '../' : '';
+
+function createElement(tag, options = {}) {
+  const element = document.createElement(tag);
+  if (options.className) element.className = options.className;
+  if (options.text !== undefined) element.textContent = options.text;
+  for (const [name, value] of Object.entries(options.attributes || {})) {
+    if (value !== undefined && value !== null && value !== '') element.setAttribute(name, String(value));
+  }
+  return element;
+}
+
+function contentPath(path) {
+  return `${SITE_ROOT}${path}`;
+}
+
+function safeImageSource(value) {
+  if (typeof value !== 'string' || !value) return null;
+  if (/^https:\/\//i.test(value)) return safeExternalUrl(value);
+  if (/^[a-z][a-z\d+.-]*:/i.test(value) || value.startsWith('/') || value.split('/').includes('..')) return null;
+  return contentPath(value.replace(/^\.\//, ''));
+}
+
+function safeExternalUrl(value) {
+  try {
+    const url = new URL(value);
+    return ['http:', 'https:'].includes(url.protocol) ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
+async function fetchJson(path) {
+  const response = await fetch(contentPath(path));
+  if (!response.ok) throw new Error(`Unable to load ${path} (${response.status})`);
+  return response.json();
+}
+
+function showLoadError(container, lang = document.documentElement.lang) {
+  if (!container) return;
+  const message = lang === 'ja'
+    ? 'コンテンツを読み込めませんでした。後でもう一度お試しください。'
+    : 'This content could not be loaded. Please try again later.';
+  container.replaceChildren(createElement('p', {
+    className: 'status-message status-message--error',
+    text: message,
+    attributes: { role: 'alert' },
+  }));
 }
 
 function getCurrentPage() {
-  const path = window.location.pathname;
-  const file = path.split('/').pop();
-  return file === '' ? 'index.html' : file;
+  const file = window.location.pathname.split('/').pop();
+  return file || 'index.html';
+}
+
+function appendExternalLink(parent, label, url, className = '') {
+  const safeUrl = safeExternalUrl(url);
+  if (!safeUrl) {
+    parent.append(createElement('span', { className, text: label }));
+    return;
+  }
+  parent.append(createElement('a', {
+    className,
+    text: label,
+    attributes: { href: safeUrl, target: '_blank', rel: 'noopener noreferrer' },
+  }));
 }
 
 function renderHeader(config, lang) {
   const currentPage = getCurrentPage();
-  
-  // プロパティ名を file ではなく href に統一してあるよ
   const navItems = [
-    { href: 'index.html', label: lang === 'ja' ? 'ホーム' : 'Home', hasJa: true },
-    { href: 'members.html', label: lang === 'ja' ? 'メンバー' : 'Members', hasJa: true },
-    { href: 'publications.html', label: lang === 'ja' ? '業績' : 'Publications', hasJa: true },
-    { href: 'projects.html', label: lang === 'ja' ? 'プロジェクト' : 'Projects', hasJa: true },
-    { href: 'awards.html', label: lang === 'ja' ? '受賞歴' : 'Awards', hasJa: false },
+    { href: 'index.html', en: 'Home', ja: 'ホーム', hasJa: true },
+    { href: 'members.html', en: 'Members', ja: 'メンバー', hasJa: true },
+    { href: 'publications.html', en: 'Publications', ja: '業績', hasJa: true },
+    { href: 'projects.html', en: 'Projects', ja: 'プロジェクト', hasJa: true },
+    { href: 'awards.html', en: 'Awards', ja: '受賞歴', hasJa: false },
   ];
 
-  const navLinks = navItems.map(item => {
-    const active = currentPage === item.href ? ' class="active"' : '';
-    // 日本語ページにいて、かつそのページの日本語版がない場合は1階層上(../)の英語ページを指定する
-    let linkHref = item.href;
-    if (lang === 'ja' && !item.hasJa) {
-      linkHref = '../' + item.href;
-    }
-    return `<li><a href="${linkHref}"${active}>${item.label}</a></li>`;
-  }).join('');
+  const header = createElement('header', { className: 'site-header' });
+  const utility = createElement('div', { className: 'header-utility' });
+  const currentItem = navItems.find(item => item.href === currentPage);
+  const languageUrl = lang === 'ja'
+    ? `../${currentPage}`
+    : currentItem?.hasJa ? `ja/${currentPage}` : 'ja/index.html';
+  utility.append(createElement('a', {
+    className: 'language-link',
+    text: lang === 'ja' ? 'English' : '日本語',
+    attributes: { href: languageUrl, hreflang: lang === 'ja' ? 'en' : 'ja' },
+  }));
 
-  const logoPath = lang === 'ja' ? `../${config.logo}` : config.logo;
-  
-  // 言語切り替えリンクのロジック
-  let langToggleUrl = '';
-  if (lang === 'ja') {
-    langToggleUrl = `../${currentPage}`;
-  } else {
-    const currentItem = navItems.find(item => item.href === currentPage);
-    if (currentItem && currentItem.hasJa) {
-      langToggleUrl = `ja/${currentPage}`;
-    } else {
-      langToggleUrl = 'ja/index.html';
+  const nav = createElement('nav', {
+    className: 'site-nav',
+    attributes: { 'aria-label': lang === 'ja' ? 'メインナビゲーション' : 'Main navigation' },
+  });
+  const home = createElement('a', { className: 'brand', attributes: { href: 'index.html' } });
+  home.append(
+    createElement('img', {
+      className: 'nav-logo',
+      attributes: { src: safeImageSource(config.logo), alt: '', width: 55, height: 61 },
+    }),
+    createElement('span', { className: 'brand-name', text: config.labName }),
+  );
+
+  const toggle = createElement('button', {
+    className: 'nav-toggle',
+    attributes: {
+      type: 'button',
+      'aria-expanded': 'false',
+      'aria-controls': 'primary-navigation',
+      'aria-label': lang === 'ja' ? 'メニューを開く' : 'Open menu',
+    },
+  });
+  toggle.append(createElement('span', { className: 'nav-toggle-icon', attributes: { 'aria-hidden': 'true' } }));
+
+  const list = createElement('ul', { className: 'nav-links', attributes: { id: 'primary-navigation' } });
+  for (const item of navItems) {
+    const href = lang === 'ja' && !item.hasJa ? `../${item.href}` : item.href;
+    const link = createElement('a', { text: item[lang === 'ja' ? 'ja' : 'en'], attributes: { href } });
+    if (currentPage === item.href) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
     }
+    const itemElement = createElement('li');
+    itemElement.append(link);
+    list.append(itemElement);
   }
-  
-  const langToggleText = lang === 'ja' ? 'English' : '日本語';
 
-  return `<header>
-    <div style="text-align: right; padding: 5px 10px;">
-      <a href="${langToggleUrl}">${langToggleText}</a>
-    </div>
-    <nav>
-      <div class="logo">
-        <img src="${logoPath}" alt="${config.labName} Logo" class="nav-logo" id="nav-logo"> 
-        ${config.labName}
-      </div>
-      <ul class="nav-links">${navLinks}</ul>
-    </nav>
-  </header>`;
+  toggle.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+    toggle.setAttribute('aria-label', lang === 'ja'
+      ? (isOpen ? 'メニューを開く' : 'メニューを閉じる')
+      : (isOpen ? 'Open menu' : 'Close menu'));
+    list.classList.toggle('is-open', !isOpen);
+  });
+
+  nav.append(home, toggle, list);
+  header.append(utility, nav);
+  return header;
 }
 
 function renderFooter(config) {
-  const year = new Date().getFullYear();
-  return `<footer><p>&copy; ${year} ${config.copyright}. All rights reserved.</p></footer>`;
+  const footer = createElement('footer', { className: 'site-footer' });
+  footer.append(createElement('p', {
+    text: `© ${new Date().getFullYear()} ${config.copyright}. All rights reserved.`,
+  }));
+  return footer;
 }
 
 async function initCommon() {
   const lang = document.documentElement.lang || 'en';
-  const config = await loadConfig(lang);
-  
-  const headerObj = document.getElementById('header-placeholder');
-  if (headerObj) {
-    headerObj.outerHTML = renderHeader(config, lang);
-  }
-  
-  const footerObj = document.getElementById('footer-placeholder');
-  if (footerObj) {
-    footerObj.outerHTML = renderFooter(config);
+  const headerPlaceholder = document.getElementById('header-placeholder');
+  const footerPlaceholder = document.getElementById('footer-placeholder');
+  try {
+    const config = await fetchJson(lang === 'ja' ? 'data/ja/config.json' : 'data/config.json');
+    if (headerPlaceholder) headerPlaceholder.replaceWith(renderHeader(config, lang));
+    if (footerPlaceholder) footerPlaceholder.replaceWith(renderFooter(config));
+  } catch (error) {
+    console.error(error);
+    showLoadError(headerPlaceholder, lang);
   }
 }
 

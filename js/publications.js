@@ -1,32 +1,43 @@
+function groupedByYear(items) {
+  return items.reduce((groups, item) => {
+    (groups[item.year] ||= []).push(item);
+    return groups;
+  }, {});
+}
+
+function publicationItem(publication) {
+  const item = createElement('li', { className: 'publication-item' });
+  const title = createElement('h3');
+  if (publication.url) appendExternalLink(title, publication.title, publication.url);
+  else title.textContent = publication.title;
+  item.append(
+    title,
+    createElement('p', { className: 'authors', text: publication.authors }),
+    createElement('p', { className: 'venue', text: publication.venue }),
+  );
+  return item;
+}
+
 async function renderPublications() {
   const lang = document.documentElement.lang || 'en';
-  // 言語によってJSONのパスを切り替える
-  const dataPath = lang === 'ja' ? '../data/publications.json' : 'data/publications.json';
-  const data = await fetch(dataPath).then(r => r.json());
-
-  // Group by year (descending)
-  const byYear = {};
-  for (const pub of data) {
-    if (!byYear[pub.year]) byYear[pub.year] = [];
-    byYear[pub.year].push(pub);
+  const container = document.getElementById('publications-container');
+  try {
+    const data = await fetchJson('data/publications.json');
+    const groups = groupedByYear(data);
+    const years = Object.keys(groups).sort((a, b) => Number(b) - Number(a));
+    const sections = years.map(year => {
+      const section = createElement('section', { className: 'year-section' });
+      section.append(createElement('h2', { text: year }));
+      const list = createElement('ul', { className: 'publication-list' });
+      list.append(...groups[year].map(publicationItem));
+      section.append(list);
+      return section;
+    });
+    container.replaceChildren(...sections);
+  } catch (error) {
+    console.error(error);
+    showLoadError(container, lang);
   }
-
-  const years = Object.keys(byYear).sort((a, b) => b - a);
-  const html = years.map(year => {
-    const items = byYear[year].map(pub => {
-      const title = pub.url
-        ? `<a href="${pub.url}" target="_blank">${pub.title}</a>`
-        : pub.title;
-      return `<li class="publication-item">
-        <h3>${title}</h3>
-        <p class="authors">${pub.authors}</p>
-        <p class="venue">${pub.venue}</p>
-      </li>`;
-    }).join('');
-    return `<div class="year-section"><h3>${year}</h3><ul class="publication-list">${items}</ul></div>`;
-  }).join('');
-
-  document.getElementById('publications-container').innerHTML = html;
 }
 
 renderPublications();

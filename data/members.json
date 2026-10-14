@@ -7,20 +7,13 @@
       "photo": ""
     }
   ],
-  "Research Collaborator": [
-	  {
-		"nameJa": "",
-		"nameEn": "",
-		"role": "",
-		"photo": ""
-	  }
-  ],
+  "researchCollaborators": [],
   "phd": [
 	{
 	  "nameJa": "",
 	  "nameEn": "Mamillapalli Pujitha",
 	  "role": "Ph.D. (International Collaborator)",
-	  "photo": "data/imgs/Mamillapaill Pujitha.jpeg"
+      "photo": "data/imgs/mamillapalli-pujitha-optimized.jpg"
 	},
     {
       "nameJa": "",
@@ -32,7 +25,7 @@
 	   "nameJa": "",
 	   "nameEn": "Shradha Kouloorkar",
 	   "role": "Ph.D. (International Collaborator)",
-	   "photo": "data/imgs/Shradha Kouloorkar.jpg"
+      "photo": "data/imgs/shradha-kouloorkar-optimized.jpg"
 	}
 		
   ],
@@ -41,7 +34,7 @@
       "nameJa": "森岡 悠人",
       "nameEn": "Yuto Morioka",
       "role": "2nd year master student",
-      "photo": "data/imgs/okayu.jpg"
+      "photo": "data/imgs/okayu-optimized.jpg"
     },
     {
       "nameJa": "三井 陽日",
@@ -50,16 +43,13 @@
       "photo": ""
     }
   ],
-  "alumni": [
-    {
-    }
-  ],
+  "alumni": [],
   "bachelor": [
     {
       "nameJa": "細川 夏風",
       "nameEn": "Hosokawa Natsuka",
       "role": "3rd year bachelor student",
-      "photo": "data/imgs/hosokawa.jpg"
+      "photo": "data/imgs/hosokawa-optimized.jpg"
     },
     {
       "nameJa": "林 由莉",
