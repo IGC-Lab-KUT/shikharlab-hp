@@ -1,5 +1,5 @@
 function hasMemberContent(member) {
-  return Boolean(member && (member.nameJa || member.nameEn || member.name || member.role || member.photo));
+  return Boolean(member && (member.nameJa || member.nameEn || member.name || member.roleEn || member.roleJa || member.role || member.photo));
 }
 
 function memberCard(member, lang) {
@@ -40,7 +40,8 @@ function memberCard(member, lang) {
   if (member.nameEn) appendName(names, member.nameJa ? 'p' : 'h3', 'name-en', member.nameEn);
   if (!member.nameJa && !member.nameEn) names.append(createElement('h3', { text: member.name || '' }));
   card.append(names);
-  if (member.role) card.append(createElement('p', { className: 'role', text: member.role }));
+  const role = member[lang === 'ja' ? 'roleJa' : 'roleEn'] || member.role;
+  if (role) card.append(createElement('p', { className: 'role', text: role }));
   return card;
 }
 

@@ -36,12 +36,14 @@ data/           ← ここを編集するだけでサイトが更新される
 ```json
 {
   "name": "山田 太郎",
-  "role": "PhD Student (2026-)",
+  "roleEn": "PhD Student (2026–)",
+  "roleJa": "博士課程（2026年–）",
   "email": "yamada@example.edu",
   "photo": "data/imgs/yamada.jpg"
 }
 ```
 写真は `data/imgs/` フォルダに置いて `photo` にリポジトリルートからのパスを指定（空文字列でも可）。
+役職・学年は `roleEn` と `roleJa` に英語・日本語をそれぞれ記載します。
 指導教員カードからプロフィールページへリンクする場合は、`profilePage` に `pi.html` を指定します。
 
 ### 指導教員プロフィールを更新する

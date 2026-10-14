@@ -7,19 +7,29 @@ function groupedByYear(items) {
 
 function publicationItem(publication, lang) {
   const item = createElement('li', { className: 'publication-item' });
-  const title = createElement('h3');
-  const typeLabels = lang === 'ja'
-    ? { journal: '論文誌', conference: '国際会議', bookChapter: '書籍章' }
-    : { journal: 'Journal', conference: 'Conference', bookChapter: 'Book chapter' };
+  const title = createElement('h4');
   if (publication.url) appendExternalLink(title, publication.title, publication.url);
   else title.textContent = publication.title;
   item.append(
-    createElement('p', { className: 'publication-type', text: typeLabels[publication.type] || '' }),
     title,
     createElement('p', { className: 'authors', text: publication.authors }),
     createElement('p', { className: 'venue', text: publication.venue }),
   );
   return item;
+}
+
+function publicationGroup(items, type, lang) {
+  const labels = lang === 'ja'
+    ? { journal: '論文誌', conference: '国際会議論文', bookChapter: '書籍章' }
+    : { journal: 'Journal Articles', conference: 'Conference Papers', bookChapter: 'Book Chapters' };
+  const publications = items.filter(item => item.type === type);
+  if (!publications.length) return null;
+
+  const group = createElement('div', { className: 'publication-type-group' });
+  const list = createElement('ul', { className: 'publication-list' });
+  list.append(...publications.map(item => publicationItem(item, lang)));
+  group.append(createElement('h3', { text: labels[type] }), list);
+  return group;
 }
 
 async function renderPublications() {
@@ -32,9 +42,11 @@ async function renderPublications() {
     const sections = years.map(year => {
       const section = createElement('section', { className: 'year-section' });
       section.append(createElement('h2', { text: year }));
-      const list = createElement('ul', { className: 'publication-list' });
-      list.append(...groups[year].map(item => publicationItem(item, lang)));
-      section.append(list);
+      section.append(
+        ...['journal', 'conference', 'bookChapter']
+          .map(type => publicationGroup(groups[year], type, lang))
+          .filter(Boolean),
+      );
       return section;
     });
     container.replaceChildren(...sections);

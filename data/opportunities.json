@@ -10,12 +10,12 @@
       {
         "icon": "🔬",
         "title": "Master's students",
-        "description": "Develop focused research on wireless systems, intelligent networking, satellite or aerial communications, security, or related areas."
+        "description": "Master's students can develop focused research on wireless systems, intelligent networking, satellite or aerial communications, security, or related areas."
       },
       {
         "icon": "📡",
         "title": "Doctoral students",
-        "description": "Pursue original research that advances intelligent, secure, and resilient communication networks. Prospective applicants should consult the university's official admissions information."
+        "description": "Doctoral students can pursue original research that advances intelligent, secure, and resilient communication networks. Prospective applicants should consult the university's official admissions information."
       }
     ],
     "topics": [
@@ -33,7 +33,7 @@
       "Programming experience; Python and data-analysis skills are particularly useful",
       "Interest in mathematical modeling, simulation, machine learning, or experimental systems"
     ],
-    "collaborationIntro": "The laboratory actively develops international academic and industry partnerships for joint research, co-authored publications, technical exchange, and student research opportunities.",
+    "collaborationIntro": "The laboratory actively develops international academic and industrial partnerships through joint research, co-authored publications, technical exchange, and student research opportunities.",
     "collaboration": [
       {
         "icon": "🌐",
@@ -60,7 +60,7 @@
       {
         "icon": "📚",
         "title": "Paper discussion",
-        "description": "Students discuss research papers selected independently, from senior students' work, or on the supervisor's recommendation."
+        "description": "Students discuss papers they select independently, papers related to senior students' research, or papers recommended by the supervisor."
       },
       {
         "icon": "📊",
@@ -115,6 +115,11 @@
         "image": "data/imgs/lab-lounge.jpg",
         "alt": "Laboratory lounge with sofas and tables",
         "caption": "Rest and discussion area"
+      },
+      {
+        "image": "data/imgs/lab-events.jpg",
+        "alt": "Collage of laboratory members at a research presentation, seasonal events, and the Kochi University of Technology campus",
+        "caption": "Laboratory events and student activities"
       }
     ],
     "contactLabel": "Contact the laboratory",
@@ -131,12 +136,12 @@
       {
         "icon": "🔬",
         "title": "修士課程",
-        "description": "無線システム、知的ネットワーク、衛星・空中通信、セキュリティなどに関する専門的な研究を進めます。"
+        "description": "修士課程の学生は、無線システム、知的ネットワーク、衛星・空中通信、セキュリティなどに関する専門的な研究を進めます。"
       },
       {
         "icon": "📡",
         "title": "博士課程",
-        "description": "知的で安全かつ強靱な通信ネットワークの発展につながる独創的研究に取り組みます。出願希望者は大学の公式入試情報を確認してください。"
+        "description": "博士課程の学生は、知的で安全かつ強靱な通信ネットワークの発展につながる独創的研究に取り組みます。出願希望者は大学の公式入試情報を確認してください。"
       }
     ],
     "topics": [
@@ -181,7 +186,7 @@
       {
         "icon": "📚",
         "title": "論文輪講",
-        "description": "学生が自ら選んだ論文、先輩の研究、または指導教員が推薦した論文について議論します。"
+        "description": "学生が自ら選んだ論文、先輩の研究に関連する論文、または指導教員が推薦した論文について議論します。"
       },
       {
         "icon": "📊",
@@ -236,9 +241,14 @@
         "image": "data/imgs/lab-lounge.jpg",
         "alt": "ソファとテーブルを備えた研究室のラウンジ",
         "caption": "休憩・交流スペース"
+      },
+      {
+        "image": "data/imgs/lab-events.jpg",
+        "alt": "研究発表、季節のイベント、高知工科大学キャンパスでの研究室メンバーの様子をまとめた写真",
+        "caption": "研究室イベント・学生活動"
       }
     ],
     "contactLabel": "研究室へのお問い合わせ",
-    "contactNote": "研究テーマとの関連や共同研究の可能性について、学生・共同研究希望者はShikhar講師へメールでお気軽にお問い合わせください。"
+    "contactNote": "研究テーマとの適合性や共同研究の可能性について、学生・共同研究希望者はShikhar講師へメールでお気軽にお問い合わせください。"
   }
 }

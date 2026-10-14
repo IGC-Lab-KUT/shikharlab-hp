@@ -784,6 +784,16 @@ main > section > h2 {
   list-style: none;
 }
 
+.publication-type-group + .publication-type-group {
+  margin-top: 1.5rem;
+}
+
+.publication-type-group > h3 {
+  margin-bottom: 0.65rem;
+  color: var(--color-blue-dark);
+  font-size: 1.08rem;
+}
+
 .news li {
   display: grid;
   grid-template-columns: minmax(6.2rem, auto) 1fr;
@@ -886,7 +896,8 @@ main > section > h2 {
   border-bottom: 0;
 }
 
-.publication-item h3 {
+.publication-item h3,
+.publication-item h4 {
   margin-bottom: 0.45rem;
   color: var(--color-navy);
   font-size: clamp(1.03rem, 2.2vw, 1.17rem);
