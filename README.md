@@ -51,6 +51,7 @@ data/           ← ここを編集するだけでサイトが更新される
 
 - `education`: 学歴・学位
 - `appointments`: 過去の職歴
+- `teaching`: 教育・研究指導（概要、学部・大学院の担当科目、大学公式情報へのリンク）
 - `researchInterests`: 研究関心
 - `funding`: 研究費・競争的資金（題目、役割、期間、機関、助成機関、金額）
 - `professionalService`: 編集・学会活動

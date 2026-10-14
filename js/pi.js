@@ -52,6 +52,39 @@ function fundingItem(item, lang) {
   return row;
 }
 
+function teachingGroup(label, courses) {
+  const group = createElement('section', { className: 'teaching-group' });
+  const list = createElement('ul', { className: 'check-list' });
+  list.replaceChildren(...courses.map(course => createElement('li', { text: course })));
+  group.append(createElement('h3', { text: label }), list);
+  return group;
+}
+
+function renderTeaching(teaching) {
+  const container = document.getElementById('pi-teaching');
+  if (!container || !teaching) return;
+
+  const content = createElement('div', { className: 'teaching-content' });
+  if (teaching.summary) content.append(createElement('p', { className: 'teaching-summary', text: teaching.summary }));
+
+  const groups = createElement('div', { className: 'teaching-groups' });
+  if (teaching.undergraduate?.length) {
+    groups.append(teachingGroup(teaching.undergraduateLabel, teaching.undergraduate));
+  }
+  if (teaching.graduate?.length) {
+    groups.append(teachingGroup(teaching.graduateLabel, teaching.graduate));
+  }
+  if (groups.children.length) content.append(groups);
+
+  const sourceUrl = safeExternalUrl(teaching.sourceUrl);
+  if (sourceUrl && teaching.sourceLabel) {
+    const source = createElement('p', { className: 'teaching-source' });
+    appendExternalLink(source, teaching.sourceLabel, sourceUrl);
+    content.append(source);
+  }
+  container.replaceChildren(content);
+}
+
 function piAwardItem(award, lang) {
   const item = createElement('article', { className: 'mini-list-item' });
   item.append(
@@ -115,6 +148,7 @@ async function renderPiProfile() {
     document.getElementById('pi-appointments').replaceChildren(
       ...profile.appointments.map(item => timelineItem(item, 'appointment')),
     );
+    renderTeaching(profile.teaching);
     document.getElementById('pi-interests').replaceChildren(
       ...profile.researchInterests.map(text => createElement('li', { text })),
     );

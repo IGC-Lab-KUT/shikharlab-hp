@@ -92,6 +92,31 @@
         "period": "2019–2021"
       }
     ],
+    "teaching": {
+      "summary": "At Kochi University of Technology, Shikhar teaches undergraduate and graduate courses and supervises project research and degree work. He mentors bachelor's, master's, and doctoral students in wireless communication and network engineering, using hands-on activities and real-world examples where appropriate.",
+      "undergraduateLabel": "Undergraduate courses",
+      "undergraduate": [
+        "Cyber Media and XR",
+        "Introduction to Cyber Reality",
+        "Project Research 1",
+        "Project Research 2",
+        "Project Research 3",
+        "Seminars on the School of Informatics",
+        "Laboratory Work on Information Technology 3",
+        "Graduation Thesis"
+      ],
+      "graduateLabel": "Graduate courses",
+      "graduate": [
+        "Advanced Software Engineering",
+        "Seminar on Informatics I",
+        "Seminar on Informatics II",
+        "Advanced Seminar 1",
+        "Advanced Seminar 2",
+        "Individual Work for Graduate"
+      ],
+      "sourceLabel": "Current course list on the university faculty profile",
+      "sourceUrl": "https://www.kochi-tech.ac.jp/profile/en/shikhar.html"
+    },
     "researchInterests": [
       "6G and beyond wireless communication",
       "Space–air–ground integrated networks",
@@ -203,6 +228,31 @@
         "period": "2019–2021"
       }
     ],
+    "teaching": {
+      "summary": "高知工科大学では、学部・大学院の授業を担当するとともに、プロジェクト研究や学位研究を指導しています。無線通信・ネットワーク工学の分野で、学士課程、修士課程、博士課程の学生を指導し、内容に応じて実践的な演習や実例を取り入れています。",
+      "undergraduateLabel": "学部・学群",
+      "undergraduate": [
+        "サイバーメディアとXR",
+        "Introduction to Cyber Reality",
+        "プロジェクト研究1",
+        "プロジェクト研究2",
+        "プロジェクト研究3",
+        "情報学群セミナー",
+        "情報学群実験第3",
+        "卒業研究"
+      ],
+      "graduateLabel": "大学院",
+      "graduate": [
+        "応用ソフトウェア工学演習",
+        "情報学先端セミナー1",
+        "情報学先端セミナー2",
+        "特別セミナー1",
+        "特別セミナー2",
+        "特別研究"
+      ],
+      "sourceLabel": "大学教員プロフィールの本年度担当講義",
+      "sourceUrl": "https://www.kochi-tech.ac.jp/profile/ja/shikhar.html"
+    },
     "researchInterests": [
       "6G・Beyond 6G無線通信",
       "宇宙・空・地上統合ネットワーク",
