@@ -5,7 +5,8 @@
       "nameEn": "Shikhar Verma",
       "roleEn": "Lecturer",
       "roleJa": "講師",
-      "photo": "https://www.kochi-tech.ac.jp/profile/en/img/shikhar-1.png",
+      "photo": "data/imgs/shikhar-profile.jpg",
+      "photoFocus": "upper",
       "profilePage": "pi.html"
     }
   ],
