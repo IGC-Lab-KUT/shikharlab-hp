@@ -3,8 +3,10 @@
     {
       "nameJa": "",
       "nameEn": "Shikhar Verma",
-      "role": "Lecturer",
-      "photo": ""
+      "roleEn": "Lecturer",
+      "roleJa": "講師",
+      "photo": "https://www.kochi-tech.ac.jp/profile/en/img/shikhar-1.png",
+      "profilePage": "pi.html"
     }
   ],
   "researchCollaborators": [],
@@ -12,19 +14,22 @@
 	{
 	  "nameJa": "",
 	  "nameEn": "Mamillapalli Pujitha",
-	  "role": "Ph.D. (International Collaborator)",
+	  "roleEn": "PhD (International Collaborator)",
+	  "roleJa": "博士課程（国際共同研究者）",
       "photo": "data/imgs/mamillapalli-pujitha-optimized.jpg"
 	},
     {
       "nameJa": "",
       "nameEn": "Sayatan Bose",
-      "role": "Ph.D. (International Collaborator)",
+      "roleEn": "PhD (International Collaborator)",
+      "roleJa": "博士課程（国際共同研究者）",
       "photo": "data/imgs/Sayantan Bose.jpg"
 	},
 	{
 	   "nameJa": "",
 	   "nameEn": "Shradha Kouloorkar",
-	   "role": "Ph.D. (International Collaborator)",
+	   "roleEn": "PhD (International Collaborator)",
+	   "roleJa": "博士課程（国際共同研究者）",
       "photo": "data/imgs/shradha-kouloorkar-optimized.jpg"
 	}
 		
@@ -33,13 +38,15 @@
     {
       "nameJa": "森岡 悠人",
       "nameEn": "Yuto Morioka",
-      "role": "2nd year master student",
+      "roleEn": "Second-year master's student",
+      "roleJa": "修士課程2年生",
       "photo": "data/imgs/okayu-optimized.jpg"
     },
     {
       "nameJa": "三井 陽日",
       "nameEn": "Haruki Mitsui",
-      "role": "1st year master student",
+      "roleEn": "First-year master's student",
+      "roleJa": "修士課程1年生",
       "photo": ""
     }
   ],
@@ -48,43 +55,50 @@
     {
       "nameJa": "細川 夏風",
       "nameEn": "Hosokawa Natsuka",
-      "role": "3rd year bachelor student",
+      "roleEn": "Third-year bachelor's student",
+      "roleJa": "学部3年生",
       "photo": "data/imgs/hosokawa-optimized.jpg"
     },
     {
       "nameJa": "林 由莉",
       "nameEn": "Yuri Hayashi",
-      "role": "3rd year bachelor student",
+      "roleEn": "Third-year bachelor's student",
+      "roleJa": "学部3年生",
       "photo": ""
     },
     {
       "nameJa": "田島 陽菜",
       "nameEn": "Hina Tashima",
-      "role": "3rd year bachelor student",
+      "roleEn": "Third-year bachelor's student",
+      "roleJa": "学部3年生",
       "photo": ""
     },
     {
       "nameJa": "立光 夏月",
       "nameEn": "Katsuki Tatemitsu",
-      "role": "3rd year bachelor student",
+      "roleEn": "Third-year bachelor's student",
+      "roleJa": "学部3年生",
       "photo": ""
     },
     {
       "nameJa": "関 ありさ",
       "nameEn": "Arisa Seki",
-      "role": "3rd year bachelor student",
+      "roleEn": "Third-year bachelor's student",
+      "roleJa": "学部3年生",
       "photo": ""
     },
     {
       "nameJa": "川畑 暖仁",
       "nameEn": "Haruto Kawabata",
-      "role": "3rd year bachelor student",
+      "roleEn": "Third-year bachelor's student",
+      "roleJa": "学部3年生",
       "photo": ""
     },
 		{
 			"nameJa": "西口 隼翔",
 			"nameEn": "Hayato Nishiguchi",
-      "role": "3rd year bachelor student",
+      "roleEn": "Third-year bachelor's student",
+      "roleJa": "学部3年生",
 			"photo": ""
 		}
   ]

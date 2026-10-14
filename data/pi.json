@@ -1,0 +1,338 @@
+{
+  "photo": "data/imgs/shikhar-profile.jpg",
+  "photoSource": "",
+  "selectedPublicationUrls": [
+    "https://ieeexplore.ieee.org/abstract/document/7900337",
+    "https://ieeexplore.ieee.org/abstract/document/10365490"
+  ],
+  "profileLinks": [
+    {
+      "id": "university",
+      "labelEn": "University faculty profile",
+      "labelJa": "大学教員プロフィール",
+      "urlEn": "https://www.kochi-tech.ac.jp/profile/en/shikhar.html",
+      "urlJa": "https://www.kochi-tech.ac.jp/profile/ja/shikhar.html",
+      "verified": true
+    },
+    {
+      "id": "researchmap",
+      "labelEn": "researchmap",
+      "labelJa": "researchmap",
+      "urlEn": "https://researchmap.jp/shikhar.verma",
+      "urlJa": "https://researchmap.jp/shikhar.verma",
+      "verified": true
+    },
+    {
+      "id": "googleScholar",
+      "labelEn": "Google Scholar",
+      "labelJa": "Google Scholar",
+      "urlEn": "https://scholar.google.co.in/citations?hl=en&user=PeT97nEAAAAJ&view_op=list_works&sortby=pubdate",
+      "urlJa": "https://scholar.google.co.in/citations?hl=en&user=PeT97nEAAAAJ&view_op=list_works&sortby=pubdate",
+      "verified": true
+    },
+    {
+      "id": "orcid",
+      "labelEn": "ORCID",
+      "labelJa": "ORCID",
+      "urlEn": "https://orcid.org/0000-0002-9905-3772",
+      "urlJa": "https://orcid.org/0000-0002-9905-3772",
+      "verified": true
+    },
+    {
+      "id": "scopus",
+      "labelEn": "Scopus",
+      "labelJa": "Scopus",
+      "urlEn": "https://www.scopus.com/authid/detail.uri?authorId=57213739448",
+      "urlJa": "https://www.scopus.com/authid/detail.uri?authorId=57213739448",
+      "verified": true
+    },
+    {
+      "id": "ieeeXplore",
+      "labelEn": "IEEE Xplore",
+      "labelJa": "IEEE Xplore",
+      "urlEn": "https://ieeexplore.ieee.org/author/37086075841",
+      "urlJa": "https://ieeexplore.ieee.org/author/37086075841",
+      "verified": true
+    },
+    {
+      "id": "linkedin",
+      "labelEn": "LinkedIn",
+      "labelJa": "LinkedIn",
+      "urlEn": "https://www.linkedin.com/in/dr-shikhar-verma-3a13b486/",
+      "urlJa": "https://www.linkedin.com/in/dr-shikhar-verma-3a13b486/",
+      "verified": true
+    }
+  ],
+  "en": {
+    "name": "Shikhar Verma",
+    "appointment": "Lecturer",
+    "affiliation": "School of Informatics, Kochi University of Technology, Japan",
+    "biography": "Shikhar Verma is a Lecturer in the School of Informatics at Kochi University of Technology. His research focuses on intelligent next-generation communication networks, including 6G, satellite and aerial communications, information security, the Internet of Things (IoT), and AI-enabled networking. Before joining Kochi University of Technology, he served as a Specially Appointed Assistant Professor at Tohoku University and as a JSPS Research Fellow (DC2).",
+    "education": [
+      {
+        "qualification": "Doctoral degree",
+        "institution": "Tohoku University, Japan",
+        "year": "2021"
+      },
+      {
+        "qualification": "Master's degree",
+        "institution": "Tohoku University, Japan",
+        "year": "2018"
+      }
+    ],
+    "appointments": [
+      {
+        "role": "Specially Appointed Assistant Professor",
+        "institution": "Tohoku University, Japan",
+        "period": "2021–2025"
+      },
+      {
+        "role": "Research Fellow (DC2)",
+        "institution": "Japan Society for the Promotion of Science",
+        "period": "2019–2021"
+      }
+    ],
+    "teaching": {
+      "summary": "At Kochi University of Technology, Shikhar teaches undergraduate and graduate courses and supervises project research and degree work. He mentors bachelor's, master's, and doctoral students in wireless communication and network engineering, using hands-on activities and real-world examples where appropriate.",
+      "undergraduateLabel": "Undergraduate courses",
+      "undergraduate": [
+        "Cyber Media and XR",
+        "Introduction to Cyber Reality",
+        "Project Research 1",
+        "Project Research 2",
+        "Project Research 3",
+        "Seminars on the School of Informatics",
+        "Laboratory Work on Information Technology 3",
+        "Graduation Thesis"
+      ],
+      "graduateLabel": "Graduate courses",
+      "graduate": [
+        "Advanced Software Engineering",
+        "Seminar on Informatics I",
+        "Seminar on Informatics II",
+        "Advanced Seminar 1",
+        "Advanced Seminar 2",
+        "Individual Work for Graduate"
+      ],
+      "sourceLabel": "Current course list on the university faculty profile",
+      "sourceUrl": "https://www.kochi-tech.ac.jp/profile/en/shikhar.html"
+    },
+    "researchInterests": [
+      "6G and beyond wireless communication",
+      "Space–air–ground integrated networks",
+      "Satellite and non-terrestrial communication",
+      "Artificial intelligence for communication networks",
+      "Wireless and Internet of Things security",
+      "UAV and low-altitude communication networks",
+      "Advanced WiFi systems"
+    ],
+    "funding": [
+      {
+        "title": "Intelligent Multi-layer Jamming Mitigation for 6G-enabled Satellite-Aerial-Ground Networks",
+        "role": "Principal Investigator",
+        "period": "2026–Present",
+        "institution": "Kochi University of Technology, Japan",
+        "agency": "Ministry of Education, Culture, Sports, Science and Technology (MEXT), Japan (KAKENHI)",
+        "amount": "3,600,000 yen"
+      },
+      {
+        "title": "A Study on Intelligent and Secure Human-centric 6G Network Orchestration",
+        "role": "Principal Investigator",
+        "period": "2022–2026",
+        "institution": "Tohoku University, Japan",
+        "agency": "Ministry of Education, Culture, Sports, Science and Technology (MEXT), Japan (KAKENHI)",
+        "amount": "3,500,000 yen"
+      },
+      {
+        "title": "Energy Efficient Data Transmission Scheme for IoT over 5G",
+        "role": "Principal Investigator",
+        "period": "2019–2021",
+        "institution": "Tohoku University, Japan",
+        "agency": "Ministry of Education, Culture, Sports, Science and Technology (MEXT), Japan (KAKENHI)",
+        "amount": "1,700,000 yen"
+      }
+    ],
+    "professionalService": [
+      {
+        "role": "Associate Editor",
+        "organization": "IEEE Wireless Communications",
+        "period": "2026–Present"
+      },
+      {
+        "role": "Associate Editor",
+        "organization": "IEEE Transactions on Cognitive Communications and Networking",
+        "period": "2026–Present"
+      },
+      {
+        "role": "Guest Editor",
+        "organization": "IEEE Internet of Things Journal",
+        "period": "2025–Present"
+      },
+      {
+        "role": "Associate Editor",
+        "organization": "IEEE Communications Surveys & Tutorials",
+        "period": "2024–Present"
+      },
+      {
+        "role": "Associate Editor",
+        "organization": "IEEE Internet of Things Journal",
+        "period": "2023–Present"
+      },
+      {
+        "role": "Senior Member",
+        "organization": "Institute of Electrical and Electronics Engineers (IEEE)",
+        "period": "2025–Present"
+      },
+      {
+        "role": "Publicity Co-Chair",
+        "organization": "18th International Conference on COMmunication Systems & NETworkS",
+        "period": "2025–2026"
+      },
+      {
+        "role": "Technical Program Committee Member",
+        "organization": "IEEE ICC, IEEE GLOBECOM, IEEE VTC, and other high-quality international conferences",
+        "period": ""
+      }
+    ],
+    "contact": {
+      "email": "shikhar[a]kochi-tech.ac.jp",
+      "office": "Room A260, 2nd Floor, Building A, Kochi University of Technology"
+    }
+  },
+  "ja": {
+    "name": "SHIKHAR（シカール）",
+    "appointment": "講師",
+    "affiliation": "高知工科大学 情報学群",
+    "biography": "Shikhar Vermaは、高知工科大学情報学群の講師です。6G、衛星・空中通信、情報セキュリティ、IoT、AIを活用したネットワークなど、次世代の知的通信ネットワークを幅広く研究しています。高知工科大学着任前は、東北大学特任助教および日本学術振興会特別研究員（DC2）を務めました。",
+    "education": [
+      {
+        "qualification": "博士",
+        "institution": "東北大学",
+        "year": "2021"
+      },
+      {
+        "qualification": "修士",
+        "institution": "東北大学",
+        "year": "2018"
+      }
+    ],
+    "appointments": [
+      {
+        "role": "特任助教",
+        "institution": "東北大学",
+        "period": "2021–2025"
+      },
+      {
+        "role": "特別研究員（DC2）",
+        "institution": "日本学術振興会",
+        "period": "2019–2021"
+      }
+    ],
+    "teaching": {
+      "summary": "高知工科大学では、学部・大学院の授業を担当するとともに、プロジェクト研究や学位研究を指導しています。無線通信・ネットワーク工学の分野で、学士課程、修士課程、博士課程の学生を指導し、内容に応じて実践的な演習や実例を取り入れています。",
+      "undergraduateLabel": "学部・学群",
+      "undergraduate": [
+        "サイバーメディアとXR",
+        "Introduction to Cyber Reality",
+        "プロジェクト研究1",
+        "プロジェクト研究2",
+        "プロジェクト研究3",
+        "情報学群セミナー",
+        "情報学群実験第3",
+        "卒業研究"
+      ],
+      "graduateLabel": "大学院",
+      "graduate": [
+        "応用ソフトウェア工学演習",
+        "情報学先端セミナー1",
+        "情報学先端セミナー2",
+        "特別セミナー1",
+        "特別セミナー2",
+        "特別研究"
+      ],
+      "sourceLabel": "大学教員プロフィールの本年度担当講義",
+      "sourceUrl": "https://www.kochi-tech.ac.jp/profile/ja/shikhar.html"
+    },
+    "researchInterests": [
+      "6G・Beyond 6G無線通信",
+      "宇宙・空・地上統合ネットワーク",
+      "衛星・非地上系通信",
+      "通信ネットワークのための人工知能",
+      "無線・IoTセキュリティ",
+      "UAV・低高度通信ネットワーク",
+      "高度WiFiシステム"
+    ],
+    "funding": [
+      {
+        "title": "6G対応衛星・空・地上ネットワークにおける知的多層ジャミング緩和",
+        "role": "研究代表者",
+        "period": "2026年–現在",
+        "institution": "高知工科大学",
+        "agency": "文部科学省（MEXT）科研費（KAKENHI）",
+        "amount": "3,600,000円"
+      },
+      {
+        "title": "知的かつセキュアな人間中心6Gネットワークオーケストレーションに関する研究",
+        "role": "研究代表者",
+        "period": "2022年–2026年",
+        "institution": "東北大学",
+        "agency": "文部科学省（MEXT）科研費（KAKENHI）",
+        "amount": "3,500,000円"
+      },
+      {
+        "title": "5GにおけるIoT向け省エネルギーデータ伝送方式",
+        "role": "研究代表者",
+        "period": "2019年–2021年",
+        "institution": "東北大学",
+        "agency": "文部科学省（MEXT）科研費（KAKENHI）",
+        "amount": "1,700,000円"
+      }
+    ],
+    "professionalService": [
+      {
+        "role": "アソシエイトエディタ",
+        "organization": "IEEE Wireless Communications",
+        "period": "2026年–現在"
+      },
+      {
+        "role": "アソシエイトエディタ",
+        "organization": "IEEE Transactions on Cognitive Communications and Networking",
+        "period": "2026年–現在"
+      },
+      {
+        "role": "ゲストエディタ",
+        "organization": "IEEE Internet of Things Journal",
+        "period": "2025年–現在"
+      },
+      {
+        "role": "アソシエイトエディタ",
+        "organization": "IEEE Communications Surveys & Tutorials",
+        "period": "2024年–現在"
+      },
+      {
+        "role": "アソシエイトエディタ",
+        "organization": "IEEE Internet of Things Journal",
+        "period": "2023年–現在"
+      },
+      {
+        "role": "シニアメンバー",
+        "organization": "米国電気電子学会（IEEE）",
+        "period": "2025年–現在"
+      },
+      {
+        "role": "広報共同委員長",
+        "organization": "18th International Conference on COMmunication Systems & NETworkS",
+        "period": "2025–2026"
+      },
+      {
+        "role": "技術プログラム委員",
+        "organization": "IEEE ICC、IEEE GLOBECOM、IEEE VTCをはじめとする主要国際会議",
+        "period": ""
+      }
+    ],
+    "contact": {
+      "email": "shikhar[a]kochi-tech.ac.jp",
+      "office": "高知工科大学 A棟2階 A260室"
+    }
+  }
+}

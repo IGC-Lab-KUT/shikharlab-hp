@@ -1,0 +1,254 @@
+{
+  "en": {
+    "intro": "GIC Lab welcomes enquiries from students, researchers, and organizations whose interests align with intelligent next-generation communication systems. Admission, supervision, funding, and project participation depend on university procedures, academic fit, and available capacity; no position or financial support is guaranteed by this page.",
+    "pathways": [
+      {
+        "icon": "🎓",
+        "title": "Undergraduate students",
+        "description": "Students whose interests align with communication and networking research can explore the field through seminars, project work, and graduation research within the School of Informatics."
+      },
+      {
+        "icon": "🔬",
+        "title": "Master's students",
+        "description": "Master's students can develop focused research on wireless systems, intelligent networking, satellite or aerial communications, security, or related areas."
+      },
+      {
+        "icon": "📡",
+        "title": "Doctoral students",
+        "description": "Doctoral students can pursue original research that advances intelligent, secure, and resilient communication networks. Prospective applicants should consult the university's official admissions information."
+      }
+    ],
+    "topics": [
+      "6G and beyond wireless communication",
+      "Space–air–ground integrated networks",
+      "Satellite and non-terrestrial networks",
+      "AI-enabled network control and optimization",
+      "Secure and resilient wireless communications",
+      "UAV and low-altitude communication systems"
+    ],
+    "backgrounds": [
+      "A master's or doctoral research interest aligned with the laboratory's research areas",
+      "Computer science, informatics, electrical or communication engineering, or a closely related field",
+      "Foundations in computer networks, wireless communication, algorithms, or probability",
+      "Programming experience; Python and data-analysis skills are particularly useful",
+      "Interest in mathematical modeling, simulation, machine learning, or experimental systems"
+    ],
+    "collaborationIntro": "The laboratory actively develops international academic and industrial partnerships through joint research, co-authored publications, technical exchange, and student research opportunities.",
+    "collaboration": [
+      {
+        "icon": "🌐",
+        "title": "International academic network",
+        "description": "Collaborations include Idaho State University, Western University, National Yang Ming Chiao Tung University, Indian Institute of Technology Hyderabad (Prof. Abhinav Kumar), and National Sun Yat-sen University, Taiwan (Prof. Keshav Singh)."
+      },
+      {
+        "icon": "🤝",
+        "title": "Industry–university research",
+        "description": "Collaboration with NEC Corporation and Tohoku University's Kato Laboratory includes research on anti-jamming strategies for satellite–aerial–terrestrial integrated networks."
+      },
+      {
+        "icon": "📝",
+        "title": "Joint research and exchange",
+        "description": "Activities may include joint research projects, co-authored work in leading IEEE journals and conferences, seminars, technical discussions, and international research exchange."
+      }
+    ],
+    "labActivities": [
+      {
+        "icon": "📅",
+        "title": "Weekly seminar",
+        "description": "The laboratory seminar is held every Wednesday during the second period in Room A260."
+      },
+      {
+        "icon": "📚",
+        "title": "Paper discussion",
+        "description": "Students discuss papers they select independently, papers related to senior students' research, or papers recommended by the supervisor."
+      },
+      {
+        "icon": "📊",
+        "title": "Quarter seminar",
+        "description": "Students summarize weekly seminar work and review their overall research progress for the quarter."
+      },
+      {
+        "icon": "🎉",
+        "title": "Laboratory events",
+        "description": "Welcome gatherings, year-end events, and end-of-semester activities support an open and collegial laboratory community."
+      }
+    ],
+    "labFacilities": [
+      {
+        "icon": "🏫",
+        "title": "Room A260",
+        "description": "The Global Intelligent Communication Laboratory is located in Room A260 at Kochi University of Technology."
+      },
+      {
+        "icon": "💻",
+        "title": "Shared research workspace",
+        "description": "The laboratory provides shared desks and research space for students' daily study and project work."
+      },
+      {
+        "icon": "☕",
+        "title": "Rest and discussion area",
+        "description": "A dedicated lounge area supports informal discussion, collaboration, and breaks."
+      },
+      {
+        "icon": "🖥️",
+        "title": "Seminar space",
+        "description": "The seminar area includes whiteboards and large displays for research presentations and group discussion."
+      }
+    ],
+    "labGallery": [
+      {
+        "image": "data/imgs/lab-seminar-space.jpg",
+        "alt": "Seminar area in Room A260 with tables, a large monitor, and an interactive display",
+        "caption": "Seminar and presentation space"
+      },
+      {
+        "image": "data/imgs/lab-entrance.jpg",
+        "alt": "Entrance door to the Global Intelligent Communication Laboratory in Room A260",
+        "caption": "Entrance to Room A260"
+      },
+      {
+        "image": "data/imgs/lab-workspace.jpg",
+        "alt": "Shared laboratory workspace with desks, chairs, and computers",
+        "caption": "Shared research workspace"
+      },
+      {
+        "image": "data/imgs/lab-lounge.jpg",
+        "alt": "Laboratory lounge with sofas and tables",
+        "caption": "Rest and discussion area"
+      },
+      {
+        "image": "data/imgs/lab-events.jpg",
+        "alt": "Collage of laboratory members at a research presentation, seasonal events, and the Kochi University of Technology campus",
+        "caption": "Laboratory events and student activities"
+      }
+    ],
+    "contactLabel": "Contact the laboratory",
+    "contactNote": "Students and prospective collaborators are welcome to contact Dr. Shikhar directly by email to discuss aligned research interests and possible collaboration."
+  },
+  "ja": {
+    "intro": "GIC研究室では、次世代知的通信システムに関心を持つ学生・研究者・組織からのお問い合わせを受け付けています。入学、指導、研究費、プロジェクト参加は、大学の制度、研究テーマとの適合性、受入状況に基づいて決定されます。本ページは、ポジションや経済的支援を保証するものではありません。",
+    "pathways": [
+      {
+        "icon": "🎓",
+        "title": "学部生",
+        "description": "通信・ネットワーク研究に関心を持つ学生は、情報学群のセミナー、プロジェクト研究、卒業研究を通じて研究分野を探究できます。"
+      },
+      {
+        "icon": "🔬",
+        "title": "修士課程",
+        "description": "修士課程の学生は、無線システム、知的ネットワーク、衛星・空中通信、セキュリティなどに関する専門的な研究を進めます。"
+      },
+      {
+        "icon": "📡",
+        "title": "博士課程",
+        "description": "博士課程の学生は、知的で安全かつ強靱な通信ネットワークの発展につながる独創的研究に取り組みます。出願希望者は大学の公式入試情報を確認してください。"
+      }
+    ],
+    "topics": [
+      "6G・Beyond 6G無線通信",
+      "宇宙・空・地上統合ネットワーク",
+      "衛星・非地上系ネットワーク",
+      "AIを活用したネットワーク制御・最適化",
+      "安全で強靱な無線通信",
+      "UAV・低高度通信システム"
+    ],
+    "backgrounds": [
+      "研究室の研究分野と合致する修士・博士研究への関心",
+      "情報科学、情報学、電気・通信工学、または関連分野の基礎",
+      "コンピュータネットワーク、無線通信、アルゴリズム、確率に関する基礎知識",
+      "プログラミング経験（特にPythonやデータ分析の技能）",
+      "数理モデル、シミュレーション、機械学習、実験システムへの関心"
+    ],
+    "collaborationIntro": "研究室では、共同研究、共著論文、技術交流、学生の研究交流を通じて、国際的な学術連携および産学連携を積極的に推進しています。",
+    "collaboration": [
+      {
+        "icon": "🌐",
+        "title": "国際学術連携ネットワーク",
+        "description": "Idaho State University、Western University、National Yang Ming Chiao Tung University、インド工科大学ハイデラバード校（Prof. Abhinav Kumar）、台湾・国立中山大学（Prof. Keshav Singh）などと連携しています。"
+      },
+      {
+        "icon": "🤝",
+        "title": "産学共同研究",
+        "description": "NECおよび東北大学Kato研究室との連携では、衛星・空・地上統合ネットワークに向けたアンチジャミング戦略などを研究しています。"
+      },
+      {
+        "icon": "📝",
+        "title": "共同研究・研究交流",
+        "description": "共同研究プロジェクト、主要IEEE論文誌・国際会議での共著、セミナー、技術交流、国際研究交流などを行います。"
+      }
+    ],
+    "labActivities": [
+      {
+        "icon": "📅",
+        "title": "毎週のゼミ",
+        "description": "研究室ゼミは毎週水曜日の2限にA260室で行います。"
+      },
+      {
+        "icon": "📚",
+        "title": "論文輪講",
+        "description": "学生が自ら選んだ論文、先輩の研究に関連する論文、または指導教員が推薦した論文について議論します。"
+      },
+      {
+        "icon": "📊",
+        "title": "クォーターゼミ",
+        "description": "毎週のゼミ内容をまとめて発表し、クォーター全体の研究進捗を確認します。"
+      },
+      {
+        "icon": "🎉",
+        "title": "研究室イベント",
+        "description": "歓迎会、忘年会、学期末イベントなどを通じて、開かれた協力的な研究室コミュニティを育んでいます。"
+      }
+    ],
+    "labFacilities": [
+      {
+        "icon": "🏫",
+        "title": "A260研究室",
+        "description": "グローバル知的通信研究室は、高知工科大学A260室にあります。"
+      },
+      {
+        "icon": "💻",
+        "title": "共同研究スペース",
+        "description": "学生の日々の学習やプロジェクト研究のために、共同デスクと研究スペースを備えています。"
+      },
+      {
+        "icon": "☕",
+        "title": "休憩・交流スペース",
+        "description": "気軽な意見交換、共同作業、休憩に利用できるラウンジスペースがあります。"
+      },
+      {
+        "icon": "🖥️",
+        "title": "ゼミスペース",
+        "description": "研究発表やグループ討議のためのホワイトボードと大型ディスプレイを備えています。"
+      }
+    ],
+    "labGallery": [
+      {
+        "image": "data/imgs/lab-seminar-space.jpg",
+        "alt": "テーブル、大型モニター、電子黒板を備えたA260室のゼミスペース",
+        "caption": "ゼミ・プレゼンテーションスペース"
+      },
+      {
+        "image": "data/imgs/lab-entrance.jpg",
+        "alt": "A260室グローバル知的通信研究室の入口",
+        "caption": "A260室の入口"
+      },
+      {
+        "image": "data/imgs/lab-workspace.jpg",
+        "alt": "机、椅子、コンピューターを備えた共同研究スペース",
+        "caption": "共同研究スペース"
+      },
+      {
+        "image": "data/imgs/lab-lounge.jpg",
+        "alt": "ソファとテーブルを備えた研究室のラウンジ",
+        "caption": "休憩・交流スペース"
+      },
+      {
+        "image": "data/imgs/lab-events.jpg",
+        "alt": "研究発表、季節のイベント、高知工科大学キャンパスでの研究室メンバーの様子をまとめた写真",
+        "caption": "研究室イベント・学生活動"
+      }
+    ],
+    "contactLabel": "研究室へのお問い合わせ",
+    "contactNote": "研究テーマとの適合性や共同研究の可能性について、学生・共同研究希望者はShikhar講師へメールでお気軽にお問い合わせください。"
+  }
+}

@@ -2,7 +2,17 @@
   "labName": "Shikhar Lab",
   "logo": "LOGO.PNG",
   "subtitle": "Global Intelligent Communication Lab (GIC-Lab)",
-  "about": "The Global Intelligent Communication (GIC) Laboratory conducts cutting-edge research on next-generation communication systems, covering a wide range of topics including satellite communications, High Altitude Platform Stations (HAPS), low-altitude networks such as Unmanned Aerial Vehicles (UAVs) and flying taxis, 6G technologies, and the evolution of WiFi systems.Our approach aims to realize robust, intelligent, and highly adaptable communication infrastructures by integrating AI-driven optimization technologies, advanced wireless protocols, and scalable global network architectures. We also address social challenges by improving connectivity in underserved areas, building disaster-resilient networks, and developing communication platforms capable of meeting rapidly changing global and local needs.Based in the nature-rich Kochi Prefecture of Japan, the GIC Laboratory serves as a bridge between global research aspirations and regional innovation. By utilizing state-of-the-art communication technologies to contribute to areas such as regional revitalization, the realization of smart communities, and the promotion of environmental sustainability, we strive to achieve both academic excellence and meaningful social impact.",
+  "mission": "We advance intelligent, secure, and resilient communication technologies that connect people and communities across terrestrial, aerial, and space networks.",
+  "homepage": {
+    "researchAreaIds": ["6g-beyond", "sagin", "ai-networking"],
+    "selectedPublicationUrls": [
+      "https://doi.org/10.1109/TCCN.2026.3660763",
+      "https://ieeexplore.ieee.org/abstract/document/10643413",
+      "https://ieeexplore.ieee.org/abstract/document/10365490"
+    ],
+    "achievementCount": 3
+  },
+  "about": "The Global Intelligent Communication (GIC) Laboratory conducts cutting-edge research on next-generation communication systems. Our work spans satellite communications, high-altitude platform stations (HAPS), low-altitude networks for unmanned aerial vehicles (UAVs) and flying vehicles, 6G technologies, and evolving Wi-Fi systems. We seek to develop robust, intelligent, and highly adaptable communication infrastructure by integrating AI-driven optimization, advanced wireless protocols, and scalable global network architectures. We also address societal challenges by improving connectivity in underserved areas, building disaster-resilient networks, and developing communication platforms that can respond to rapidly changing global and local needs. Based in Kochi Prefecture, Japan, the GIC Laboratory connects global research ambitions with regional innovation. We use advanced communication technologies to support regional revitalization, smart communities, and environmental sustainability while pursuing academic excellence and meaningful social impact.",
   "contact": {
     "email": "shikhar[a]kochi-tech.ac.jp",
     "address": "Room A260, 2nd Floor, Building A, Kochi University of Technology"
@@ -10,8 +20,8 @@
   "links": [
     { "label": "GitHub", "url": "https://github.com/IGC-Lab-KUT" },
     { "label": "University Homepage", "url": "https://www.kochi-tech.ac.jp/english/" },
-    { "label": "University of Infomatics Homepage", "url": "https://www.info.kochi-tech.ac.jp/" },
-    { "label": "Teacher's Information", "url": "https://www.kochi-tech.ac.jp/profile/ja/shikhar.html" }
+    { "label": "School of Informatics", "url": "https://www.info.kochi-tech.ac.jp/" },
+    { "label": "Faculty Profile", "url": "https://www.kochi-tech.ac.jp/profile/en/shikhar.html" }
   ],
   "copyright": "Shikhar Lab"
 }

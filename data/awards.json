@@ -2,67 +2,89 @@
 {
         "year": "2025",
         "title": "Best Paper Award",
+        "titleJa": "最優秀論文賞",
         "recipients": "Shikhar",
-        "venue": "IEEE 9th International Conference on Network Intelligence and Digital Content (IEEE IC-NIDC 2025), Beijing, China"
+        "venue": "IEEE 9th International Conference on Network Intelligence and Digital Content (IEEE IC-NIDC 2025), Beijing, China",
+        "venueJa": "第9回 IEEE International Conference on Network Intelligence and Digital Content（IEEE IC-NIDC 2025、中国・北京）"
     },
     {
         "year": "2024",
         "title": "Young Scientist Award for Outstanding Research",
+        "titleJa": "若手研究者優秀研究賞",
         "recipients": "Shikhar",
-        "venue": "Department of Electrical Engineering, Communication Engineering, Electronic Engineering, and Information Engineering (ECEI), Tohoku University"
+        "venue": "Department of Electrical Engineering, Communication Engineering, Electronic Engineering, and Information Engineering (ECEI), Tohoku University",
+        "venueJa": "東北大学 電気・通信・電子・情報工学専攻（ECEI）"
     },
     {
         "year": "2022",
         "title": "Excellent Researcher Award for Young Faculty",
+        "titleJa": "若手教員優秀研究者賞",
         "recipients": "Shikhar",
-        "venue": "Department of Electrical Engineering, Communication Engineering, Electronic Engineering, and Information Engineering (ECEI), Tohoku University"
+        "venue": "Department of Electrical Engineering, Communication Engineering, Electronic Engineering, and Information Engineering (ECEI), Tohoku University",
+        "venueJa": "東北大学 電気・通信・電子・情報工学専攻（ECEI）"
     },
     {
         "year": "2021",
         "title": "Dean Award for Excellent Thesis",
+        "titleJa": "優秀学位論文賞（研究科長賞）",
         "recipients": "Shikhar",
-        "venue": "Graduate School of Information Sciences, Tohoku University"
+        "venue": "Graduate School of Information Sciences, Tohoku University",
+        "venueJa": "東北大学 大学院情報科学研究科"
     },
     {
         "year": "2020",
         "title": "Student Travel Grant",
+        "titleJa": "学生渡航助成金",
         "recipients": "Shikhar",
-        "venue": "IEEE Global Communications Conference (GLOBECOM)"
+        "venue": "IEEE Global Communications Conference (GLOBECOM)",
+        "venueJa": "IEEE Global Communications Conference（GLOBECOM）"
     },
     {
         "year": "2020",
         "title": "Best Student Paper Award",
+        "titleJa": "最優秀学生論文賞",
         "recipients": "Shikhar",
-        "venue": "IEEE Vehicular Technology Society Japan"
+        "venue": "IEEE Vehicular Technology Society Japan",
+        "venueJa": "IEEE Vehicular Technology Society 日本支部"
     },
     {
-        "year": "2021",
+        "year": "2019–2021",
         "title": "Fellowship",
+        "titleJa": "特別研究員フェローシップ",
         "recipients": "Shikhar",
-        "venue": "Japan Society for the Promotion of Science (JSPS)"
+        "venue": "Japan Society for the Promotion of Science (JSPS)",
+        "venueJa": "日本学術振興会（JSPS）"
     },
     {
         "year": "2018",
         "title": "Best Paper",
+        "titleJa": "最優秀論文賞",
         "recipients": "Shikhar",
-        "venue": "International Conference on Communications (ICC) 2018"
+        "venue": "International Conference on Communications (ICC) 2018",
+        "venueJa": "IEEE International Conference on Communications（ICC 2018）"
     },
     {
         "year": "2018",
         "title": "Student Travel Grant",
+        "titleJa": "学生渡航助成金",
         "recipients": "Shikhar",
-        "venue": "International Conference on Communications (ICC) 2018"
+        "venue": "International Conference on Communications (ICC) 2018",
+        "venueJa": "IEEE International Conference on Communications（ICC 2018）"
     },
     {
         "year": "2017",
         "title": "Research Excellence Award",
+        "titleJa": "研究優秀賞",
         "recipients": "Shikhar",
-        "venue": "IEEE ComSoc Sendai Chapter"
+        "venue": "IEEE ComSoc Sendai Chapter",
+        "venueJa": "IEEE Communications Society Sendai Chapter"
     },
     {
-        "year": "2019",
+        "year": "2015–2019",
         "title": "Scholarship",
+        "titleJa": "奨学金",
         "recipients": "Shikhar",
-        "venue": "Ministry of Education, Culture, Sports, Science and Technology (MEXT)"
+        "venue": "Ministry of Education, Culture, Sports, Science and Technology (MEXT)",
+        "venueJa": "文部科学省（MEXT）"
     }
 ]
