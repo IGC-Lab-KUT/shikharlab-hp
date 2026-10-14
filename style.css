@@ -509,6 +509,18 @@ main > section > h2 {
   color: var(--color-blue-dark);
 }
 
+.publication-type {
+  display: inline-block;
+  margin-bottom: 0.45rem;
+  padding: 0.2rem 0.55rem;
+  color: var(--color-blue-dark);
+  background: var(--color-blue-soft);
+  border-radius: 99rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
 .section-note {
   margin-top: -0.65rem;
   margin-bottom: 1.3rem;

@@ -85,6 +85,7 @@ researchmap は確認済みURLを表示しています。ResearchGate は未確�
 ```json
 {
   "year": 2026,
+  "type": "journal",
   "title": "論文タイトル",
   "authors": "著者名",
   "venue": "会議・雑誌名",
@@ -92,6 +93,7 @@ researchmap は確認済みURLを表示しています。ResearchGate は未確�
 }
 ```
 `url` は論文ページへのリンク（なければ空文字列）。
+`type` は `journal`（論文誌）、`conference`（国際会議）、`bookChapter`（書籍章）のいずれかを指定します。
 
 ### 受賞情報を追加する
 `data/awards.json` に追加:
