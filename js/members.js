@@ -1,38 +1,58 @@
-function memberCard(member, lang) {
+function hasMemberContent(member) {
+  return Boolean(member && (member.nameJa || member.nameEn || member.name || member.role || member.photo));
+}
+
+function memberCard(member) {
   const displayName = member.nameJa || member.nameEn || member.name || '';
-  
-  // 日本語ページの場合は画像のパスを1つ上の階層に調整する
-  let photoSrc = member.photo;
-  if (photoSrc && lang === 'ja' && !photoSrc.startsWith('http')) {
-    photoSrc = '../' + photoSrc;
+  const card = createElement('article', { className: 'member-card' });
+  const photoSource = safeImageSource(member.photo);
+  if (photoSource) {
+    card.append(createElement('img', {
+      attributes: {
+        src: photoSource, alt: displayName, width: 150, height: 150,
+        loading: 'lazy', decoding: 'async',
+      },
+    }));
+  } else {
+    card.append(createElement('div', {
+      className: 'member-placeholder', text: displayName.slice(0, 1), attributes: { 'aria-hidden': 'true' },
+    }));
   }
-  
-  const img = photoSrc
-    ? `<img src="${photoSrc}" alt="${displayName}">`
-    : '';
-  const nameJa = member.nameJa
-    ? `<p class="name-ja">${member.nameJa}</p>`
-    : '';
-  const nameEn = member.nameEn
-    ? `<p class="name-en">${member.nameEn}</p>`
-    : '';
-  const name = (!member.nameJa && !member.nameEn && member.name)
-    ? `<h3>${member.name}</h3>`
-    : `<div class="name-group">${nameJa}${nameEn}</div>`;
-  return `<div class="member-card">${img}${name}<p class="role">${member.role}</p></div>`;
+
+  const names = createElement('div', { className: 'name-group' });
+  if (member.nameJa) names.append(createElement('h3', { className: 'name-ja', text: member.nameJa }));
+  if (member.nameEn) names.append(createElement(member.nameJa ? 'p' : 'h3', { className: 'name-en', text: member.nameEn }));
+  if (!member.nameJa && !member.nameEn) names.append(createElement('h3', { text: member.name || '' }));
+  card.append(names);
+  if (member.role) card.append(createElement('p', { className: 'role', text: member.role }));
+  return card;
+}
+
+function renderMemberGroup(data, key, gridId, sectionId) {
+  const members = (data[key] || []).filter(hasMemberContent);
+  const section = document.getElementById(sectionId);
+  if (!members.length) {
+    section.hidden = true;
+    return;
+  }
+  document.getElementById(gridId).replaceChildren(...members.map(memberCard));
 }
 
 async function renderMembers() {
   const lang = document.documentElement.lang || 'en';
-  // 言語によってJSONのパスを切り替える
-  const dataPath = lang === 'ja' ? '../data/members.json' : 'data/members.json';
-  const data = await fetch(dataPath).then(r => r.json());
-
-  document.getElementById('pi-grid').innerHTML = data.pi.map(m => memberCard(m, lang)).join('');
-  document.getElementById('phd-grid').innerHTML = data.phd.map(m => memberCard(m, lang)).join('');
-  document.getElementById('master-grid').innerHTML = data.master.map(m => memberCard(m, lang)).join('');
-  document.getElementById('alumni-grid').innerHTML = data.alumni.map(m => memberCard(m, lang)).join('');
-  document.getElementById('bachelor-grid').innerHTML = data.bachelor.map(m => memberCard(m, lang)).join('');
+  const main = document.querySelector('main');
+  try {
+    const data = await fetchJson('data/members.json');
+    renderMemberGroup(data, 'pi', 'pi-grid', 'pi-section');
+    renderMemberGroup(data, 'researchCollaborators', 'collaborators-grid', 'collaborators-section');
+    renderMemberGroup(data, 'phd', 'phd-grid', 'phd-section');
+    renderMemberGroup(data, 'master', 'master-grid', 'master-section');
+    renderMemberGroup(data, 'bachelor', 'bachelor-grid', 'bachelor-section');
+    renderMemberGroup(data, 'alumni', 'alumni-grid', 'alumni-section');
+  } catch (error) {
+    console.error(error);
+    showLoadError(main, lang);
+  }
 }
 
 renderMembers();
