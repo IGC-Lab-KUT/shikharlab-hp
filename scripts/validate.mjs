@@ -22,10 +22,22 @@ const jsFiles = files.filter(path => ['.js', '.mjs'].includes(extname(path)));
 for (const path of jsonFiles) {
   try {
     const source = readFileSync(path, 'utf8');
-    JSON.parse(source);
+    const data = JSON.parse(source);
     for (const match of source.matchAll(/["'](data\/imgs\/[^"']+)["']/g)) {
       if (!existsSync(join(root, match[1]))) failures.push(`${relative(root, path)}: missing image ${match[1]}`);
     }
+    const inspectUrls = value => {
+      if (Array.isArray(value)) value.forEach(inspectUrls);
+      else if (value && typeof value === 'object') {
+        for (const [key, child] of Object.entries(value)) {
+          if (/^(?:url|urlEn|urlJa|photoSource)$/.test(key) && child && !/^https:\/\//i.test(child)) {
+            failures.push(`${relative(root, path)}: external ${key} must use https`);
+          }
+          inspectUrls(child);
+        }
+      }
+    };
+    inspectUrls(data);
   } catch (error) {
     failures.push(`${relative(root, path)}: invalid JSON (${error.message})`);
   }

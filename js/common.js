@@ -30,6 +30,12 @@ function safeExternalUrl(value) {
   }
 }
 
+function safeInternalPath(value) {
+  if (typeof value !== 'string' || !value) return null;
+  if (/^[a-z][a-z\d+.-]*:/i.test(value) || value.startsWith('/') || value.split('/').includes('..')) return null;
+  return value.replace(/^\.\//, '');
+}
+
 async function fetchJson(path) {
   const response = await fetch(contentPath(path), { cache: 'no-cache' });
   if (!response.ok) throw new Error(`Unable to load ${path} (${response.status})`);
@@ -71,17 +77,18 @@ function renderHeader(config, lang) {
   const navItems = [
     { href: 'index.html', en: 'Home', ja: 'ホーム', hasJa: true },
     { href: 'members.html', en: 'Members', ja: 'メンバー', hasJa: true },
+    { href: 'projects.html', en: 'Research', ja: '研究', hasJa: true },
     { href: 'publications.html', en: 'Publications', ja: '業績', hasJa: true },
-    { href: 'projects.html', en: 'Projects', ja: 'プロジェクト', hasJa: true },
     { href: 'awards.html', en: 'Awards', ja: '受賞歴', hasJa: false },
+    { href: 'opportunities.html', en: 'Opportunities', ja: '進学・共同研究', hasJa: true },
   ];
 
   const header = createElement('header', { className: 'site-header' });
   const utility = createElement('div', { className: 'header-utility' });
-  const currentItem = navItems.find(item => item.href === currentPage);
+  const bilingualPages = new Set(['index.html', 'members.html', 'projects.html', 'publications.html', 'pi.html', 'opportunities.html']);
   const languageUrl = lang === 'ja'
     ? `../${currentPage}`
-    : currentItem?.hasJa ? `ja/${currentPage}` : 'ja/index.html';
+    : bilingualPages.has(currentPage) ? `ja/${currentPage}` : 'ja/index.html';
   utility.append(createElement('a', {
     className: 'language-link',
     text: lang === 'ja' ? 'English' : '日本語',

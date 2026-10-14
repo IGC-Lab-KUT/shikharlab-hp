@@ -12,6 +12,9 @@ data/           ← ここを編集するだけでサイトが更新される
   publications.json - 論文一覧
   projects.json - プロジェクト一覧
   awards.json   - 受賞一覧
+  pi.json       - 指導教員プロフィール・学歴・職歴・学会活動・プロフィールリンク
+  research.json - 研究分野（英語・日本語）
+  opportunities.json - 進学・共同研究案内（英語・日本語）
 ```
 
 サイトの共通デザインは `style.css`、共通ナビゲーション・安全なデータ読み込み処理は
@@ -39,6 +42,39 @@ data/           ← ここを編集するだけでサイトが更新される
 }
 ```
 写真は `data/imgs/` フォルダに置いて `photo` にリポジトリルートからのパスを指定（空文字列でも可）。
+指導教員カードからプロフィールページへリンクする場合は、`profilePage` に `pi.html` を指定します。
+
+### 指導教員プロフィールを更新する
+`data/pi.json` の `en` / `ja` を編集します。
+
+- `education`: 学歴・学位
+- `appointments`: 過去の職歴
+- `researchInterests`: 研究関心
+- `professionalService`: 編集・学会活動
+- `selectedPublicationUrls`: `data/publications.json` からプロフィールに掲載する論文URL
+- `profileLinks`: 学術プロフィールへのリンク
+
+`profileLinks` は、本人確認済みのURLだけ `verified: true` にしてください。URLが未確認の項目は
+`urlEn` / `urlJa` を空のままにし、`verified: false` としてください。未確認リンクはサイト上に表示されません。
+
+現在、Google Scholar、ORCID、Scopus、IEEE Xplore、ResearchGate、LinkedIn は
+`placeholder` として登録されています。本人確認済みURLを入力した後にのみ公開してください。
+
+### 研究分野を更新する
+`data/research.json` の `areas` を編集します。各項目には英語・日本語のタイトルと説明を設定します。
+`data/projects.json` は既存の研究プロジェクト情報として引き続き利用します。
+
+### 進学・共同研究案内を更新する
+`data/opportunities.json` の `en` / `ja` を編集します。学生区分、研究テーマ、望ましい背景、
+問い合わせ手順、必要情報、共同研究の形態をJSONから更新できます。募集枠、奨学金、研究費など、
+時期により変わる情報は確認できた場合にのみ追加してください。
+
+### ホームページのハイライトを更新する
+`data/config.json` と `data/ja/config.json` の `homepage` を編集します。
+
+- `researchAreaIds`: ホームに表示する `data/research.json` のID
+- `selectedPublicationUrls`: ホームに表示する `data/publications.json` のURL
+- `achievementCount`: `data/awards.json` の先頭から表示する件数
 
 ### 論文を追加する
 `data/publications.json` に追加（年の降順に並べる）:
@@ -59,8 +95,10 @@ data/           ← ここを編集するだけでサイトが更新される
 {
   "year": 2026,
   "title": "Best Paper Award",
+  "titleJa": "最優秀論文賞",
   "recipients": "受賞者名",
   "venue": "会議・学会名",
+  "venueJa": "会議・学会名（日本語）",
   "url": "https://..."
 }
 ```

@@ -1,0 +1,232 @@
+{
+  "photo": "https://www.kochi-tech.ac.jp/profile/en/img/shikhar-1.png",
+  "photoSource": "https://www.kochi-tech.ac.jp/profile/en/shikhar.html",
+  "selectedPublicationUrls": [
+    "https://doi.org/10.1109/TCCN.2026.3660763",
+    "https://ieeexplore.ieee.org/abstract/document/10643413",
+    "https://ieeexplore.ieee.org/abstract/document/10365490",
+    "https://ieeexplore.ieee.org/abstract/document/9634163"
+  ],
+  "profileLinks": [
+    {
+      "id": "university",
+      "labelEn": "University faculty profile",
+      "labelJa": "大学教員プロフィール",
+      "urlEn": "https://www.kochi-tech.ac.jp/profile/en/shikhar.html",
+      "urlJa": "https://www.kochi-tech.ac.jp/profile/ja/shikhar.html",
+      "verified": true
+    },
+    {
+      "id": "researchmap",
+      "labelEn": "researchmap",
+      "labelJa": "researchmap",
+      "urlEn": "https://researchmap.jp/shikhar.verma",
+      "urlJa": "https://researchmap.jp/shikhar.verma",
+      "verified": true
+    },
+    {
+      "id": "googleScholar",
+      "labelEn": "Google Scholar",
+      "labelJa": "Google Scholar",
+      "urlEn": "",
+      "urlJa": "",
+      "verified": false,
+      "placeholder": "REQUIRED: verified Google Scholar profile URL"
+    },
+    {
+      "id": "orcid",
+      "labelEn": "ORCID",
+      "labelJa": "ORCID",
+      "urlEn": "",
+      "urlJa": "",
+      "verified": false,
+      "placeholder": "REQUIRED: verified ORCID profile URL"
+    },
+    {
+      "id": "scopus",
+      "labelEn": "Scopus",
+      "labelJa": "Scopus",
+      "urlEn": "",
+      "urlJa": "",
+      "verified": false,
+      "placeholder": "REQUIRED: verified Scopus author profile URL"
+    },
+    {
+      "id": "ieeeXplore",
+      "labelEn": "IEEE Xplore",
+      "labelJa": "IEEE Xplore",
+      "urlEn": "",
+      "urlJa": "",
+      "verified": false,
+      "placeholder": "REQUIRED: verified IEEE Xplore author profile URL"
+    },
+    {
+      "id": "researchGate",
+      "labelEn": "ResearchGate",
+      "labelJa": "ResearchGate",
+      "urlEn": "",
+      "urlJa": "",
+      "verified": false,
+      "placeholder": "REQUIRED: verified ResearchGate profile URL"
+    },
+    {
+      "id": "linkedin",
+      "labelEn": "LinkedIn",
+      "labelJa": "LinkedIn",
+      "urlEn": "",
+      "urlJa": "",
+      "verified": false,
+      "placeholder": "REQUIRED: verified LinkedIn profile URL"
+    }
+  ],
+  "en": {
+    "name": "Shikhar Verma",
+    "appointment": "Lecturer",
+    "affiliation": "School of Informatics, Kochi University of Technology, Japan",
+    "biography": "Shikhar Verma is a Lecturer in the School of Informatics at Kochi University of Technology. His research spans intelligent next-generation communication networks, including 6G, satellite and aerial communications, information security, the Internet of Things, and networking supported by artificial intelligence. Before joining Kochi University of Technology, he served as a Specially Appointed Assistant Professor at Tohoku University and as a JSPS Research Fellow (DC2).",
+    "education": [
+      {
+        "qualification": "Doctoral degree",
+        "institution": "Tohoku University, Japan",
+        "year": "2021"
+      },
+      {
+        "qualification": "Master's degree",
+        "institution": "Tohoku University, Japan",
+        "year": "2018"
+      }
+    ],
+    "appointments": [
+      {
+        "role": "Specially Appointed Assistant Professor",
+        "institution": "Tohoku University, Japan",
+        "period": "2021–2025"
+      },
+      {
+        "role": "Research Fellow (DC2)",
+        "institution": "Japan Society for the Promotion of Science",
+        "period": "2019–2021"
+      }
+    ],
+    "researchInterests": [
+      "6G and beyond wireless communication",
+      "Space–air–ground integrated networks",
+      "Satellite and non-terrestrial communication",
+      "Artificial intelligence for communication networks",
+      "Wireless and Internet of Things security",
+      "UAV and low-altitude communication networks",
+      "Advanced WiFi systems"
+    ],
+    "professionalService": [
+      {
+        "role": "TPC Member",
+        "organization": "32nd National Conference on Communications (NCC), India",
+        "period": "2025–"
+      },
+      {
+        "role": "TPC Member",
+        "organization": "IEEE International Conference on Communications 2026",
+        "period": "2026–"
+      },
+      {
+        "role": "Publicity Co-Chair",
+        "organization": "18th International Conference on COMmunication Systems & NETworkS",
+        "period": "2025–2026"
+      },
+      {
+        "role": "Guest Editor",
+        "organization": "IEEE Internet of Things Journal",
+        "period": "2025–"
+      },
+      {
+        "role": "Associate Editor",
+        "organization": "IEEE Communications Surveys & Tutorials",
+        "period": "2024–"
+      },
+      {
+        "role": "Associate Editor",
+        "organization": "IEEE Internet of Things",
+        "period": "2023–"
+      }
+    ],
+    "contact": {
+      "email": "shikhar[a]kochi-tech.ac.jp",
+      "office": "Room A260, 2nd Floor, Building A, Kochi University of Technology"
+    }
+  },
+  "ja": {
+    "name": "SHIKHAR（シカール）",
+    "appointment": "講師",
+    "affiliation": "高知工科大学 情報学群",
+    "biography": "SHIKHARは、高知工科大学情報学群の講師です。6G、衛星・空中通信、情報セキュリティ、IoT、人工知能を活用したネットワークなど、次世代の知的通信ネットワークを幅広く研究しています。高知工科大学着任前は、東北大学特任助教および日本学術振興会特別研究員（DC2）を務めました。",
+    "education": [
+      {
+        "qualification": "博士",
+        "institution": "東北大学",
+        "year": "2021"
+      },
+      {
+        "qualification": "修士",
+        "institution": "東北大学",
+        "year": "2018"
+      }
+    ],
+    "appointments": [
+      {
+        "role": "特任助教",
+        "institution": "東北大学",
+        "period": "2021–2025"
+      },
+      {
+        "role": "特別研究員（DC2）",
+        "institution": "日本学術振興会",
+        "period": "2019–2021"
+      }
+    ],
+    "researchInterests": [
+      "6G・Beyond 6G無線通信",
+      "宇宙・空・地上統合ネットワーク",
+      "衛星・非地上系通信",
+      "通信ネットワークのための人工知能",
+      "無線・IoTセキュリティ",
+      "UAV・低高度通信ネットワーク",
+      "高度WiFiシステム"
+    ],
+    "professionalService": [
+      {
+        "role": "TPC委員",
+        "organization": "32nd National Conference on Communications (NCC), India",
+        "period": "2025–"
+      },
+      {
+        "role": "TPC委員",
+        "organization": "IEEE International Conference on Communications 2026",
+        "period": "2026–"
+      },
+      {
+        "role": "広報共同委員長",
+        "organization": "18th International Conference on COMmunication Systems & NETworkS",
+        "period": "2025–2026"
+      },
+      {
+        "role": "ゲストエディタ",
+        "organization": "IEEE Internet of Things Journal",
+        "period": "2025–"
+      },
+      {
+        "role": "アソシエイトエディタ",
+        "organization": "IEEE Communications Surveys & Tutorials",
+        "period": "2024–"
+      },
+      {
+        "role": "アソシエイトエディタ",
+        "organization": "IEEE Internet of Things",
+        "period": "2023–"
+      }
+    ],
+    "contact": {
+      "email": "shikhar[a]kochi-tech.ac.jp",
+      "office": "高知工科大学 A棟2階 A260室"
+    }
+  }
+}

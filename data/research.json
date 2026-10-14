@@ -1,0 +1,46 @@
+{
+  "areas": [
+    {
+      "id": "6g-beyond",
+      "titleEn": "6G and Beyond Wireless Communication",
+      "titleJa": "6G・Beyond 6G無線通信",
+      "summaryEn": "Advanced radio access, spectrum use, intelligent surfaces, high-frequency links, and evolving WiFi technologies for adaptable future networks.",
+      "summaryJa": "将来の適応型ネットワークに向けて、高度な無線アクセス、周波数利用、知的反射面、高周波リンク、進化するWiFi技術を研究します。"
+    },
+    {
+      "id": "sagin",
+      "titleEn": "Space–Air–Ground Integrated Networks (SAGIN)",
+      "titleJa": "宇宙・空・地上統合ネットワーク（SAGIN）",
+      "summaryEn": "Integrated architectures that coordinate satellite, high-altitude, aerial, and terrestrial network layers for broad and resilient connectivity.",
+      "summaryJa": "衛星、高高度プラットフォーム、航空、地上の各ネットワーク層を連携させ、広域で強靱な接続を実現する統合アーキテクチャを研究します。"
+    },
+    {
+      "id": "ntn",
+      "titleEn": "Satellite and Non-Terrestrial Networks",
+      "titleJa": "衛星・非地上系ネットワーク",
+      "summaryEn": "Reliable links, computing, resource coordination, and interference management for LEO constellations, HAPS, and other non-terrestrial platforms.",
+      "summaryJa": "LEO衛星コンステレーション、HAPSなどの非地上系プラットフォームを対象に、信頼性の高いリンク、計算資源、リソース連携、干渉管理を研究します。"
+    },
+    {
+      "id": "ai-networking",
+      "titleEn": "AI-Enabled and Intelligent Networking",
+      "titleJa": "AI活用型・知的ネットワーキング",
+      "summaryEn": "Machine learning, deep reinforcement learning, prediction, and multi-agent methods for proactive and adaptive network control.",
+      "summaryJa": "機械学習、深層強化学習、予測、マルチエージェント手法を用いた、先回り型かつ適応的なネットワーク制御を研究します。"
+    },
+    {
+      "id": "secure-resilient",
+      "titleEn": "Secure and Resilient Wireless Communications",
+      "titleJa": "安全で強靱な無線通信",
+      "summaryEn": "Jamming mitigation, localization, information security, and robust communication strategies for changing and disrupted environments.",
+      "summaryJa": "変化や障害が生じる環境に対応するため、ジャミング対策、位置推定、情報セキュリティ、堅牢な通信方式を研究します。"
+    },
+    {
+      "id": "uav-lae",
+      "titleEn": "UAV and Low-Altitude Economy Communication Systems",
+      "titleJa": "UAV・低高度経済圏の通信システム",
+      "summaryEn": "Connectivity, path planning, and proactive mobility management for UAVs, flying vehicles, and emerging low-altitude services.",
+      "summaryJa": "UAV、飛行体、新たな低高度サービスに向けて、接続、経路計画、先回り型モビリティ管理を研究します。"
+    }
+  ]
+}
