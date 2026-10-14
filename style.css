@@ -403,6 +403,61 @@ main > section > h2 {
   min-height: 6rem;
 }
 
+.card-icon {
+  display: inline-grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  margin-bottom: 0.7rem;
+  background: var(--color-blue-soft);
+  border-radius: 50%;
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.icon-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.85rem;
+}
+
+.icon-card .card-icon {
+  margin-bottom: 0;
+}
+
+.icon-card-content {
+  min-width: 0;
+}
+
+.section-intro {
+  max-width: 58rem;
+  margin: -0.35rem 0 1.25rem;
+  color: var(--color-muted);
+}
+
+.lab-life-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.lab-life-layout > div > h3 {
+  margin-bottom: 0.9rem;
+  color: var(--color-navy);
+  font-size: 1.2rem;
+}
+
+.lab-life-grid {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.lab-life-card {
+  padding: 1rem;
+  border-top-width: 1px;
+}
+
 .achievement-year,
 .timeline-period,
 .service-period {
@@ -474,7 +529,7 @@ main > section > h2 {
 .profile-photo {
   display: block;
   width: 100%;
-  max-height: 22rem;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
   object-position: top center;
   border-radius: var(--radius-md);
@@ -553,6 +608,10 @@ main > section > h2 {
 .timeline-item p,
 .service-item p {
   margin-bottom: 0.15rem;
+}
+
+.service-item--no-period {
+  grid-template-columns: 1fr;
 }
 
 .timeline-item h3,
@@ -935,7 +994,8 @@ main > section > h2 {
 
   .profile-hero,
   .profile-layout,
-  .two-column-layout {
+  .two-column-layout,
+  .lab-life-layout {
     grid-template-columns: 1fr;
   }
 

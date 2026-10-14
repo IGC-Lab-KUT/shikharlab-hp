@@ -7,15 +7,23 @@ function textList(items, containerId) {
 function pathwayCard(item) {
   const card = createElement('article', { className: 'pathway-card' });
   card.append(
+    createElement('span', { className: 'card-icon', text: item.icon, attributes: { 'aria-hidden': 'true' } }),
     createElement('h3', { text: item.title }),
     createElement('p', { text: item.description }),
   );
   return card;
 }
 
-function collaborationCard(text) {
-  const card = createElement('article', { className: 'feature-card feature-card--compact' });
-  card.append(createElement('p', { text }));
+function iconCard(item, extraClass = '') {
+  const card = createElement('article', { className: `feature-card icon-card ${extraClass}`.trim() });
+  card.append(
+    createElement('span', { className: 'card-icon', text: item.icon, attributes: { 'aria-hidden': 'true' } }),
+    createElement('div', { className: 'icon-card-content' }),
+  );
+  card.lastElementChild.append(
+    createElement('h3', { text: item.title }),
+    createElement('p', { text: item.description }),
+  );
   return card;
 }
 
@@ -32,10 +40,15 @@ async function renderOpportunities() {
     document.getElementById('opportunity-pathways').replaceChildren(...content.pathways.map(pathwayCard));
     textList(content.topics, 'opportunity-topics');
     textList(content.backgrounds, 'opportunity-backgrounds');
-    textList(content.contactSteps, 'opportunity-steps');
-    textList(content.applicantInformation, 'opportunity-materials');
+    document.getElementById('collaboration-intro').textContent = content.collaborationIntro;
     document.getElementById('collaboration-options').replaceChildren(
-      ...content.collaboration.map(collaborationCard),
+      ...content.collaboration.map(item => iconCard(item, 'collaboration-card')),
+    );
+    document.getElementById('lab-activities').replaceChildren(
+      ...content.labActivities.map(item => iconCard(item, 'lab-life-card')),
+    );
+    document.getElementById('lab-facilities').replaceChildren(
+      ...content.labFacilities.map(item => iconCard(item, 'lab-life-card')),
     );
     document.getElementById('opportunity-contact-heading').textContent = content.contactLabel;
     document.getElementById('opportunity-contact-note').textContent = content.contactNote;

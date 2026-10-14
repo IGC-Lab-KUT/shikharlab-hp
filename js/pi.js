@@ -23,10 +23,9 @@ function contributionItem(publication) {
 
 function serviceItem(item) {
   const row = createElement('article', { className: 'service-item' });
-  row.append(
-    createElement('p', { className: 'service-period', text: item.period }),
-    createElement('div', { text: `${item.role} — ${item.organization}` }),
-  );
+  if (item.period) row.append(createElement('p', { className: 'service-period', text: item.period }));
+  row.append(createElement('div', { text: `${item.role} — ${item.organization}` }));
+  if (!item.period) row.classList.add('service-item--no-period');
   return row;
 }
 
@@ -52,14 +51,20 @@ async function renderPiProfile() {
     const profile = data[lang] || data.en;
     const photoSource = safeImageSource(data.photo);
     if (photoSource) {
-      const photoLink = createElement('a', {
-        attributes: { href: safeExternalUrl(data.photoSource), target: '_blank', rel: 'noopener noreferrer' },
-      });
-      photoLink.append(createElement('img', {
+      const photo = createElement('img', {
         className: 'profile-photo',
-        attributes: { src: photoSource, alt: profile.name, width: 360, height: 420, decoding: 'async' },
-      }));
-      document.getElementById('pi-photo-wrap').append(photoLink);
+        attributes: { src: photoSource, alt: profile.name, width: 800, height: 1200, decoding: 'async' },
+      });
+      const sourceUrl = safeExternalUrl(data.photoSource);
+      if (sourceUrl) {
+        const photoLink = createElement('a', {
+          attributes: { href: sourceUrl, target: '_blank', rel: 'noopener noreferrer' },
+        });
+        photoLink.append(photo);
+        document.getElementById('pi-photo-wrap').append(photoLink);
+      } else {
+        document.getElementById('pi-photo-wrap').append(photo);
+      }
     }
 
     document.getElementById('pi-name').textContent = profile.name;

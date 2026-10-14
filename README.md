@@ -53,21 +53,24 @@ data/           ← ここを編集するだけでサイトが更新される
 - `professionalService`: 編集・学会活動
 - `selectedPublicationUrls`: `data/publications.json` からプロフィールに掲載する論文URL
 - `profileLinks`: 学術プロフィールへのリンク
+- `photo`: `data/imgs/` に置いたプロフィール写真のパス
 
 `profileLinks` は、本人確認済みのURLだけ `verified: true` にしてください。URLが未確認の項目は
 `urlEn` / `urlJa` を空のままにし、`verified: false` としてください。未確認リンクはサイト上に表示されません。
 
-現在、Google Scholar、ORCID、Scopus、IEEE Xplore、ResearchGate、LinkedIn は
-`placeholder` として登録されています。本人確認済みURLを入力した後にのみ公開してください。
+現在、Google Scholar、ORCID、Scopus、IEEE Xplore、LinkedIn、大学教員プロフィール、
+researchmap は確認済みURLを表示しています。ResearchGate は未確認のため `placeholder` として
+登録され、サイト上には表示されません。本人確認済みURLを入力した後にのみ公開してください。
 
 ### 研究分野を更新する
 `data/research.json` の `areas` を編集します。各項目には英語・日本語のタイトルと説明を設定します。
 `data/projects.json` は既存の研究プロジェクト情報として引き続き利用します。
 
 ### 進学・共同研究案内を更新する
-`data/opportunities.json` の `en` / `ja` を編集します。学生区分、研究テーマ、望ましい背景、
-問い合わせ手順、必要情報、共同研究の形態をJSONから更新できます。募集枠、奨学金、研究費など、
-時期により変わる情報は確認できた場合にのみ追加してください。
+`data/opportunities.json` の `en` / `ja` を編集します。学生区分、研究テーマ、修士・博士課程に
+望ましい背景、学術・産業共同研究、研究室の日常、設備情報をJSONから更新できます。各カードの
+`icon` には短い絵文字を指定できます。募集枠、奨学金、研究費など、時期により変わる情報は
+確認できた場合にのみ追加してください。
 
 ### ホームページのハイライトを更新する
 `data/config.json` と `data/ja/config.json` の `homepage` を編集します。

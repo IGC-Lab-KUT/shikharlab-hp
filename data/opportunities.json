@@ -1,16 +1,19 @@
 {
   "en": {
-    "intro": "GIC Lab welcomes enquiries from students and researchers whose interests align with intelligent next-generation communication systems. Admission, supervision, funding, and project participation depend on university procedures, academic fit, and available capacity; no position or financial support is guaranteed by this page.",
+    "intro": "GIC Lab welcomes enquiries from students, researchers, and organizations whose interests align with intelligent next-generation communication systems. Admission, supervision, funding, and project participation depend on university procedures, academic fit, and available capacity; no position or financial support is guaranteed by this page.",
     "pathways": [
       {
+        "icon": "🎓",
         "title": "Undergraduate students",
-        "description": "Explore communication and networking research through seminars, project work, and graduation research within the School of Informatics."
+        "description": "Students whose interests align with communication and networking research can explore the field through seminars, project work, and graduation research within the School of Informatics."
       },
       {
+        "icon": "🔬",
         "title": "Master's students",
         "description": "Develop focused research on wireless systems, intelligent networking, satellite or aerial communications, security, or related areas."
       },
       {
+        "icon": "📡",
         "title": "Doctoral students",
         "description": "Pursue original research that advances intelligent, secure, and resilient communication networks. Prospective applicants should consult the university's official admissions information."
       }
@@ -24,46 +27,92 @@
       "UAV and low-altitude communication systems"
     ],
     "backgrounds": [
+      "A master's or doctoral research interest aligned with the laboratory's research areas",
       "Computer science, informatics, electrical or communication engineering, or a closely related field",
       "Foundations in computer networks, wireless communication, algorithms, or probability",
       "Programming experience; Python and data-analysis skills are particularly useful",
-      "Interest in mathematical modeling, simulation, machine learning, or experimental systems",
-      "Ability to read technical literature and communicate research ideas in English"
+      "Interest in mathematical modeling, simulation, machine learning, or experimental systems"
     ],
-    "contactSteps": [
-      "Review the laboratory's research areas, current projects, and publications.",
-      "Consult the official Kochi University of Technology admissions or affiliation requirements that apply to you.",
-      "Send a concise email explaining the specific research connection and your intended study or collaboration route."
-    ],
-    "applicantInformation": [
-      "A brief introduction and current affiliation",
-      "Curriculum vitae or academic résumé",
-      "Academic background and, where relevant, transcripts",
-      "Research interests and a short explanation of their fit with GIC Lab",
-      "Relevant publications, thesis, portfolio, source code, or project experience",
-      "Intended degree, collaboration type, and proposed timeline"
-    ],
+    "collaborationIntro": "The laboratory actively develops international academic and industry partnerships for joint research, co-authored publications, technical exchange, and student research opportunities.",
     "collaboration": [
-      "Joint academic research and co-authored studies",
-      "Research exchanges, seminars, and technical discussions",
-      "Data, simulation, and experimental collaboration where appropriate",
-      "Industry–university exploration of intelligent communication challenges"
-    ],
-    "contactLabel": "Contact the laboratory",
-    "contactNote": "Use the laboratory email below for an initial enquiry. Please do not send sensitive personal documents until requested through an appropriate university channel."
-  },
-  "ja": {
-    "intro": "GIC研究室では、次世代知的通信システムに関心を持つ学生・研究者からのお問い合わせを受け付けています。入学、指導、研究費、プロジェクト参加は、大学の制度、研究テーマとの適合性、受入状況に基づいて決定されます。本ページは、ポジションや経済的支援を保証するものではありません。",
-    "pathways": [
       {
-        "title": "学部生",
-        "description": "情報学群のセミナー、プロジェクト研究、卒業研究を通じて、通信・ネットワーク研究に取り組みます。"
+        "icon": "🌐",
+        "title": "International academic network",
+        "description": "Collaborations include Idaho State University, Western University, National Yang Ming Chiao Tung University, Indian Institute of Technology Hyderabad (Prof. Abhinav), and National Sun Yat-sen University, Taiwan (Prof. Keshav Singh)."
       },
       {
+        "icon": "🤝",
+        "title": "Industry–university research",
+        "description": "Collaboration with NEC Corporation and Tohoku University's Kato Laboratory includes research on anti-jamming strategies for satellite–aerial–terrestrial integrated networks."
+      },
+      {
+        "icon": "📝",
+        "title": "Joint research and exchange",
+        "description": "Activities may include joint research projects, co-authored work in leading IEEE journals and conferences, seminars, technical discussions, and international research exchange."
+      }
+    ],
+    "labActivities": [
+      {
+        "icon": "📅",
+        "title": "Weekly seminar",
+        "description": "The laboratory seminar is held every Wednesday during the second period in Room A260."
+      },
+      {
+        "icon": "📚",
+        "title": "Paper discussion",
+        "description": "Students discuss research papers selected independently, from senior students' work, or on the supervisor's recommendation."
+      },
+      {
+        "icon": "📊",
+        "title": "Quarter seminar",
+        "description": "Students summarize weekly seminar work and review their overall research progress for the quarter."
+      },
+      {
+        "icon": "🎉",
+        "title": "Laboratory events",
+        "description": "Welcome gatherings, year-end events, and end-of-semester activities support an open and collegial laboratory community."
+      }
+    ],
+    "labFacilities": [
+      {
+        "icon": "🏫",
+        "title": "Room A260",
+        "description": "The Global Intelligent Communication Laboratory is located in Room A260 at Kochi University of Technology."
+      },
+      {
+        "icon": "💻",
+        "title": "Shared research workspace",
+        "description": "The laboratory provides shared desks and research space for students' daily study and project work."
+      },
+      {
+        "icon": "☕",
+        "title": "Rest and discussion area",
+        "description": "A dedicated lounge area supports informal discussion, collaboration, and breaks."
+      },
+      {
+        "icon": "🖥️",
+        "title": "Seminar space",
+        "description": "The seminar area includes whiteboards and large displays for research presentations and group discussion."
+      }
+    ],
+    "contactLabel": "Contact the laboratory",
+    "contactNote": "Students and prospective collaborators are welcome to contact Dr. Shikhar directly by email to discuss aligned research interests and possible collaboration."
+  },
+  "ja": {
+    "intro": "GIC研究室では、次世代知的通信システムに関心を持つ学生・研究者・組織からのお問い合わせを受け付けています。入学、指導、研究費、プロジェクト参加は、大学の制度、研究テーマとの適合性、受入状況に基づいて決定されます。本ページは、ポジションや経済的支援を保証するものではありません。",
+    "pathways": [
+      {
+        "icon": "🎓",
+        "title": "学部生",
+        "description": "通信・ネットワーク研究に関心を持つ学生は、情報学群のセミナー、プロジェクト研究、卒業研究を通じて研究分野を探究できます。"
+      },
+      {
+        "icon": "🔬",
         "title": "修士課程",
         "description": "無線システム、知的ネットワーク、衛星・空中通信、セキュリティなどに関する専門的な研究を進めます。"
       },
       {
+        "icon": "📡",
         "title": "博士課程",
         "description": "知的で安全かつ強靱な通信ネットワークの発展につながる独創的研究に取り組みます。出願希望者は大学の公式入試情報を確認してください。"
       }
@@ -77,32 +126,75 @@
       "UAV・低高度通信システム"
     ],
     "backgrounds": [
+      "研究室の研究分野と合致する修士・博士研究への関心",
       "情報科学、情報学、電気・通信工学、または関連分野の基礎",
       "コンピュータネットワーク、無線通信、アルゴリズム、確率に関する基礎知識",
       "プログラミング経験（特にPythonやデータ分析の技能）",
-      "数理モデル、シミュレーション、機械学習、実験システムへの関心",
-      "技術文献を読み、英語で研究内容を伝える力"
+      "数理モデル、シミュレーション、機械学習、実験システムへの関心"
     ],
-    "contactSteps": [
-      "研究室の研究分野、研究プロジェクト、研究業績を確認してください。",
-      "自分に該当する高知工科大学の入試・所属手続きを公式情報で確認してください。",
-      "関心のある研究との具体的な関係、および希望する進学・共同研究の形態を簡潔なメールで説明してください。"
-    ],
-    "applicantInformation": [
-      "簡単な自己紹介と現在の所属",
-      "履歴書または学術CV",
-      "学歴、および必要に応じて成績情報",
-      "研究関心とGIC研究室との適合性を説明する短い文章",
-      "関連する論文、学位論文、ポートフォリオ、ソースコード、プロジェクト経験",
-      "希望する学位・共同研究の形態と時期"
-    ],
+    "collaborationIntro": "研究室では、共同研究、共著論文、技術交流、学生の研究交流を通じて、国際的な学術連携および産学連携を積極的に推進しています。",
     "collaboration": [
-      "共同研究および共著研究",
-      "研究交流、セミナー、技術的な意見交換",
-      "適切な範囲でのデータ、シミュレーション、実験協力",
-      "知的通信に関する産学連携の可能性検討"
+      {
+        "icon": "🌐",
+        "title": "国際学術連携ネットワーク",
+        "description": "Idaho State University、Western University、National Yang Ming Chiao Tung University、インド工科大学ハイデラバード校（Prof. Abhinav）、台湾・国立中山大学（Prof. Keshav Singh）などと連携しています。"
+      },
+      {
+        "icon": "🤝",
+        "title": "産学共同研究",
+        "description": "NECおよび東北大学Kato研究室との連携では、衛星・空・地上統合ネットワークに向けたアンチジャミング戦略などを研究しています。"
+      },
+      {
+        "icon": "📝",
+        "title": "共同研究・研究交流",
+        "description": "共同研究プロジェクト、主要IEEE論文誌・国際会議での共著、セミナー、技術交流、国際研究交流などを行います。"
+      }
+    ],
+    "labActivities": [
+      {
+        "icon": "📅",
+        "title": "毎週のゼミ",
+        "description": "研究室ゼミは毎週水曜日の2限にA260室で行います。"
+      },
+      {
+        "icon": "📚",
+        "title": "論文輪講",
+        "description": "学生が自ら選んだ論文、先輩の研究、または指導教員が推薦した論文について議論します。"
+      },
+      {
+        "icon": "📊",
+        "title": "クォーターゼミ",
+        "description": "毎週のゼミ内容をまとめて発表し、クォーター全体の研究進捗を確認します。"
+      },
+      {
+        "icon": "🎉",
+        "title": "研究室イベント",
+        "description": "歓迎会、忘年会、学期末イベントなどを通じて、開かれた協力的な研究室コミュニティを育んでいます。"
+      }
+    ],
+    "labFacilities": [
+      {
+        "icon": "🏫",
+        "title": "A260研究室",
+        "description": "グローバル知的通信研究室は、高知工科大学A260室にあります。"
+      },
+      {
+        "icon": "💻",
+        "title": "共同研究スペース",
+        "description": "学生の日々の学習やプロジェクト研究のために、共同デスクと研究スペースを備えています。"
+      },
+      {
+        "icon": "☕",
+        "title": "休憩・交流スペース",
+        "description": "気軽な意見交換、共同作業、休憩に利用できるラウンジスペースがあります。"
+      },
+      {
+        "icon": "🖥️",
+        "title": "ゼミスペース",
+        "description": "研究発表やグループ討議のためのホワイトボードと大型ディスプレイを備えています。"
+      }
     ],
     "contactLabel": "研究室へのお問い合わせ",
-    "contactNote": "初回のお問い合わせは、下記の研究室メールアドレスをご利用ください。大学の適切な手段で依頼されるまでは、機微な個人書類を送信しないでください。"
+    "contactNote": "研究テーマとの関連や共同研究の可能性について、学生・共同研究希望者はShikhar講師へメールでお気軽にお問い合わせください。"
   }
 }
