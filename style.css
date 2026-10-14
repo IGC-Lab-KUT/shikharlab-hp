@@ -863,6 +863,7 @@ main > section > h2 {
 }
 
 .member-card img,
+.member-photo-frame,
 .member-placeholder {
   width: 9.375rem;
   height: 9.375rem;
@@ -873,7 +874,23 @@ main > section > h2 {
 .member-card img {
   display: block;
   object-fit: cover;
+  object-position: center;
   background: var(--color-border);
+}
+
+.member-photo-frame {
+  overflow: hidden;
+  background: var(--color-border);
+}
+
+.member-photo-frame img.member-photo--upper {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+  object-position: center 25%;
+  transform: scale(1.45);
+  transform-origin: center 25%;
 }
 
 .member-placeholder {

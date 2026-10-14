@@ -7,12 +7,20 @@ function memberCard(member, lang) {
   const card = createElement('article', { className: 'member-card' });
   const photoSource = safeImageSource(member.photo);
   if (photoSource) {
-    card.append(createElement('img', {
+    const photo = createElement('img', {
+      className: member.photoFocus === 'upper' ? 'member-photo member-photo--upper' : 'member-photo',
       attributes: {
         src: photoSource, alt: displayName, width: 150, height: 150,
         loading: 'lazy', decoding: 'async',
       },
-    }));
+    });
+    if (member.photoFocus === 'upper') {
+      const frame = createElement('div', { className: 'member-photo-frame' });
+      frame.append(photo);
+      card.append(frame);
+    } else {
+      card.append(photo);
+    }
   } else {
     card.append(createElement('div', {
       className: 'member-placeholder', text: displayName.slice(0, 1), attributes: { 'aria-hidden': 'true' },
