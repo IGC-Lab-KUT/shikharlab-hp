@@ -12,7 +12,7 @@ data/           ← ここを編集するだけでサイトが更新される
   publications.json - 論文一覧
   projects.json - プロジェクト一覧
   awards.json   - 受賞一覧
-  pi.json       - 指導教員プロフィール・学歴・職歴・学会活動・プロフィールリンク
+  pi.json       - 指導教員プロフィール・学歴・職歴・研究費・学会活動・プロフィールリンク
   research.json - 研究分野（英語・日本語）
   opportunities.json - 進学・共同研究案内（英語・日本語）
 ```
@@ -50,6 +50,7 @@ data/           ← ここを編集するだけでサイトが更新される
 - `education`: 学歴・学位
 - `appointments`: 過去の職歴
 - `researchInterests`: 研究関心
+- `funding`: 研究費・競争的資金（題目、役割、期間、機関、助成機関、金額）
 - `professionalService`: 編集・学会活動
 - `selectedPublicationUrls`: `data/publications.json` からプロフィールに掲載する論文URL
 - `profileLinks`: 学術プロフィールへのリンク
