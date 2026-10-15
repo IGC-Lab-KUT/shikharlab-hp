@@ -1,12 +1,70 @@
 {
-  "en": [
-    { "date": "2026-4-2", "text": "We had a cherry blossom viewing party with the members of the research lab!" },
-    { "date": "2026-4-24", "text": "We held a welcome party for the new students in the lab!" },
-    { "date": "2026-5-14,15", "text": "Yuto Morioka presented the paper \"Deep Reinforcement Learning-based Aircraft Path Planning Method for Low-Altitude Economy\" (co-authored with Shikhar Varma, Tinghan Wei, and Mikifumi Shikida) at a conference held at the Hiroshima City University Satellite Campus." }
-  ],
-  "ja": [
-    { "date": "2026-4-2", "text": "研究室のメンバーでお花見をしました！" },
-    { "date": "2026-4-24", "text": "研究室の新入生歓迎会を開催しました！" },
-    { "date": "2026-5-14,15", "text": "森岡悠斗が広島市立大学サテライトキャンパスで開催された学会で論文「Deep Reinforcement Learning-based Aircraft Path Planning Method for Low-Altitude Economy」（Shikhar Varma，Tinghan Wei，Mikifumi Shikidaとの共著）を発表しました．" }
+  "schemaVersion": 2,
+  "items": [
+    {
+      "id": "2026-05-yuto-morioka-conference-presentation",
+      "date": "2026-05-14",
+      "dateEnd": "2026-05-15",
+      "category": {
+        "id": "research-presentation",
+        "en": "Research Presentation",
+        "ja": "研究発表"
+      },
+      "title": {
+        "en": "Yuto Morioka presented research on aircraft path planning",
+        "ja": "森岡悠斗が航空機経路計画に関する研究を発表"
+      },
+      "summary": {
+        "en": "Yuto Morioka presented the paper \"Deep Reinforcement Learning-based Aircraft Path Planning Method for Low-Altitude Economy\" (co-authored with Shikhar Varma, Tinghan Wei, and Mikifumi Shikida) at a conference held at the Hiroshima City University Satellite Campus.",
+        "ja": "森岡悠斗が広島市立大学サテライトキャンパスで開催された学会で論文「Deep Reinforcement Learning-based Aircraft Path Planning Method for Low-Altitude Economy」（Shikhar Varma，Tinghan Wei，Mikifumi Shikidaとの共著）を発表しました．"
+      },
+      "content": {
+        "en": [
+          "Yuto Morioka presented the paper \"Deep Reinforcement Learning-based Aircraft Path Planning Method for Low-Altitude Economy\" at a conference held at the Hiroshima City University Satellite Campus on 14–15 May 2026.",
+          "The paper was co-authored with Shikhar Varma, Tinghan Wei, and Mikifumi Shikida."
+        ],
+        "ja": [
+          "森岡悠斗が、2026年5月14日・15日に広島市立大学サテライトキャンパスで開催された学会で、論文「Deep Reinforcement Learning-based Aircraft Path Planning Method for Low-Altitude Economy」を発表しました。",
+          "本論文は、Shikhar Varma、Tinghan Wei、Mikifumi Shikidaとの共著です。"
+        ]
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-04-new-student-welcome-party",
+      "date": "2026-04-24",
+      "category": {
+        "id": "lab-event",
+        "en": "Lab Event",
+        "ja": "研究室イベント"
+      },
+      "title": {
+        "en": "Welcome party for new laboratory students",
+        "ja": "研究室の新入生歓迎会を開催"
+      },
+      "summary": {
+        "en": "We held a welcome party for the new students in the lab!",
+        "ja": "研究室の新入生歓迎会を開催しました！"
+      },
+      "status": "published"
+    },
+    {
+      "id": "2026-04-cherry-blossom-viewing",
+      "date": "2026-04-02",
+      "category": {
+        "id": "lab-event",
+        "en": "Lab Event",
+        "ja": "研究室イベント"
+      },
+      "title": {
+        "en": "Laboratory cherry blossom viewing party",
+        "ja": "研究室メンバーでお花見"
+      },
+      "summary": {
+        "en": "We had a cherry blossom viewing party with the members of the research lab!",
+        "ja": "研究室のメンバーでお花見をしました！"
+      },
+      "status": "published"
+    }
   ]
-} 
+}

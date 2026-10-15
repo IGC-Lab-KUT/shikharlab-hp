@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shikhar Labの研究発表、研究室イベント、お知らせなどのニュース一覧です。">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <link rel="icon" href="../LOGO.PNG" type="image/png">
+  <title>ニュース一覧 - Shikhar Lab</title>
+  <link rel="stylesheet" href="../style.css?v=20261015.1">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
+  <div id="header-placeholder"></div>
+  <main id="main-content">
+    <h1 class="page-title">ニュース一覧</h1>
+    <p class="page-intro">GIC研究室からのお知らせ、研究発表、研究室イベントなどを掲載しています。</p>
+    <section aria-labelledby="news-filter-heading">
+      <h2 id="news-filter-heading">ニュースを絞り込む</h2>
+      <div class="news-filters" role="group" aria-label="ニュースの絞り込み">
+        <label for="news-year-filter">年
+          <select id="news-year-filter">
+            <option value="">すべての年</option>
+          </select>
+        </label>
+        <label for="news-category-filter">カテゴリー
+          <select id="news-category-filter">
+            <option value="">すべてのカテゴリー</option>
+          </select>
+        </label>
+      </div>
+      <p class="news-filter-status" id="news-filter-status" aria-live="polite"></p>
+      <ul class="news-archive-list" id="news-archive-list"></ul>
+    </section>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="../js/common.js?v=20261015.1"></script>
+  <script src="../js/news-utils.js?v=20261015.1"></script>
+  <script src="../js/news-archive.js?v=20261015.1"></script>
+</body>
+</html>
