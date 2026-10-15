@@ -9,21 +9,21 @@
       "category": { "id": "research-visit", "en": "Research Visit", "ja": "研究滞在" },
       "title": {
         "en": "Yuto Morioka begins a visiting research stay at NIT Meghalaya",
-        "ja": "森岡悠斗がNIT Meghalayaで客員研究滞在を開始"
+        "ja": "森岡悠人がNIT Meghalayaで客員研究滞在を開始"
       },
       "summary": {
         "en": "Yuto Morioka is visiting the National Institute of Technology Meghalaya as a visiting researcher under Prof. Diptendu Sinha Roy for three months, from October to December 2026.",
-        "ja": "森岡悠斗がDiptendu Sinha Roy教授のもと、2026年10月から12月までの3か月間、National Institute of Technology Meghalayaで客員研究員として研究滞在します。"
+        "ja": "森岡悠人がDiptendu Sinha Roy教授のもと、2026年10月から12月までの3か月間、National Institute of Technology Meghalayaで客員研究員として研究滞在します。"
       },
       "featuredImage": {
         "src": "data/imgs/news-2026-yuto-nit-meghalaya.webp",
         "alt": {
           "en": "Yuto Morioka standing at the entrance to the National Institute of Technology Meghalaya",
-          "ja": "National Institute of Technology Meghalayaの入口に立つ森岡悠斗"
+          "ja": "National Institute of Technology Meghalayaの入口に立つ森岡悠人"
         },
         "caption": {
           "en": "Yuto Morioka at the entrance to NIT Meghalaya during his visiting research stay.",
-          "ja": "客員研究滞在中、NIT Meghalayaの入口にて撮影した森岡悠斗。"
+          "ja": "客員研究滞在中、NIT Meghalayaの入口にて撮影した森岡悠人。"
         }
       },
       "status": "published",
@@ -35,11 +35,11 @@
       "category": { "id": "research-presentation", "en": "Research Presentation", "ja": "研究発表" },
       "title": {
         "en": "Yuto Morioka presented research on aerial vehicle path planning",
-        "ja": "森岡悠斗が飛行体の経路計画に関する研究を発表"
+        "ja": "森岡悠人が飛行体の経路計画に関する研究を発表"
       },
       "summary": {
         "en": "Yuto Morioka presented \"Deep Reinforcement Learning-based Aerial Vehicle Path Planning for Low-Altitude Economy\" at the IEICE IN/RCS joint technical meeting in Hiroshima.",
-        "ja": "森岡悠斗が広島で開催された電子情報通信学会IN/RCS合同研究会で「Deep Reinforcement Learning-based Aerial Vehicle Path Planning for Low-Altitude Economy」を発表しました。"
+        "ja": "森岡悠人が広島で開催された電子情報通信学会IN/RCS合同研究会で「Deep Reinforcement Learning-based Aerial Vehicle Path Planning for Low-Altitude Economy」を発表しました。"
       },
       "content": {
         "en": [
@@ -47,19 +47,19 @@
           "The paper (IN2026-3) was co-authored by Yuto Morioka, Shikhar Verma, Wei Ting Han, and Mikifumi Shikida."
         ],
         "ja": [
-          "森岡悠斗が、2026年5月14日に広島市立大学サテライトキャンパスで開催された電子情報通信学会 情報ネットワーク研究会・無線通信システム研究会 合同研究会において、「Deep Reinforcement Learning-based Aerial Vehicle Path Planning for Low-Altitude Economy」を発表しました。",
-          "本稿（IN2026-3）は、森岡悠斗、Shikhar Verma、Wei Ting Han、幹冨史樹の共著です。"
+          "森岡悠人が、2026年5月14日に広島市立大学サテライトキャンパスで開催された電子情報通信学会 情報ネットワーク研究会・無線通信システム研究会 合同研究会において、「Deep Reinforcement Learning-based Aerial Vehicle Path Planning for Low-Altitude Economy」を発表しました。",
+          "本稿（IN2026-3）は、森岡悠人、Shikhar Verma、Wei Ting Han、幹冨史樹の共著です。"
         ]
       },
       "featuredImage": {
         "src": "data/imgs/news-2026-yuto-ieice-presentation.webp",
         "alt": {
           "en": "Yuto Morioka presenting his research at the IEICE IN/RCS joint technical meeting",
-          "ja": "電子情報通信学会IN/RCS合同研究会で研究発表を行う森岡悠斗"
+          "ja": "電子情報通信学会IN/RCS合同研究会で研究発表を行う森岡悠人"
         },
         "caption": {
           "en": "Yuto Morioka presents his research at the IEICE IN/RCS joint technical meeting at the Hiroshima City University Satellite Campus.",
-          "ja": "広島市立大学サテライトキャンパスで開催された電子情報通信学会IN/RCS合同研究会で研究発表を行う森岡悠斗。"
+          "ja": "広島市立大学サテライトキャンパスで開催された電子情報通信学会IN/RCS合同研究会で研究発表を行う森岡悠人。"
         }
       },
       "links": [
