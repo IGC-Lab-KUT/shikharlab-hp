@@ -98,14 +98,14 @@
     ],
     "labGallery": [
       {
-        "image": "data/imgs/lab-seminar-space.jpg",
-        "alt": "Seminar area in Room A260 with tables, a large monitor, and an interactive display",
-        "caption": "Seminar and presentation space"
-      },
-      {
         "image": "data/imgs/lab-entrance.jpg",
         "alt": "Entrance door to the Global Intelligent Communication Laboratory in Room A260",
         "caption": "Entrance to Room A260"
+      },
+      {
+        "image": "data/imgs/lab-seminar-space.jpg",
+        "alt": "Seminar area in Room A260 with tables, a large monitor, and an interactive display",
+        "caption": "Seminar and presentation space"
       },
       {
         "image": "data/imgs/lab-workspace.jpg",
@@ -225,14 +225,14 @@
     ],
     "labGallery": [
       {
-        "image": "data/imgs/lab-seminar-space.jpg",
-        "alt": "テーブル、大型モニター、電子黒板を備えたA260室のゼミスペース",
-        "caption": "ゼミ・プレゼンテーションスペース"
-      },
-      {
         "image": "data/imgs/lab-entrance.jpg",
         "alt": "A260室グローバル知的通信研究室の入口",
         "caption": "A260室の入口"
+      },
+      {
+        "image": "data/imgs/lab-seminar-space.jpg",
+        "alt": "テーブル、大型モニター、電子黒板を備えたA260室のゼミスペース",
+        "caption": "ゼミ・プレゼンテーションスペース"
       },
       {
         "image": "data/imgs/lab-workspace.jpg",
