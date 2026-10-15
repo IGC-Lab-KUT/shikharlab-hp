@@ -15,6 +15,17 @@
         "en": "Yuto Morioka is visiting the National Institute of Technology Meghalaya as a visiting researcher under Prof. Diptendu Sinha Roy for three months, from October to December 2026.",
         "ja": "森岡悠斗がDiptendu Sinha Roy教授のもと、2026年10月から12月までの3か月間、National Institute of Technology Meghalayaで客員研究員として研究滞在します。"
       },
+      "featuredImage": {
+        "src": "data/imgs/news-2026-yuto-nit-meghalaya.webp",
+        "alt": {
+          "en": "Yuto Morioka standing at the entrance to the National Institute of Technology Meghalaya",
+          "ja": "National Institute of Technology Meghalayaの入口に立つ森岡悠斗"
+        },
+        "caption": {
+          "en": "Yuto Morioka at the entrance to NIT Meghalaya during his visiting research stay.",
+          "ja": "客員研究滞在中、NIT Meghalayaの入口にて撮影した森岡悠斗。"
+        }
+      },
       "status": "published",
       "lastUpdated": "2026-10-15"
     },
