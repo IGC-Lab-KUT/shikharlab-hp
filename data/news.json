@@ -126,6 +126,17 @@
             "en": "Shikhar Verma presents federated meta-learning for ultra-fast resource allocation in dense cell-free massive MIMO 6G networks.",
             "ja": "高密度セルフリーMassive MIMO 6Gネットワークにおける超高速資源配分のための連合メタ学習に関する研究を発表するShikhar Verma。"
           }
+        },
+        {
+          "src": "data/imgs/news-2026-icc-venue.webp",
+          "alt": {
+            "en": "Scottish Event Campus beside the River Clyde in Glasgow",
+            "ja": "グラスゴーのクライド川沿いにあるScottish Event Campus"
+          },
+          "caption": {
+            "en": "The Scottish Event Campus in Glasgow, venue of IEEE ICC 2026.",
+            "ja": "IEEE ICC 2026の会場となった英国グラスゴーのScottish Event Campus。"
+          }
         }
       ],
       "links": [
