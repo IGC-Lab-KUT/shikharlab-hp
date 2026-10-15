@@ -1,76 +1,132 @@
-˛äm˛&y∫ﬁ√Ú‚n∂´ÀÒËôÊÎ{‹ôﬂÏÖÈez{ÏÜXß{_?n)ˇ¶√©z∂≠äâÁ¢⁄^Æh≠µÁYù[ò›[€àÿÿ[^ôYô]‹’ò[YJò[YK[ô H¬àYà
-\[Ÿàò[YHOOH	‹›ö[ô… Hô]\õàò[YN¬àYà
-]ò[YH\[Ÿàò[YHOOH	€ÿöôX›	 Hô]\õà	…Œ¬àô]\õàò[YV€[ô◊Hò[YKô[àò[YKöòH	…Œ¬üBÇôù[ò›[€àXõ\⁄Yô]‹ ]JH¬àô]\õà
-\úò^Kö\–\úò^J]OÀö][\ H»]Kö][\»à◊JBàôö[\ä][HOà][H	âà][Kú›]\»OOH	‹Xõ\⁄Y	»	âà\[Ÿà][KöYOOH	‹›ö[ô…»	âà◊óÕKWÃüKWÃüIÀù\›
-][Kô]JJBàú€‹ù
+function localizedNewsValue(value, lang) {
+  if (typeof value === 'string') return value;
+  if (!value || typeof value !== 'object') return '';
+  return value[lang] || value.en || value.ja || '';
+}
 
-KäHOàãô]Kõÿÿ[P€€\\ôJKô]JJN¬üBÇôù[ò›[€àô]‹“\—]Z[
-][K[ô H¬àô]\õàõ€€X[äà
-\úò^Kö\–\úò^J][OÀò€€ù[ùÀñ€[ô◊JH	âà][Kò€€ù[ù€[ô◊Kõ[ô›
-Bà][OÀôôX]\ôY[XYŸBà
-\úò^Kö\–\úò^J][OÀö[XYŸ\ H	âà][Kö[XYŸ\Àõ[ô›
-Bà
-\úò^Kö\–\úò^J][OÀõ[ö‹ H	âà][Kõ[ö‹Àõ[ô›
-Bà
-\úò^Kö\–\úò^J][OÀúô[]YXõXÿ][€ú H	âà][Kúô[]YXõXÿ][€úÀõ[ô›
-Bà
-\úò^Kö\–\úò^J][OÀúô[]Yõ⁄ôX› H	âà][Kúô[]Yõ⁄ôX›Àõ[ô›
-Bà
-N¬üBÇôù[ò›[€àõ‹õX]ô]‹—]J][K[ô H¬à€€ú›]SXô[Hÿÿ[^ôYô]‹’ò[YJ][Kô]SXô[[ô N¬àYà
-]SXô[
-Hô]\õà]SXô[¬à€€ú›ÿÿ[HH[ô»OOH	⁄òI»»	⁄òKRî	»à	Ÿ[ãQ–âŒ¬à€€ú›‹[€ú»H»YX\éà	€ù[Y\öX…À[€ùà	‹⁄‹ù	À^Nà	€ù[Y\öX…À[YVõ€ôNà	’U…»N¬à€€ú››\ùHô]»]J	⁄][Kô]_Uååò
-N¬àYà
-ù[Xô\ãö\”òSä›\ùôŸ][YJ
-JJHô]\õà][Kô]N¬à€€ú››\ù^Hô]»[ùë]U[YQõ‹õX]
-ÿÿ[K‹[€ú Kôõ‹õX]
-›\ù
-N¬àYà
-Z][Kô]Q[ô][Kô]Q[ôOOH][Kô]JHô]\õà›\ù^¬à€€ú›[ôHô]»]J	⁄][Kô]Q[ôUååò
-N¬àYà
-ù[Xô\ãö\”òSä[ôôŸ][YJ
-JJHô]\õà›\ù^¬àô]\õà	‹›\ù^H8†$»	€ô]»[ùë]U[YQõ‹õX]
-ÿÿ[K‹[€ú Kôõ‹õX]
-[ô
-_X¬üBÇôù[ò›[€àô]‹—]Z[ôYä][JH¬àô]\õàô]‹ÀY]Z[ö[⁄YIŸ[ò€ŸUTíP€€\€ô[ù
-][KöY
-_X¬üBÇôù[ò›[€àô]‹“[XYŸJ][JH¬àô]\õà][Kù[XõòZ[][KôôX]\ôY[XYŸHù[¬üBÇôù[ò›[€àô[ô\ìô]‹–ÿ\ô
-][K[ôÀ€€\X›Hò[ŸJH¬à€€ú›ÿ\ôH‹ôX]Q[[Y[ù
-	€IÀ»€\‹”ò[YNà€€\X›»	€ô]‹ÀXÿ\ôô]‹ÀXÿ\ôKX€€\X›	»à	€ô]‹ÀXÿ\ô	»JN¬à€€ú›\—]Z[Hô]‹“\—]Z[
-][K[ô N¬à€€ú›[XYŸHHô]‹“[XYŸJ][JN¬à€€ú›[XYŸT€›\òŸHHÿYôR[XYŸT€›\òŸJ[XYŸOÀú‹ò N¬àYà
-[XYŸT€›\òŸJH¬à€€ú›ÿ\ô[XYŸHH‹ôX]Q[[Y[ù
-	⁄[Y…À¬à€\‹”ò[YNà	€ô]‹ÀXÿ\ôZ[XYŸIÀà]öXù]\Œà¬à‹òŒà[XYŸT€›\òŸKà[àÿÿ[^ôYô]‹’ò[YJ[XYŸKò[[ô KàÿY[ôŒà	€^ûIÀàX€Ÿ[ôŒà	ÿ\ﬁ[ò…ÀàKàJN¬àYà
-\—]Z[
-H¬à€€ú›[XYŸS[ö»H‹ôX]Q[[Y[ù
-	ÿIÀ¬à€\‹”ò[YNà	€ô]‹ÀXÿ\ôZ[XYŸK[[ö…Àà]öXù]\Œà¬àôYéàô]‹—]Z[ôYä][JKà	ÿ\öXK[Xô[	Œàÿÿ[^ôYô]‹’ò[YJ][Kù]K[ô KàKàJN¬à[XYŸS[öÀò\[ô
-ÿ\ô[XYŸJN¬àÿ\ôò\[ô
-[XYŸS[ö N¬àH[ŸH¬àÿ\ôò\[ô
-ÿ\ô[XYŸJN¬àBàBÇà€€ú›õŸHH‹ôX]Q[[Y[ù
-	Ÿ]âÀ»€\‹”ò[YNà	€ô]‹ÀXÿ\ôXõŸI»JN¬à€€ú›Y]HH‹ôX]Q[[Y[ù
-	Ÿ]âÀ»€\‹”ò[YNà	€ô]‹À[Y]I»JN¬àY]Kò\[ô
-à‹ôX]Q[[Y[ù
-	›[YIÀ¬à€\‹”ò[YNà	€ô]‹ÀY]IÀà^àõ‹õX]ô]‹—]J][K[ô Kà]öXù]\Œà»]][YNà][Kô]HKàJKà‹ôX]Q[[Y[ù
-	‹‹[âÀ¬à€\‹”ò[YNà	€ô]‹ÀXÿ]Y€‹ûIÀà^àÿÿ[^ôYô]‹’ò[YJ][Kòÿ]Y€‹ûK[ô KàJKà
-N¬Çà€€ú›XY[ô»H‹ôX]Q[[Y[ù
-	⁄…À»€\‹”ò[YNà	€ô]‹À]]I»JN¬àYà
-\—]Z[
-H¬àXY[ôÀò\[ô
-‹ôX]Q[[Y[ù
-	ÿIÀ¬à^àÿÿ[^ôYô]‹’ò[YJ][Kù]K[ô Kà]öXù]\Œà»ôYéàô]‹—]Z[ôYä][JHKàJJN¬àH[ŸH¬àXY[ôÀù^€€ù[ùHÿÿ[^ôYô]‹’ò[YJ][Kù]K[ô N¬àBàõŸKò\[ô
-Y]KXY[ôÀ‹ôX]Q[[Y[ù
-	‹	À¬à€\‹”ò[YNà	€ô]‹À\›[[X\ûIÀà^àÿÿ[^ôYô]‹’ò[YJ][Kú›[[X\ûK[ô KàJJN¬àYà
-\—]Z[
-H¬àõŸKò\[ô
-‹ôX]Q[[Y[ù
-	ÿIÀ¬à€\‹”ò[YNà	€ô]‹À\ôXY[[‹ôIÀà^à[ô»OOH	⁄òI»»	˙*l¯‡e¯‡c˙*´x‡†	»à	‘ôXY[‹ôIÀà]öXù]\Œà»ôYéàô]‹—]Z[ôYä][JK	ÿ\öXK[Xô[	Œà	€[ô»OOH	⁄òI»»	˙*l¯‡e¯‡c˙*´x‡†	»à	‘ôXY[‹ôIﬂNà	€ÿÿ[^ôYô]‹’ò[YJ][Kù]K[ô _XKàJJN¬àBàÿ\ôò\[ô
-õŸJN¬àô]\õàÿ\ô¬üBÇôù[ò›[€à\[ôô]‹”[ö \ô[ù][K[ô H¬à€€ú›Xô[Hÿÿ[^ôYô]‹’ò[YJ][KõXô[][Kù]K[ô N¬à€€ú›^\õò[HÿYôQ^\õò[\õ
-][Kù\õ
-N¬àYà
-^\õò[
-H¬à\[ô^\õò[[ö \ô[ùXô[^\õò[
-N¬àô]\õé¬àBà€€ú›[ù\õò[HÿYôR[ù\õò[]
-][Kù\õ
-N¬àYà
-[ù\õò[
-H\ô[ùò\[ô
-‹ôX]Q[[Y[ù
-	ÿIÀ»^àXô[]öXù]\Œà»ôYéà[ù\õò[HJJN¬üBÇù⁄[ô›Àìô]‹’RHH¬à\[ôô]‹”[öÀàõ‹õX]ô]‹—]Kàÿÿ[^ôYô]‹’ò[YKàô]‹“\—]Z[àXõ\⁄Yô]‹Ààô[ô\ìô]‹–ÿ\ôüN¬
+function publishedNews(data) {
+  return (Array.isArray(data?.items) ? data.items : [])
+    .filter(item => item && item.status === 'published' && typeof item.id === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(item.date))
+    .sort((a, b) => b.date.localeCompare(a.date));
+}
+
+function newsHasDetail(item, lang) {
+  return Boolean(
+    (Array.isArray(item?.content?.[lang]) && item.content[lang].length)
+    || item?.featuredImage
+    || (Array.isArray(item?.images) && item.images.length)
+    || (Array.isArray(item?.links) && item.links.length)
+    || (Array.isArray(item?.relatedPublications) && item.relatedPublications.length)
+    || (Array.isArray(item?.relatedProjects) && item.relatedProjects.length)
+  );
+}
+
+function formatNewsDate(item, lang) {
+  const dateLabel = localizedNewsValue(item.dateLabel, lang);
+  if (dateLabel) return dateLabel;
+  const locale = lang === 'ja' ? 'ja-JP' : 'en-GB';
+  const options = { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' };
+  const start = new Date(`${item.date}T00:00:00Z`);
+  if (Number.isNaN(start.getTime())) return item.date;
+  const startText = new Intl.DateTimeFormat(locale, options).format(start);
+  if (!item.dateEnd || item.dateEnd === item.date) return startText;
+  const end = new Date(`${item.dateEnd}T00:00:00Z`);
+  if (Number.isNaN(end.getTime())) return startText;
+  return `${startText} ‚Äì ${new Intl.DateTimeFormat(locale, options).format(end)}`;
+}
+
+function newsDetailHref(item) {
+  return `news-detail.html?id=${encodeURIComponent(item.id)}`;
+}
+
+function newsImage(item) {
+  return item.thumbnail || item.featuredImage || null;
+}
+
+function renderNewsCard(item, lang, compact = false) {
+  const card = createElement('li', { className: compact ? 'news-card news-card--compact' : 'news-card' });
+  const hasDetail = newsHasDetail(item, lang);
+  const image = newsImage(item);
+  const imageSource = safeImageSource(image?.src);
+  if (imageSource) {
+    const cardImage = createElement('img', {
+      className: 'news-card-image',
+      attributes: {
+        src: imageSource,
+        alt: localizedNewsValue(image.alt, lang),
+        loading: 'lazy',
+        decoding: 'async',
+      },
+    });
+    if (hasDetail) {
+      const imageLink = createElement('a', {
+        className: 'news-card-image-link',
+        attributes: {
+          href: newsDetailHref(item),
+          'aria-label': localizedNewsValue(item.title, lang),
+        },
+      });
+      imageLink.append(cardImage);
+      card.append(imageLink);
+    } else {
+      card.append(cardImage);
+    }
+  }
+
+  const body = createElement('div', { className: 'news-card-body' });
+  const meta = createElement('div', { className: 'news-meta' });
+  meta.append(
+    createElement('time', {
+      className: 'news-date',
+      text: formatNewsDate(item, lang),
+      attributes: { datetime: item.date },
+    }),
+    createElement('span', {
+      className: 'news-category',
+      text: localizedNewsValue(item.category, lang),
+    }),
+  );
+
+  const heading = createElement('h3', { className: 'news-title' });
+  if (hasDetail) {
+    heading.append(createElement('a', {
+      text: localizedNewsValue(item.title, lang),
+      attributes: { href: newsDetailHref(item) },
+    }));
+  } else {
+    heading.textContent = localizedNewsValue(item.title, lang);
+  }
+  body.append(meta, heading, createElement('p', {
+    className: 'news-summary',
+    text: localizedNewsValue(item.summary, lang),
+  }));
+  if (hasDetail) {
+    body.append(createElement('a', {
+      className: 'news-read-more',
+      text: lang === 'ja' ? 'Ë©≥„Åó„ÅèË™≠„ÇÄ' : 'Read more',
+      attributes: { href: newsDetailHref(item), 'aria-label': `${lang === 'ja' ? 'Ë©≥„Åó„ÅèË™≠„ÇÄ' : 'Read more'}: ${localizedNewsValue(item.title, lang)}` },
+    }));
+  }
+  card.append(body);
+  return card;
+}
+
+function appendNewsLink(parent, item, lang) {
+  const label = localizedNewsValue(item.label || item.title, lang);
+  const external = safeExternalUrl(item.url);
+  if (external) {
+    appendExternalLink(parent, label, external);
+    return;
+  }
+  const internal = safeInternalPath(item.url);
+  if (internal) parent.append(createElement('a', { text: label, attributes: { href: internal } }));
+}
+
+window.NewsUI = {
+  appendNewsLink,
+  formatNewsDate,
+  localizedNewsValue,
+  newsHasDetail,
+  publishedNews,
+  renderNewsCard,
+};
