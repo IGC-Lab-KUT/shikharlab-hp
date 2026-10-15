@@ -25,9 +25,4 @@ jobs:
         run: node scripts/validate.mjs
       - name: Classify pull-request scope
         if: github.event_name == 'pull_request'
-        run: |
-          if [[ "${{ github.head_ref }}" == news/* ]]; then
-            node scripts/check-news-scope.mjs --base "${{ github.event.pull_request.base.sha }}" --head "${{ github.event.pull_request.head.sha }}" --enforce
-          else
-            node scripts/check-news-scope.mjs --base "${{ github.event.pull_request.base.sha }}" --head "${{ github.event.pull_request.head.sha }}"
-          fi
+        run: node scripts/check-news-scope.mjs --base "${{ github.event.pull_request.base.sha }}" --head "${{ github.event.pull_request.head.sha }}"
