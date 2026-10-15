@@ -30,6 +30,185 @@
       "lastUpdated": "2026-10-15"
     },
     {
+      "id": "2026-06-ieee-vtc-spring-presentations",
+      "date": "2026-06-09",
+      "dateEnd": "2026-06-12",
+      "category": { "id": "conference-presentation", "en": "Conference Presentation", "ja": "国際会議発表" },
+      "title": {
+        "en": "Two papers presented at IEEE VTC 2026-Spring",
+        "ja": "IEEE VTC 2026-Springで2件の研究成果を発表"
+      },
+      "summary": {
+        "en": "Sayantan Bose presented two papers on intelligent handover and AI-native link management at IEEE VTC 2026-Spring in Nice, France.",
+        "ja": "Sayantan Boseが、フランス・ニースで開催されたIEEE VTC 2026-Springにおいて、インテリジェントハンドオーバーとAIネイティブリンク管理に関する2件の研究成果を発表しました。"
+      },
+      "content": {
+        "en": [
+          "Sayantan Bose presented two papers at the 2026 IEEE 103rd Vehicular Technology Conference (VTC 2026-Spring), held in Nice, France, from 9 to 12 June 2026.",
+          "The first paper, \"Latency-Aware Intelligent Handover Approach for Flying Vehicles in Low-Altitude Economy Networks,\" investigates intelligent handover for aerial vehicles in low-altitude economy networks.",
+          "The second paper, \"AI-Native End-to-End Link Management over SAGIN via Anomaly-Resilient Prediction for 6G In-Flight Communications,\" was presented at the 2nd International Workshop on Intelligent Aerial and Spaceborne Systems for 6G (6G SAGA)."
+        ],
+        "ja": [
+          "Sayantan Boseが、2026年6月9日から12日までフランス・ニースで開催された2026 IEEE 103rd Vehicular Technology Conference（VTC 2026-Spring）において、2件の研究成果を発表しました。",
+          "1件目の論文「Latency-Aware Intelligent Handover Approach for Flying Vehicles in Low-Altitude Economy Networks」では、低高度経済圏ネットワークにおける飛行体向けインテリジェントハンドオーバーについて検討しています。",
+          "2件目の論文「AI-Native End-to-End Link Management over SAGIN via Anomaly-Resilient Prediction for 6G In-Flight Communications」は、2nd International Workshop on Intelligent Aerial and Spaceborne Systems for 6G（6G SAGA）で発表しました。"
+        ]
+      },
+      "links": [
+        {
+          "label": { "en": "IEEE VTC 2026-Spring official website", "ja": "IEEE VTC 2026-Spring 公式サイト" },
+          "url": "https://events.vtsociety.org/vtc2026-spring/"
+        },
+        {
+          "label": { "en": "6G SAGA workshop program", "ja": "6G SAGAワークショッププログラム" },
+          "url": "https://events.vtsociety.org/vtc2026-spring/conference-sessions/workshops-currently-available/w2-2nd-international-workshop-on-intelligent-aerial-and-spaceborne-systems-for-6g-6g-saga-communication-sensing-and-autonomy-for-mobility/"
+        }
+      ],
+      "author": "Shikhar Lab",
+      "status": "published",
+      "lastUpdated": "2026-10-15"
+    },
+    {
+      "id": "2026-05-ieee-icc-presentations",
+      "date": "2026-05-24",
+      "dateEnd": "2026-05-28",
+      "category": { "id": "conference-presentation", "en": "Conference Presentation", "ja": "国際会議発表" },
+      "title": {
+        "en": "Three papers presented at IEEE ICC 2026 and ICC Workshops",
+        "ja": "IEEE ICC 2026およびICC Workshopsで3件の研究成果を発表"
+      },
+      "summary": {
+        "en": "Shikhar Verma presented three papers on RIS-aided SAGIN and intelligent resource allocation at IEEE ICC 2026 in Glasgow, United Kingdom.",
+        "ja": "Shikhar Vermaが、英国グラスゴーで開催されたIEEE ICC 2026において、RIS支援SAGINおよびインテリジェント資源配分に関する3件の研究成果を発表しました。"
+      },
+      "content": {
+        "en": [
+          "Shikhar Verma presented three papers at the 2026 IEEE International Conference on Communications (IEEE ICC 2026) and its workshops, held in Glasgow, United Kingdom, from 24 to 28 May 2026.",
+          "The ICC Workshops paper \"Deep Reinforcement Learning for Interference Suppression in RIS-Aided Space-Air-Ground Integrated Networks\" studies learning-based interference suppression for integrated networks.",
+          "The two main-conference papers address energy-efficient dynamic spectrum allocation for massive THz IoT networks and federated meta-learning for ultra-fast resource allocation in dense cell-free massive MIMO 6G networks."
+        ],
+        "ja": [
+          "Shikhar Vermaが、2026年5月24日から28日まで英国グラスゴーで開催された2026 IEEE International Conference on Communications（IEEE ICC 2026）および併設ワークショップにおいて、3件の研究成果を発表しました。",
+          "ICC Workshopsで発表した論文「Deep Reinforcement Learning for Interference Suppression in RIS-Aided Space-Air-Ground Integrated Networks」では、統合ネットワークにおける学習ベースの干渉抑制を検討しています。",
+          "本会議の2件の論文では、大規模THz IoTネットワーク向けのエネルギー効率に優れた動的スペクトル配分と、高密度セルフリーMassive MIMO 6Gネットワーク向けの超高速資源配分のための連合メタ学習を扱っています。"
+        ]
+      },
+      "featuredImage": {
+        "src": "data/imgs/news-2026-icc-spectrum.webp",
+        "alt": {
+          "en": "Shikhar Verma presenting energy-efficient dynamic spectrum allocation research at IEEE ICC 2026",
+          "ja": "IEEE ICC 2026でエネルギー効率に優れた動的スペクトル配分に関する研究を発表するShikhar Verma"
+        },
+        "caption": {
+          "en": "Shikhar Verma presents energy-efficient dynamic spectrum allocation for massive THz IoT networks.",
+          "ja": "大規模THz IoTネットワーク向けのエネルギー効率に優れた動的スペクトル配分に関する研究を発表するShikhar Verma。"
+        }
+      },
+      "images": [
+        {
+          "src": "data/imgs/news-2026-icc.webp",
+          "alt": {
+            "en": "Shikhar Verma presenting research at IEEE ICC 2026 in Glasgow",
+            "ja": "グラスゴーで開催されたIEEE ICC 2026で研究発表を行うShikhar Verma"
+          },
+          "caption": {
+            "en": "Shikhar Verma presents research on RIS-aided space–air–ground integrated networks at IEEE ICC 2026.",
+            "ja": "IEEE ICC 2026でRIS支援型の衛星・空・地上統合ネットワークに関する研究を発表するShikhar Verma。"
+          }
+        },
+        {
+          "src": "data/imgs/news-2026-icc-meta-learning.webp",
+          "alt": {
+            "en": "Shikhar Verma presenting federated meta-learning research at IEEE ICC 2026",
+            "ja": "IEEE ICC 2026で連合メタ学習に関する研究を発表するShikhar Verma"
+          },
+          "caption": {
+            "en": "Shikhar Verma presents federated meta-learning for ultra-fast resource allocation in dense cell-free massive MIMO 6G networks.",
+            "ja": "高密度セルフリーMassive MIMO 6Gネットワークにおける超高速資源配分のための連合メタ学習に関する研究を発表するShikhar Verma。"
+          }
+        }
+      ],
+      "links": [
+        {
+          "label": { "en": "IEEE ICC 2026 official website", "ja": "IEEE ICC 2026 公式サイト" },
+          "url": "https://icc2026.ieee-icc.org/"
+        }
+      ],
+      "relatedPublications": [
+        {
+          "title": { "en": "Deep Reinforcement Learning for Interference Suppression in RIS-Aided Space-Air-Ground Integrated Networks", "ja": "Deep Reinforcement Learning for Interference Suppression in RIS-Aided Space-Air-Ground Integrated Networks" },
+          "url": "https://ieeexplore.ieee.org/document/11586530"
+        },
+        {
+          "title": { "en": "Energy-Efficient Dynamic Spectrum Allocation for Massive THz IoT Networks Using Quantum Approximate Optimization Algorithm", "ja": "Energy-Efficient Dynamic Spectrum Allocation for Massive THz IoT Networks Using Quantum Approximate Optimization Algorithm" },
+          "url": "https://ieeexplore.ieee.org/document/11587626"
+        },
+        {
+          "title": { "en": "Federated Meta-Learning for Ultra-Fast Resource Allocation in Dense Cell-Free Massive MIMO 6G Networks", "ja": "Federated Meta-Learning for Ultra-Fast Resource Allocation in Dense Cell-Free Massive MIMO 6G Networks" },
+          "url": "https://ieeexplore.ieee.org/document/11587010"
+        }
+      ],
+      "author": "Shikhar Lab",
+      "status": "published",
+      "lastUpdated": "2026-10-15"
+    },
+    {
+      "id": "2026-05-ieee-infocom-workshops-presentation",
+      "date": "2026-05-18",
+      "category": { "id": "conference-presentation", "en": "Conference Presentation", "ja": "国際会議発表" },
+      "title": {
+        "en": "Research on jamming-resilient LEO satellite-IoT networks presented at IEEE INFOCOM Workshops 2026",
+        "ja": "IEEE INFOCOM Workshops 2026で耐ジャミングLEO衛星IoTネットワークに関する研究を発表"
+      },
+      "summary": {
+        "en": "Shikhar Verma presented Q-FLAP, a quantum-secured federated learning approach for jamming-resilient LEO satellite-IoT networks, at IEEE INFOCOM Workshops 2026 in Tokyo.",
+        "ja": "Shikhar Vermaが、東京で開催されたIEEE INFOCOM Workshops 2026において、耐ジャミングLEO衛星IoTネットワーク向け量子セキュア連合学習手法Q-FLAPを発表しました。"
+      },
+      "content": {
+        "en": [
+          "Shikhar Verma presented the paper \"Q-FLAP: Quantum-Secured Federated Learning with Adaptive Protection for Jamming-Resilient LEO Satellite-IoT Networks\" at IEEE INFOCOM Workshops 2026 in Tokyo, Japan, on 18 May 2026.",
+          "The paper was presented at the workshop on Resilient and Intelligent Non-Terrestrial Networks (RI-NTNs 2026)."
+        ],
+        "ja": [
+          "Shikhar Vermaが、2026年5月18日に東京で開催されたIEEE INFOCOM Workshops 2026において、論文「Q-FLAP: Quantum-Secured Federated Learning with Adaptive Protection for Jamming-Resilient LEO Satellite-IoT Networks」を発表しました。",
+          "本論文は、Resilient and Intelligent Non-Terrestrial Networks（RI-NTNs 2026）ワークショップで発表されました。"
+        ]
+      },
+      "featuredImage": {
+        "src": "data/imgs/news-2026-infocom-1.webp",
+        "alt": {
+          "en": "Shikhar Verma presenting Q-FLAP at IEEE INFOCOM Workshops 2026 in Tokyo",
+          "ja": "東京で開催されたIEEE INFOCOM Workshops 2026でQ-FLAPを発表するShikhar Verma"
+        },
+        "caption": {
+          "en": "Shikhar Verma presents Q-FLAP at IEEE INFOCOM Workshops 2026 in Tokyo.",
+          "ja": "東京で開催されたIEEE INFOCOM Workshops 2026でQ-FLAPを発表するShikhar Verma。"
+        }
+      },
+      "images": [
+        {
+          "src": "data/imgs/news-2026-infocom-2.webp",
+          "alt": {
+            "en": "Q-FLAP presentation during IEEE INFOCOM Workshops 2026",
+            "ja": "IEEE INFOCOM Workshops 2026でのQ-FLAPの研究発表"
+          },
+          "caption": {
+            "en": "The Q-FLAP presentation at the RI-NTNs 2026 workshop.",
+            "ja": "RI-NTNs 2026ワークショップでのQ-FLAPの研究発表。"
+          }
+        }
+      ],
+      "relatedPublications": [
+        {
+          "title": { "en": "Q-FLAP: Quantum-Secured Federated Learning with Adaptive Protection for Jamming-Resilient LEO Satellite-IoT Networks", "ja": "Q-FLAP: Quantum-Secured Federated Learning with Adaptive Protection for Jamming-Resilient LEO Satellite-IoT Networks" },
+          "url": "https://ieeexplore.ieee.org/document/11571279"
+        }
+      ],
+      "author": "Shikhar Lab",
+      "status": "published",
+      "lastUpdated": "2026-10-15"
+    },
+    {
       "id": "2026-05-yuto-morioka-conference-presentation",
       "date": "2026-05-14",
       "category": { "id": "research-presentation", "en": "Research Presentation", "ja": "研究発表" },
@@ -106,6 +285,125 @@
           "ja": "高知工科大学で桜を楽しむ研究室メンバー。"
         }
       },
+      "status": "published",
+      "lastUpdated": "2026-10-15"
+    },
+    {
+      "id": "2025-12-ieee-globecom-presentations",
+      "date": "2025-12-08",
+      "dateEnd": "2025-12-12",
+      "category": { "id": "conference-presentation", "en": "Conference Presentation", "ja": "国際会議発表" },
+      "title": {
+        "en": "Two papers presented at IEEE GLOBECOM 2025 and GLOBECOM Workshops",
+        "ja": "IEEE GLOBECOM 2025およびGLOBECOM Workshopsで2件の研究成果を発表"
+      },
+      "summary": {
+        "en": "Shikhar Verma presented two papers on robust THz beam alignment and multi-layer jamming mitigation at IEEE GLOBECOM 2025 in Taipei, Taiwan.",
+        "ja": "Shikhar Vermaが、台湾・台北で開催されたIEEE GLOBECOM 2025において、ロバストTHzビームアライメントと多層ジャミング対策に関する2件の研究成果を発表しました。"
+      },
+      "content": {
+        "en": [
+          "Shikhar Verma presented two papers at the 2025 IEEE Global Communications Conference (IEEE GLOBECOM 2025) and its workshops, held in Taipei, Taiwan, from 8 to 12 December 2025.",
+          "The GLOBECOM Workshops paper \"Hybrid Trajectory Prediction for Robust THz Beam Alignment in Mobile Networks\" studies robust beam alignment for mobile networks.",
+          "The main-conference paper \"Mitigating Multi-Layer Jamming Attacks in Satellite-Air-Ground Integrated Networks\" addresses resilience against multi-layer jamming in integrated networks."
+        ],
+        "ja": [
+          "Shikhar Vermaが、2025年12月8日から12日まで台湾・台北で開催された2025 IEEE Global Communications Conference（IEEE GLOBECOM 2025）および併設ワークショップにおいて、2件の研究成果を発表しました。",
+          "GLOBECOM Workshopsで発表した論文「Hybrid Trajectory Prediction for Robust THz Beam Alignment in Mobile Networks」では、モバイルネットワークにおけるロバストなビームアライメントを検討しています。",
+          "本会議で発表した論文「Mitigating Multi-Layer Jamming Attacks in Satellite-Air-Ground Integrated Networks」では、統合ネットワークにおける多層ジャミングへの耐性向上を扱っています。"
+        ]
+      },
+      "featuredImage": {
+        "src": "data/imgs/news-2025-globecom-workshop.webp",
+        "alt": {
+          "en": "Shikhar Verma presenting research on THz beam alignment at IEEE GLOBECOM Workshops 2025",
+          "ja": "IEEE GLOBECOM Workshops 2025でTHzビームアライメントに関する研究を発表するShikhar Verma"
+        },
+        "caption": {
+          "en": "Shikhar Verma presents research on robust THz beam alignment at IEEE GLOBECOM Workshops 2025.",
+          "ja": "IEEE GLOBECOM Workshops 2025でロバストTHzビームアライメントに関する研究を発表するShikhar Verma。"
+        }
+      },
+      "images": [
+        {
+          "src": "data/imgs/news-2025-globecom-main.webp",
+          "alt": {
+            "en": "Shikhar Verma presenting research on multi-layer jamming attacks at IEEE GLOBECOM 2025",
+            "ja": "IEEE GLOBECOM 2025で多層ジャミング攻撃に関する研究を発表するShikhar Verma"
+          },
+          "caption": {
+            "en": "Shikhar Verma presents research on mitigating multi-layer jamming attacks in satellite–air–ground integrated networks.",
+            "ja": "衛星・空・地上統合ネットワークにおける多層ジャミング攻撃対策に関する研究を発表するShikhar Verma。"
+          }
+        }
+      ],
+      "links": [
+        {
+          "label": { "en": "IEEE GLOBECOM 2025 official website", "ja": "IEEE GLOBECOM 2025 公式サイト" },
+          "url": "https://globecom2025.ieee-globecom.org/"
+        }
+      ],
+      "relatedPublications": [
+        {
+          "title": { "en": "Hybrid Trajectory Prediction for Robust THz Beam Alignment in Mobile Networks", "ja": "Hybrid Trajectory Prediction for Robust THz Beam Alignment in Mobile Networks" },
+          "url": "https://ieeexplore.ieee.org/document/11590891"
+        },
+        {
+          "title": { "en": "Mitigating Multi-Layer Jamming Attacks in Satellite-Air-Ground Integrated Networks", "ja": "Mitigating Multi-Layer Jamming Attacks in Satellite-Air-Ground Integrated Networks" },
+          "url": "https://ieeexplore.ieee.org/document/11432509"
+        }
+      ],
+      "author": "Shikhar Lab",
+      "status": "published",
+      "lastUpdated": "2026-10-15"
+    },
+    {
+      "id": "2025-06-ieee-vtc-spring-presentation",
+      "date": "2025-06-17",
+      "dateEnd": "2025-06-20",
+      "category": { "id": "conference-presentation", "en": "Conference Presentation", "ja": "国際会議発表" },
+      "title": {
+        "en": "WiGig channel analysis presented at IEEE VTC 2025-Spring",
+        "ja": "IEEE VTC 2025-SpringでWiGigチャネル解析に関する研究を発表"
+      },
+      "summary": {
+        "en": "Shikhar Verma presented research on statistical variation in real-world WiGig channel data at IEEE VTC 2025-Spring in Oslo, Norway.",
+        "ja": "Shikhar Vermaが、ノルウェー・オスロで開催されたIEEE VTC 2025-Springにおいて、実環境WiGigチャネルデータの統計的変動に関する研究を発表しました。"
+      },
+      "content": {
+        "en": [
+          "Shikhar Verma presented the paper \"Empirical Analysis of Statistical Variation in Channel Data of WiGig Networks Towards 6G\" at the 2025 IEEE 101st Vehicular Technology Conference (VTC 2025-Spring).",
+          "The conference was held in Oslo, Norway, from 17 to 20 June 2025."
+        ],
+        "ja": [
+          "Shikhar Vermaが、2025 IEEE 101st Vehicular Technology Conference（VTC 2025-Spring）において、論文「Empirical Analysis of Statistical Variation in Channel Data of WiGig Networks Towards 6G」を発表しました。",
+          "本会議は、2025年6月17日から20日までノルウェー・オスロで開催されました。"
+        ]
+      },
+      "featuredImage": {
+        "src": "data/imgs/news-2025-vtc-spring.webp",
+        "alt": {
+          "en": "Shikhar Verma presenting WiGig channel research at IEEE VTC 2025-Spring",
+          "ja": "IEEE VTC 2025-SpringでWiGigチャネル研究を発表するShikhar Verma"
+        },
+        "caption": {
+          "en": "Shikhar Verma presents research on statistical variation in WiGig channel data at IEEE VTC 2025-Spring.",
+          "ja": "IEEE VTC 2025-SpringでWiGigチャネルデータの統計的変動に関する研究を発表するShikhar Verma。"
+        }
+      },
+      "links": [
+        {
+          "label": { "en": "IEEE VTC 2025-Spring official website", "ja": "IEEE VTC 2025-Spring 公式サイト" },
+          "url": "https://events.vtsociety.org/vtc2025-spring/"
+        }
+      ],
+      "relatedPublications": [
+        {
+          "title": { "en": "Empirical Analysis of Statistical Variation in Channel Data of WiGig Networks Towards 6G", "ja": "Empirical Analysis of Statistical Variation in Channel Data of WiGig Networks Towards 6G" },
+          "url": "https://doi.org/10.1109/VTC2025-Spring65109.2025.11174633"
+        }
+      ],
+      "author": "Shikhar Lab",
       "status": "published",
       "lastUpdated": "2026-10-15"
     }
