@@ -58,9 +58,11 @@ Routine news branches should change only:
 - `data/news.json`
 - approved photographs named `data/imgs/news-*`
 
-An automated scope check rejects other files on branches beginning with `news/`. If another file is truly required, stop and ask the repository owner to handle the update as a structural change.
+Every added or modified news photograph must be referenced by `data/news.json`. The branch name is only a naming convention. Every pull request is classified from its changed files, including deleted and renamed files. Changes outside the two routine paths are structural changes and require review from the repository owner through `.github/CODEOWNERS`. If another file is truly required, stop and ask the repository owner to handle the update as a structural change.
 
 The site is published when a change reaches `main`. Repository permissions determine who can merge or push; the instructions in `AGENTS.md` do not grant or enforce GitHub access.
+
+For independent student publishing, the `main` protection rule must require pull requests and the `validate` check, require Code Owner review, and use zero general required approvals. With that combination, a valid news-only pull request has no code owner and can be merged by a student with Write access, while structural files require professor approval.
 
 ## Correct an announcement
 
