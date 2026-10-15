@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shikhar Labのニュース記事詳細です。">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <link rel="icon" href="../LOGO.PNG" type="image/png">
+  <title>ニュース記事 - Shikhar Lab</title>
+  <link rel="stylesheet" href="../style.css?v=20261015.3">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
+  <div id="header-placeholder"></div>
+  <main id="main-content" class="news-article-page">
+    <p class="news-back-link"><a href="news.html">← ニュース一覧</a></p>
+    <article class="news-article">
+      <header class="news-article-header">
+        <div class="news-meta">
+          <time class="news-date" id="news-article-date"></time>
+          <span class="news-category" id="news-article-category"></span>
+        </div>
+        <h1 class="page-title" id="news-article-title">ニュース記事</h1>
+        <p class="news-article-intro" id="news-article-intro"></p>
+        <p class="news-article-metadata" id="news-article-metadata"></p>
+      </header>
+      <div id="news-featured"></div>
+      <div class="news-article-content" id="news-article-content"></div>
+      <section id="news-article-gallery-section" aria-labelledby="news-gallery-heading">
+        <h2 id="news-gallery-heading">写真</h2>
+        <div class="news-article-gallery" id="news-article-gallery"></div>
+      </section>
+      <div id="news-related-content"></div>
+    </article>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="../js/common.js?v=20261015.1"></script>
+  <script src="../js/news-utils.js?v=20261015.3"></script>
+  <script src="../js/news-detail.js?v=20261015.3"></script>
+</body>
+</html>

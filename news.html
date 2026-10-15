@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse announcements, events, presentations, and other news from Shikhar Lab.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <link rel="icon" href="LOGO.PNG" type="image/png">
+  <title>News Archive - Shikhar Lab</title>
+  <link rel="stylesheet" href="style.css?v=20261015.3">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div id="header-placeholder"></div>
+  <main id="main-content">
+    <h1 class="page-title">News Archive</h1>
+    <p class="page-intro">Announcements, research presentations, laboratory events, and other updates from GIC Lab.</p>
+    <section aria-labelledby="news-filter-heading">
+      <h2 id="news-filter-heading">Browse news</h2>
+      <div class="news-filters" role="group" aria-label="News filters">
+        <label for="news-year-filter">Year
+          <select id="news-year-filter">
+            <option value="">All years</option>
+          </select>
+        </label>
+        <label for="news-category-filter">Category
+          <select id="news-category-filter">
+            <option value="">All categories</option>
+          </select>
+        </label>
+      </div>
+      <p class="news-filter-status" id="news-filter-status" aria-live="polite"></p>
+      <ul class="news-archive-list" id="news-archive-list"></ul>
+    </section>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="js/common.js?v=20261015.1"></script>
+  <script src="js/news-utils.js?v=20261015.3"></script>
+  <script src="js/news-archive.js?v=20261015.1"></script>
+</body>
+</html>

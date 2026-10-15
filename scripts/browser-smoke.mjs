@@ -9,8 +9,12 @@ const playwrightModule = await import(moduleName.startsWith('/') ? pathToFileURL
 const { chromium } = playwrightModule.default || playwrightModule;
 
 const pages = [
-  'index.html', 'members.html', 'pi.html', 'publications.html', 'projects.html', 'awards.html', 'opportunities.html', 'lab-life.html',
-  'ja/index.html', 'ja/members.html', 'ja/pi.html', 'ja/publications.html', 'ja/projects.html', 'ja/opportunities.html', 'ja/lab-life.html',
+  'index.html', 'members.html', 'pi.html', 'publications.html', 'projects.html', 'awards.html', 'opportunities.html', 'lab-life.html', 'news.html',
+  'news-detail.html?id=2026-05-yuto-morioka-conference-presentation',
+  'news-detail.html?id=2026-04-cherry-blossom-welcome-gathering',
+  'ja/index.html', 'ja/members.html', 'ja/pi.html', 'ja/publications.html', 'ja/projects.html', 'ja/opportunities.html', 'ja/lab-life.html', 'ja/news.html',
+  'ja/news-detail.html?id=2026-05-yuto-morioka-conference-presentation',
+  'ja/news-detail.html?id=2026-04-cherry-blossom-welcome-gathering',
 ];
 const viewports = [
   { name: 'desktop', width: 1440, height: 1000 },
@@ -53,6 +57,12 @@ for (const viewport of viewports) {
       'ja/opportunities.html': ['.pathway-card', 3],
       'lab-life.html': ['.lab-gallery-item', 5],
       'ja/lab-life.html': ['.lab-gallery-item', 5],
+      'news.html': ['.news-card', 3],
+      'ja/news.html': ['.news-card', 3],
+      'news-detail.html?id=2026-05-yuto-morioka-conference-presentation': ['.news-article-content p', 2],
+      'news-detail.html?id=2026-04-cherry-blossom-welcome-gathering': ['.news-article-content p', 2],
+      'ja/news-detail.html?id=2026-05-yuto-morioka-conference-presentation': ['.news-article-content p', 2],
+      'ja/news-detail.html?id=2026-04-cherry-blossom-welcome-gathering': ['.news-article-content p', 2],
     }[pagePath];
     if (expectedContent && await page.locator(expectedContent[0]).count() < expectedContent[1]) {
       failures.push(`${viewport.name} ${pagePath}: missing rendered content`);
@@ -60,6 +70,15 @@ for (const viewport of viewports) {
 
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
     if (overflow) failures.push(`${viewport.name} ${pagePath}: horizontal overflow`);
+
+    const enlargeButton = page.locator('.news-image-button').first();
+    if (await enlargeButton.count()) {
+      await enlargeButton.click();
+      const lightbox = page.locator('.news-lightbox[open]');
+      if (!(await lightbox.isVisible())) failures.push(`${viewport.name} ${pagePath}: image lightbox did not open`);
+      await page.keyboard.press('Escape');
+      if (await lightbox.count()) failures.push(`${viewport.name} ${pagePath}: image lightbox did not close with Escape`);
+    }
 
     if (viewport.name === 'mobile') {
       const toggle = page.locator('.nav-toggle');
@@ -72,8 +91,8 @@ for (const viewport of viewports) {
       }
     }
 
-    if (['index.html', 'pi.html', 'projects.html', 'opportunities.html', 'lab-life.html', 'ja/index.html', 'ja/pi.html', 'ja/projects.html', 'ja/opportunities.html', 'ja/lab-life.html'].includes(pagePath)) {
-      const name = pagePath.replaceAll('/', '-').replace('.html', '') || 'index';
+    if (['index.html', 'pi.html', 'projects.html', 'opportunities.html', 'lab-life.html', 'news.html', 'news-detail.html?id=2026-05-yuto-morioka-conference-presentation', 'news-detail.html?id=2026-04-cherry-blossom-welcome-gathering', 'ja/index.html', 'ja/pi.html', 'ja/projects.html', 'ja/opportunities.html', 'ja/lab-life.html', 'ja/news.html', 'ja/news-detail.html?id=2026-05-yuto-morioka-conference-presentation', 'ja/news-detail.html?id=2026-04-cherry-blossom-welcome-gathering'].includes(pagePath)) {
+      const name = pagePath.replaceAll('/', '-').replaceAll('?', '-').replaceAll('=', '-').replace('.html', '') || 'index';
       await page.screenshot({ path: resolve(outputDirectory, `${name}-${viewport.name}.png`), fullPage: true });
     }
     await page.close();

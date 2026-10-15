@@ -86,10 +86,11 @@ function renderHeader(config, lang) {
 
   const header = createElement('header', { className: 'site-header' });
   const utility = createElement('div', { className: 'header-utility' });
-  const bilingualPages = new Set(['index.html', 'members.html', 'projects.html', 'publications.html', 'pi.html', 'opportunities.html', 'lab-life.html']);
+  const bilingualPages = new Set(['index.html', 'members.html', 'projects.html', 'publications.html', 'pi.html', 'opportunities.html', 'lab-life.html', 'news.html', 'news-detail.html']);
+  const query = bilingualPages.has(currentPage) ? window.location.search : '';
   const languageUrl = lang === 'ja'
-    ? `../${currentPage}`
-    : bilingualPages.has(currentPage) ? `ja/${currentPage}` : 'ja/index.html';
+    ? `../${currentPage}${query}`
+    : bilingualPages.has(currentPage) ? `ja/${currentPage}${query}` : 'ja/index.html';
   utility.append(createElement('a', {
     className: 'language-link',
     text: lang === 'ja' ? 'English' : '日本語',

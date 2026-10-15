@@ -47,15 +47,10 @@ async function renderIndex() {
     document.getElementById('contact-email').textContent = config.contact.email;
     document.getElementById('contact-address').textContent = config.contact.address;
 
-    const newsItems = (newsData[lang] || []).map(item => {
-      const listItem = createElement('li');
-      listItem.append(
-        createElement('time', { className: 'date', text: item.date }),
-        document.createTextNode(item.text),
-      );
-      return listItem;
-    });
-    document.getElementById('news-list').replaceChildren(...newsItems);
+    const newsItems = NewsUI.publishedNews(newsData).slice(0, 3);
+    document.getElementById('news-list').replaceChildren(
+      ...newsItems.map(item => NewsUI.renderNewsCard(item, lang, true)),
+    );
 
     const selectedAreaIds = new Set(config.homepage?.researchAreaIds || []);
     const selectedAreas = (researchData.areas || []).filter(area => selectedAreaIds.has(area.id));

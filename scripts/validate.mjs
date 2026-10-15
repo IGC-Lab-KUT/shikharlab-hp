@@ -38,6 +38,24 @@ for (const path of jsonFiles) {
       }
     };
     inspectUrls(data);
+
+    if (relative(root, path) === 'data/news.json') {
+      if (data.schemaVersion !== 2 || !Array.isArray(data.items)) failures.push('data/news.json: expected schemaVersion 2 and an items array');
+      const ids = new Set();
+      for (const [index, item] of (data.items || []).entries()) {
+        const prefix = `data/news.json: item ${index + 1}`;
+        if (!item.id || ids.has(item.id)) failures.push(`${prefix}: id must be present and unique`);
+        ids.add(item.id);
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(item.date || '')) failures.push(`${prefix}: date must use YYYY-MM-DD`);
+        if (item.dateEnd && !/^\d{4}-\d{2}-\d{2}$/.test(item.dateEnd)) failures.push(`${prefix}: dateEnd must use YYYY-MM-DD`);
+        if (item.dateLabel && (!item.dateLabel.en || !item.dateLabel.ja)) failures.push(`${prefix}: dateLabel must contain English and Japanese text`);
+        if (!item.category?.id || !item.category?.en || !item.category?.ja) failures.push(`${prefix}: bilingual category is required`);
+        if (!item.title?.en || !item.title?.ja) failures.push(`${prefix}: bilingual title is required`);
+        if (!item.summary?.en || !item.summary?.ja) failures.push(`${prefix}: bilingual summary is required`);
+        if (!['draft', 'published'].includes(item.status)) failures.push(`${prefix}: status must be draft or published`);
+        if (item.content && (!Array.isArray(item.content.en) || !Array.isArray(item.content.ja))) failures.push(`${prefix}: content must contain English and Japanese paragraph arrays`);
+      }
+    }
   } catch (error) {
     failures.push(`${relative(root, path)}: invalid JSON (${error.message})`);
   }

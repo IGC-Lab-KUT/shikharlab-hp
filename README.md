@@ -23,13 +23,30 @@ data/           ← ここを編集するだけでサイトが更新される
 ## 更新方法
 
 ### ニュースを追加する
-`data/news.json` を編集:
+`data/news.json` の `items` に英語・日本語をまとめて追加します。`status` が `published` の記事だけが
+ホームページとニュース一覧に表示されます。`content` がない記事は短いお知らせとして表示され、
+`content`、画像、関連リンクなどがある記事は詳細ページにもリンクされます。
+
 ```json
-[
-  { "date": "2026-04-01", "text": "新しいお知らせ" },
-  ...
-]
+{
+  "id": "2026-04-example",
+  "date": "2026-04-01",
+  "category": { "id": "lab-event", "en": "Lab Event", "ja": "研究室イベント" },
+  "title": { "en": "English title", "ja": "日本語タイトル" },
+  "summary": { "en": "Short English summary", "ja": "日本語の短い概要" },
+  "content": {
+    "en": ["First paragraph.", "Second paragraph."],
+    "ja": ["第1段落。", "第2段落。"]
+  },
+  "status": "published"
+}
 ```
+
+任意項目として `dateEnd`、英日併記の `dateLabel`、`thumbnail`、`featuredImage`、`images`、`links`、
+`relatedPublications`、`relatedProjects`、`author`、`lastUpdated` を使用できます。画像は
+`{ "src": "data/imgs/photo.jpg", "alt": { "en": "...", "ja": "..." }, "caption": { ... } }`
+の形式で設定します。記事ページの写真はクリックすると原寸比で拡大表示されます。複数の写真は
+矢印キーでも切り替えられ、Escapeキーで閉じられます。外部リンクには `https://` の確認済みURLだけを使用してください。
 
 ### メンバーを追加する
 `data/members.json` の該当カテゴリ（`pi` / `researchCollaborators` / `phd` / `master` / `bachelor` / `alumni`）に追加:
