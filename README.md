@@ -22,6 +22,13 @@ data/           ← ここを編集するだけでサイトが更新される
 
 ## 更新方法
 
+### Codexで学生がニュースを更新する
+
+初めて更新する場合は、[`NEWS_GUIDELINES.md`](NEWS_GUIDELINES.md) の手順と再利用可能な依頼文を使用してください。
+Codex向けのリポジトリ固有ルールは [`AGENTS.md`](AGENTS.md) にあります。通常のニュース更新では
+`data/news.json` と承認済みの `data/imgs/news-*` 写真だけを変更し、英語版・日本語版のプレビューと
+自動検証を確認してからプルリクエストを作成します。
+
 ### ニュースを追加する
 `data/news.json` の `items` に英語・日本語をまとめて追加します。`status` が `published` の記事だけが
 ホームページとニュース一覧に表示されます。`content` がない記事は短いお知らせとして表示され、
@@ -168,8 +175,8 @@ python3 -m http.server 8000
 node scripts/validate.mjs
 ```
 
-検証内容は JSON 構文、HTML の重複 ID・基本メタデータ、ローカルアセット参照、
-JavaScript 構文、危険な HTML 挿入 API の混入です。
+検証内容は JSON 構文、ニュースの日付・ID・カテゴリ・英日コンテンツ・画像・リンク、HTML の重複 ID・
+基本メタデータ、ローカルアセット参照、JavaScript 構文、危険な HTML 挿入 API の混入です。
 
 Playwright がインストールされている環境では、ローカルサーバーを起動した状態で
 デスクトップ・モバイルのブラウザテストも実行できます。

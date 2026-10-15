@@ -5,6 +5,78 @@ import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const failures = [];
+const supportedNewsCategories = new Set([
+  'conference-presentation',
+  'journal-publication',
+  'student-achievement',
+  'lab-event',
+  'seminar',
+  'research-visit',
+  'research-presentation',
+  'other',
+]);
+
+function isNonEmptyString(value) {
+  return typeof value === 'string' && value.trim().length > 0;
+}
+
+function isValidDate(value) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value || '')) return false;
+  const [year, month, day] = value.split('-').map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
+}
+
+function hasBilingualText(value) {
+  return value && isNonEmptyString(value.en) && isNonEmptyString(value.ja);
+}
+
+function isSafeNewsImagePath(value) {
+  return typeof value === 'string'
+    && /^data\/imgs\/news-[A-Za-z0-9][A-Za-z0-9._-]*$/.test(value)
+    && !value.includes('..');
+}
+
+function isSafeLink(value) {
+  if (typeof value !== 'string' || !value) return false;
+  if (/^https:\/\//i.test(value)) {
+    try {
+      const url = new URL(value);
+      return url.protocol === 'https:' && Boolean(url.hostname);
+    } catch {
+      return false;
+    }
+  }
+  return /^(?!\/|.*(?:^|\/)\.\.(?:\/|$))[A-Za-z0-9][A-Za-z0-9._/-]*(?:\?[A-Za-z0-9._~!$&'()*+,;=:@%/?-]*)?$/.test(value);
+}
+
+function validateNewsImage(image, prefix, requiredCaption = false) {
+  if (!image || typeof image !== 'object' || Array.isArray(image)) {
+    failures.push(`${prefix}: image must be an object`);
+    return;
+  }
+  if (!isSafeNewsImagePath(image.src)) failures.push(`${prefix}: src must be a safe data/imgs/news-* path`);
+  else if (!existsSync(join(root, image.src))) failures.push(`${prefix}: missing image ${image.src}`);
+  if (!hasBilingualText(image.alt)) failures.push(`${prefix}: bilingual alt text is required`);
+  if (requiredCaption && !hasBilingualText(image.caption)) failures.push(`${prefix}: bilingual caption is required`);
+  else if (image.caption && !hasBilingualText(image.caption)) failures.push(`${prefix}: caption must contain English and Japanese text`);
+}
+
+function validateNewsLinks(items, prefix) {
+  if (!Array.isArray(items)) {
+    failures.push(`${prefix}: expected an array`);
+    return;
+  }
+  items.forEach((link, index) => {
+    const linkPrefix = `${prefix} entry ${index + 1}`;
+    if (!link || typeof link !== 'object' || Array.isArray(link)) {
+      failures.push(`${linkPrefix}: expected an object`);
+      return;
+    }
+    if (!hasBilingualText(link.label || link.title)) failures.push(`${linkPrefix}: bilingual label or title is required`);
+    if (!isSafeLink(link.url)) failures.push(`${linkPrefix}: url must be a valid HTTPS URL or safe repository-relative path`);
+  });
+}
 
 function filesUnder(directory) {
   return readdirSync(directory).flatMap(name => {
@@ -42,18 +114,49 @@ for (const path of jsonFiles) {
     if (relative(root, path) === 'data/news.json') {
       if (data.schemaVersion !== 2 || !Array.isArray(data.items)) failures.push('data/news.json: expected schemaVersion 2 and an items array');
       const ids = new Set();
+      let previousDate = '';
       for (const [index, item] of (data.items || []).entries()) {
         const prefix = `data/news.json: item ${index + 1}`;
-        if (!item.id || ids.has(item.id)) failures.push(`${prefix}: id must be present and unique`);
+        if (!/^\d{4}-(?:0[1-9]|1[0-2])-[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id || '')) failures.push(`${prefix}: id must use YYYY-MM-lowercase-slug format`);
+        if (ids.has(item.id)) failures.push(`${prefix}: duplicate id ${item.id}`);
         ids.add(item.id);
-        if (!/^\d{4}-\d{2}-\d{2}$/.test(item.date || '')) failures.push(`${prefix}: date must use YYYY-MM-DD`);
-        if (item.dateEnd && !/^\d{4}-\d{2}-\d{2}$/.test(item.dateEnd)) failures.push(`${prefix}: dateEnd must use YYYY-MM-DD`);
-        if (item.dateLabel && (!item.dateLabel.en || !item.dateLabel.ja)) failures.push(`${prefix}: dateLabel must contain English and Japanese text`);
-        if (!item.category?.id || !item.category?.en || !item.category?.ja) failures.push(`${prefix}: bilingual category is required`);
-        if (!item.title?.en || !item.title?.ja) failures.push(`${prefix}: bilingual title is required`);
-        if (!item.summary?.en || !item.summary?.ja) failures.push(`${prefix}: bilingual summary is required`);
+        if (!isValidDate(item.date)) failures.push(`${prefix}: date must be a real calendar date using YYYY-MM-DD`);
+        if (item.dateEnd && !isValidDate(item.dateEnd)) failures.push(`${prefix}: dateEnd must be a real calendar date using YYYY-MM-DD`);
+        if (isValidDate(item.date) && isValidDate(item.dateEnd) && item.dateEnd < item.date) failures.push(`${prefix}: dateEnd cannot be before date`);
+        if (previousDate && isValidDate(item.date) && item.date > previousDate) failures.push(`${prefix}: news items must be in descending date order`);
+        if (isValidDate(item.date)) previousDate = item.date;
+        if (item.dateLabel && !hasBilingualText(item.dateLabel)) failures.push(`${prefix}: dateLabel must contain English and Japanese text`);
+        if (!hasBilingualText(item.category) || !isNonEmptyString(item.category?.id)) failures.push(`${prefix}: bilingual category is required`);
+        else if (!supportedNewsCategories.has(item.category.id)) failures.push(`${prefix}: unsupported category id "${item.category.id}"`);
+        if (!hasBilingualText(item.title)) failures.push(`${prefix}: bilingual title is required`);
+        if (!hasBilingualText(item.summary)) failures.push(`${prefix}: bilingual summary is required`);
         if (!['draft', 'published'].includes(item.status)) failures.push(`${prefix}: status must be draft or published`);
-        if (item.content && (!Array.isArray(item.content.en) || !Array.isArray(item.content.ja))) failures.push(`${prefix}: content must contain English and Japanese paragraph arrays`);
+        if (item.lastUpdated && !isValidDate(item.lastUpdated)) failures.push(`${prefix}: lastUpdated must be a real calendar date using YYYY-MM-DD`);
+        if (item.content) {
+          if (!Array.isArray(item.content.en) || !Array.isArray(item.content.ja) || !item.content.en.length || !item.content.ja.length) {
+            failures.push(`${prefix}: content must contain non-empty English and Japanese paragraph arrays`);
+          } else {
+            for (const language of ['en', 'ja']) {
+              if (item.content[language].some(paragraph => !isNonEmptyString(paragraph))) failures.push(`${prefix}: content.${language} must contain only non-empty paragraphs`);
+            }
+          }
+        }
+        if (item.thumbnail) validateNewsImage(item.thumbnail, `${prefix} thumbnail`);
+        if (item.featuredImage) validateNewsImage(item.featuredImage, `${prefix} featuredImage`, true);
+        if (item.images) {
+          if (!Array.isArray(item.images) || !item.images.length) failures.push(`${prefix}: images must be a non-empty array when provided`);
+          else item.images.forEach((image, imageIndex) => validateNewsImage(image, `${prefix} image ${imageIndex + 1}`, true));
+        }
+        for (const field of ['links', 'relatedPublications', 'relatedProjects']) {
+          if (item[field]) validateNewsLinks(item[field], `${prefix} ${field}`);
+        }
+        if (item.author !== undefined && !isNonEmptyString(item.author)) failures.push(`${prefix}: author must be a non-empty string when provided`);
+      }
+      const hasDetailedNews = (data.items || []).some(item => item.content || item.featuredImage || item.images?.length || item.links?.length || item.relatedPublications?.length || item.relatedProjects?.length);
+      if (hasDetailedNews) {
+        for (const articlePage of ['news-detail.html', 'ja/news-detail.html']) {
+          if (!existsSync(join(root, articlePage))) failures.push(`data/news.json: detailed news requires ${articlePage}`);
+        }
       }
     }
   } catch (error) {
