@@ -2,69 +2,101 @@
   "schemaVersion": 2,
   "items": [
     {
-      "id": "2026-05-yuto-morioka-conference-presentation",
-      "date": "2026-05-14",
-      "dateEnd": "2026-05-15",
-      "category": {
-        "id": "research-presentation",
-        "en": "Research Presentation",
-        "ja": "研究発表"
-      },
+      "id": "2026-10-yuto-morioka-nit-meghalaya-visit",
+      "date": "2026-10-01",
+      "dateEnd": "2026-12-31",
+      "dateLabel": { "en": "October–December 2026", "ja": "2026年10月～12月" },
+      "category": { "id": "research-visit", "en": "Research Visit", "ja": "研究滞在" },
       "title": {
-        "en": "Yuto Morioka presented research on aircraft path planning",
-        "ja": "森岡悠斗が航空機経路計画に関する研究を発表"
+        "en": "Yuto Morioka begins a visiting research stay at NIT Meghalaya",
+        "ja": "森岡悠斗がNIT Meghalayaで客員研究滞在を開始"
       },
       "summary": {
-        "en": "Yuto Morioka presented the paper \"Deep Reinforcement Learning-based Aircraft Path Planning Method for Low-Altitude Economy\" (co-authored with Shikhar Varma, Tinghan Wei, and Mikifumi Shikida) at a conference held at the Hiroshima City University Satellite Campus.",
-        "ja": "森岡悠斗が広島市立大学サテライトキャンパスで開催された学会で論文「Deep Reinforcement Learning-based Aircraft Path Planning Method for Low-Altitude Economy」（Shikhar Varma，Tinghan Wei，Mikifumi Shikidaとの共著）を発表しました．"
+        "en": "Yuto Morioka is visiting the National Institute of Technology Meghalaya as a visiting researcher under Prof. Diptendu Sinha Roy for three months, from October to December 2026.",
+        "ja": "森岡悠斗がDiptendu Sinha Roy教授のもと、2026年10月から12月までの3か月間、National Institute of Technology Meghalayaで客員研究員として研究滞在します。"
+      },
+      "status": "published",
+      "lastUpdated": "2026-10-15"
+    },
+    {
+      "id": "2026-05-yuto-morioka-conference-presentation",
+      "date": "2026-05-14",
+      "category": { "id": "research-presentation", "en": "Research Presentation", "ja": "研究発表" },
+      "title": {
+        "en": "Yuto Morioka presented research on aerial vehicle path planning",
+        "ja": "森岡悠斗が飛行体の経路計画に関する研究を発表"
+      },
+      "summary": {
+        "en": "Yuto Morioka presented \"Deep Reinforcement Learning-based Aerial Vehicle Path Planning for Low-Altitude Economy\" at the IEICE IN/RCS joint technical meeting in Hiroshima.",
+        "ja": "森岡悠斗が広島で開催された電子情報通信学会IN/RCS合同研究会で「Deep Reinforcement Learning-based Aerial Vehicle Path Planning for Low-Altitude Economy」を発表しました。"
       },
       "content": {
         "en": [
-          "Yuto Morioka presented the paper \"Deep Reinforcement Learning-based Aircraft Path Planning Method for Low-Altitude Economy\" at a conference held at the Hiroshima City University Satellite Campus on 14–15 May 2026.",
-          "The paper was co-authored with Shikhar Varma, Tinghan Wei, and Mikifumi Shikida."
+          "Yuto Morioka presented the paper \"Deep Reinforcement Learning-based Aerial Vehicle Path Planning for Low-Altitude Economy\" at the IEICE Technical Committee on Information Networks and Technical Committee on Radio Communication Systems joint technical meeting on 14 May 2026. The meeting was held at the Hiroshima City University Satellite Campus.",
+          "The paper (IN2026-3) was co-authored by Yuto Morioka, Shikhar Verma, Wei Ting Han, and Mikifumi Shikida."
         ],
         "ja": [
-          "森岡悠斗が、2026年5月14日・15日に広島市立大学サテライトキャンパスで開催された学会で、論文「Deep Reinforcement Learning-based Aircraft Path Planning Method for Low-Altitude Economy」を発表しました。",
-          "本論文は、Shikhar Varma、Tinghan Wei、Mikifumi Shikidaとの共著です。"
+          "森岡悠斗が、2026年5月14日に広島市立大学サテライトキャンパスで開催された電子情報通信学会 情報ネットワーク研究会・無線通信システム研究会 合同研究会において、「Deep Reinforcement Learning-based Aerial Vehicle Path Planning for Low-Altitude Economy」を発表しました。",
+          "本稿（IN2026-3）は、森岡悠斗、Shikhar Verma、Wei Ting Han、幹冨史樹の共著です。"
         ]
       },
-      "status": "published"
+      "featuredImage": {
+        "src": "data/imgs/news-2026-yuto-ieice-presentation.webp",
+        "alt": {
+          "en": "Yuto Morioka presenting his research at the IEICE IN/RCS joint technical meeting",
+          "ja": "電子情報通信学会IN/RCS合同研究会で研究発表を行う森岡悠斗"
+        },
+        "caption": {
+          "en": "Yuto Morioka presents his research at the IEICE IN/RCS joint technical meeting at the Hiroshima City University Satellite Campus.",
+          "ja": "広島市立大学サテライトキャンパスで開催された電子情報通信学会IN/RCS合同研究会で研究発表を行う森岡悠斗。"
+        }
+      },
+      "links": [
+        {
+          "label": { "en": "Official IEICE presentation record", "ja": "電子情報通信学会 発表情報" },
+          "url": "https://www.ieice.org/publications/ken/summary.php?contribution_id=143655&society_cd=CS&ken_id=CS&year=2026&presen_date=2026-05-14&schedule_id=8989&lang=en&expandable=1"
+        },
+        {
+          "label": { "en": "IEICE paper download information", "ja": "電子情報通信学会 原稿ダウンロード情報" },
+          "url": "https://ken.ieice.org/ken/download/20260514ecuu/eng/"
+        }
+      ],
+      "status": "published",
+      "lastUpdated": "2026-10-15"
     },
     {
-      "id": "2026-04-new-student-welcome-party",
+      "id": "2026-04-cherry-blossom-welcome-gathering",
       "date": "2026-04-24",
-      "category": {
-        "id": "lab-event",
-        "en": "Lab Event",
-        "ja": "研究室イベント"
-      },
-      "title": {
-        "en": "Welcome party for new laboratory students",
-        "ja": "研究室の新入生歓迎会を開催"
-      },
+      "dateLabel": { "en": "2 and 24 April 2026", "ja": "2026年4月2日・24日" },
+      "category": { "id": "lab-event", "en": "Lab Event", "ja": "研究室イベント" },
+      "title": { "en": "Cherry blossom viewing and welcome gathering", "ja": "お花見と新入生歓迎会" },
       "summary": {
-        "en": "We held a welcome party for the new students in the lab!",
-        "ja": "研究室の新入生歓迎会を開催しました！"
+        "en": "Lab members gathered at the university to enjoy the cherry blossoms, and we later held a welcome gathering for new students.",
+        "ja": "大学で研究室メンバーとお花見を楽しみ、その後、新入生歓迎会を開催しました。"
       },
-      "status": "published"
-    },
-    {
-      "id": "2026-04-cherry-blossom-viewing",
-      "date": "2026-04-02",
-      "category": {
-        "id": "lab-event",
-        "en": "Lab Event",
-        "ja": "研究室イベント"
+      "content": {
+        "en": [
+          "Lab members gathered at Kochi University of Technology on 2 April 2026 to enjoy the cherry blossoms.",
+          "A welcome gathering for new laboratory students was held on 24 April 2026."
+        ],
+        "ja": [
+          "2026年4月2日、高知工科大学で研究室メンバーと桜を楽しみました。",
+          "2026年4月24日には、研究室の新入生歓迎会を開催しました。"
+        ]
       },
-      "title": {
-        "en": "Laboratory cherry blossom viewing party",
-        "ja": "研究室メンバーでお花見"
+      "featuredImage": {
+        "src": "data/imgs/news-2026-cherry-blossom.webp",
+        "alt": {
+          "en": "Laboratory members gathered beneath cherry blossoms at Kochi University of Technology",
+          "ja": "高知工科大学の桜の下に集まった研究室メンバー"
+        },
+        "caption": {
+          "en": "Lab members gathered at Kochi University of Technology to enjoy the cherry blossoms.",
+          "ja": "高知工科大学で桜を楽しむ研究室メンバー。"
+        }
       },
-      "summary": {
-        "en": "We had a cherry blossom viewing party with the members of the research lab!",
-        "ja": "研究室のメンバーでお花見をしました！"
-      },
-      "status": "published"
+      "status": "published",
+      "lastUpdated": "2026-10-15"
     }
   ]
 }

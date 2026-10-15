@@ -1,15 +1,124 @@
-function newsFigure(image, lang, featured = false) {
+function createNewsLightbox(images, lang) {
+  const validImages = images.map(image => ({
+    source: safeImageSource(image?.src),
+    alt: NewsUI.localizedNewsValue(image?.alt, lang),
+    caption: NewsUI.localizedNewsValue(image?.caption, lang),
+  })).filter(image => image.source);
+  if (!validImages.length) return null;
+
+  const dialog = createElement('dialog', {
+    className: 'news-lightbox',
+    attributes: { 'aria-label': lang === 'ja' ? '写真の拡大表示' : 'Enlarged photograph' },
+  });
+  const close = createElement('button', {
+    className: 'news-lightbox-close',
+    text: '×',
+    attributes: { type: 'button', 'aria-label': lang === 'ja' ? '閉じる' : 'Close' },
+  });
+  const previous = createElement('button', {
+    className: 'news-lightbox-nav news-lightbox-previous',
+    text: '‹',
+    attributes: { type: 'button', 'aria-label': lang === 'ja' ? '前の写真' : 'Previous photograph' },
+  });
+  const next = createElement('button', {
+    className: 'news-lightbox-nav news-lightbox-next',
+    text: '›',
+    attributes: { type: 'button', 'aria-label': lang === 'ja' ? '次の写真' : 'Next photograph' },
+  });
+  const displayed = createElement('img', { attributes: { decoding: 'async' } });
+  const caption = createElement('p', { className: 'news-lightbox-caption' });
+  const counter = createElement('p', { className: 'news-lightbox-counter', attributes: { 'aria-live': 'polite' } });
+  const frame = createElement('div', { className: 'news-lightbox-frame' });
+  frame.append(displayed, caption, counter);
+  dialog.append(close, previous, frame, next);
+  document.body.append(dialog);
+
+  let activeIndex = 0;
+  let returnFocus = null;
+  const render = () => {
+    const image = validImages[activeIndex];
+    displayed.src = image.source;
+    displayed.alt = image.alt;
+    caption.textContent = image.caption;
+    caption.hidden = !image.caption;
+    counter.textContent = `${activeIndex + 1} / ${validImages.length}`;
+    const multiple = validImages.length > 1;
+    previous.hidden = !multiple;
+    next.hidden = !multiple;
+    previous.disabled = !multiple;
+    next.disabled = !multiple;
+  };
+  const move = direction => {
+    activeIndex = (activeIndex + direction + validImages.length) % validImages.length;
+    render();
+  };
+  const open = (index, trigger) => {
+    activeIndex = Math.max(0, Math.min(index, validImages.length - 1));
+    returnFocus = trigger;
+    render();
+    document.body.classList.add('lightbox-open');
+    if (typeof dialog.showModal === 'function') dialog.showModal();
+    else dialog.setAttribute('open', '');
+    close.focus();
+  };
+  const closeDialog = () => {
+    if (typeof dialog.close === 'function') dialog.close();
+    else {
+      dialog.removeAttribute('open');
+      document.body.classList.remove('lightbox-open');
+      returnFocus?.focus();
+    }
+  };
+
+  close.addEventListener('click', closeDialog);
+  previous.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
+  dialog.addEventListener('click', event => {
+    if (event.target === dialog) closeDialog();
+  });
+  dialog.addEventListener('close', () => {
+    document.body.classList.remove('lightbox-open');
+    returnFocus?.focus();
+  });
+  dialog.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      move(-1);
+    } else if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      move(1);
+    }
+  });
+
+  return { open };
+}
+
+function newsFigure(image, lang, featured = false, lightbox = null, lightboxIndex = 0) {
   const source = safeImageSource(image?.src);
   if (!source) return null;
   const figure = createElement('figure', { className: featured ? 'news-featured-image' : 'news-article-image' });
-  figure.append(createElement('img', {
+  const imageElement = createElement('img', {
     attributes: {
       src: source,
       alt: NewsUI.localizedNewsValue(image.alt, lang),
       loading: featured ? 'eager' : 'lazy',
       decoding: 'async',
     },
-  }));
+  });
+  if (lightbox) {
+    const button = createElement('button', {
+      className: 'news-image-button',
+      attributes: {
+        type: 'button',
+        'aria-label': lang === 'ja' ? '写真を拡大表示' : 'Enlarge photograph',
+      },
+    });
+    button.append(imageElement);
+    button.addEventListener('click', () => lightbox.open(lightboxIndex, button));
+    figure.append(button);
+  } else {
+    figure.append(imageElement);
+  }
   const caption = NewsUI.localizedNewsValue(image.caption, lang);
   if (caption) figure.append(createElement('figcaption', { text: caption }));
   return figure;
@@ -46,7 +155,9 @@ async function renderNewsDetail() {
     document.getElementById('news-article-category').textContent = NewsUI.localizedNewsValue(item.category, lang);
     document.getElementById('news-article-intro').textContent = NewsUI.localizedNewsValue(item.summary, lang);
 
-    const featured = newsFigure(item.featuredImage, lang, true);
+    const articleImages = [item.featuredImage, ...(item.images || [])].filter(image => safeImageSource(image?.src));
+    const lightbox = createNewsLightbox(articleImages, lang);
+    const featured = newsFigure(item.featuredImage, lang, true, lightbox, 0);
     if (featured) document.getElementById('news-featured').replaceChildren(featured);
     else document.getElementById('news-featured').remove();
 
@@ -54,7 +165,7 @@ async function renderNewsDetail() {
       ...(item.content?.[lang] || []).map(paragraph => createElement('p', { text: paragraph })),
     );
 
-    const galleryItems = (item.images || []).map(image => newsFigure(image, lang)).filter(Boolean);
+    const galleryItems = (item.images || []).map((image, index) => newsFigure(image, lang, false, lightbox, index + (featured ? 1 : 0))).filter(Boolean);
     if (galleryItems.length) document.getElementById('news-article-gallery').replaceChildren(...galleryItems);
     else document.getElementById('news-article-gallery-section').remove();
 

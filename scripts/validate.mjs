@@ -48,6 +48,7 @@ for (const path of jsonFiles) {
         ids.add(item.id);
         if (!/^\d{4}-\d{2}-\d{2}$/.test(item.date || '')) failures.push(`${prefix}: date must use YYYY-MM-DD`);
         if (item.dateEnd && !/^\d{4}-\d{2}-\d{2}$/.test(item.dateEnd)) failures.push(`${prefix}: dateEnd must use YYYY-MM-DD`);
+        if (item.dateLabel && (!item.dateLabel.en || !item.dateLabel.ja)) failures.push(`${prefix}: dateLabel must contain English and Japanese text`);
         if (!item.category?.id || !item.category?.en || !item.category?.ja) failures.push(`${prefix}: bilingual category is required`);
         if (!item.title?.en || !item.title?.ja) failures.push(`${prefix}: bilingual title is required`);
         if (!item.summary?.en || !item.summary?.ja) failures.push(`${prefix}: bilingual summary is required`);

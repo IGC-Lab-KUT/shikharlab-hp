@@ -1,117 +1,76 @@
-function localizedNewsValue(value, lang) {
-  if (typeof value === 'string') return value;
-  if (!value || typeof value !== 'object') return '';
-  return value[lang] || value.en || value.ja || '';
-}
+şŠmş&yºŞÃòân¶«Ëñè™æë{Ü™ßì…éez{ì†X§{_?n)ÿ¦Ã©z¶­Š‰ç¢Ú^®h­µçY[˜İ[ÛˆØØ[^™Y™]ÜÕ˜[YJ˜[YK[™ÊHÂˆYˆ
+\[Ùˆ˜[YHOOH	Üİš[™ÉÊH™]\›ˆ˜[YNÂˆYˆ
+]˜[YH\[Ùˆ˜[YHOOH	ÛØš™Xİ	ÊH™]\›ˆ	ÉÎÂˆ™]\›ˆ˜[YVÛ[™×H˜[YK™[ˆ˜[YKš˜H	ÉÎÂŸB‚™[˜İ[ÛˆX›\ÚY™]ÜÊ]JHÂˆ™]\›ˆ
+\œ˜^Kš\Ğ\œ˜^J]OËš][\ÊHÈ]Kš][\Èˆ×JBˆ™š[\Š][HOˆ][H	‰ˆ][Kœİ]\ÈOOH	ÜX›\ÚY	È	‰ˆ\[Ùˆ][KšYOOH	Üİš[™ÉÈ	‰ˆ×—ÍKWÌŸKWÌŸIË\İ
+][K™]JJBˆœÛÜ
 
-function publishedNews(data) {
-  return (Array.isArray(data?.items) ? data.items : [])
-    .filter(item => item && item.status === 'published' && typeof item.id === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(item.date))
-    .sort((a, b) => b.date.localeCompare(a.date));
-}
-
-function newsHasDetail(item, lang) {
-  return Boolean(
-    (Array.isArray(item?.content?.[lang]) && item.content[lang].length)
-    || item?.featuredImage
-    || (Array.isArray(item?.images) && item.images.length)
-    || (Array.isArray(item?.links) && item.links.length)
-    || (Array.isArray(item?.relatedPublications) && item.relatedPublications.length)
-    || (Array.isArray(item?.relatedProjects) && item.relatedProjects.length)
-  );
-}
-
-function formatNewsDate(item, lang) {
-  const locale = lang === 'ja' ? 'ja-JP' : 'en-GB';
-  const options = { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' };
-  const start = new Date(`${item.date}T00:00:00Z`);
-  if (Number.isNaN(start.getTime())) return item.date;
-  const startText = new Intl.DateTimeFormat(locale, options).format(start);
-  if (!item.dateEnd || item.dateEnd === item.date) return startText;
-  const end = new Date(`${item.dateEnd}T00:00:00Z`);
-  if (Number.isNaN(end.getTime())) return startText;
-  return `${startText} â€“ ${new Intl.DateTimeFormat(locale, options).format(end)}`;
-}
-
-function newsDetailHref(item) {
-  return `news-detail.html?id=${encodeURIComponent(item.id)}`;
-}
-
-function newsImage(item) {
-  return item.thumbnail || item.featuredImage || null;
-}
-
-function renderNewsCard(item, lang, compact = false) {
-  const card = createElement('li', { className: compact ? 'news-card news-card--compact' : 'news-card' });
-  const image = newsImage(item);
-  const imageSource = safeImageSource(image?.src);
-  if (imageSource) {
-    card.append(createElement('img', {
-      className: 'news-card-image',
-      attributes: {
-        src: imageSource,
-        alt: localizedNewsValue(image.alt, lang),
-        loading: 'lazy',
-        decoding: 'async',
-      },
-    }));
-  }
-
-  const body = createElement('div', { className: 'news-card-body' });
-  const meta = createElement('div', { className: 'news-meta' });
-  meta.append(
-    createElement('time', {
-      className: 'news-date',
-      text: formatNewsDate(item, lang),
-      attributes: { datetime: item.date },
-    }),
-    createElement('span', {
-      className: 'news-category',
-      text: localizedNewsValue(item.category, lang),
-    }),
-  );
-
-  const heading = createElement('h3', { className: 'news-title' });
-  const hasDetail = newsHasDetail(item, lang);
-  if (hasDetail) {
-    heading.append(createElement('a', {
-      text: localizedNewsValue(item.title, lang),
-      attributes: { href: newsDetailHref(item) },
-    }));
-  } else {
-    heading.textContent = localizedNewsValue(item.title, lang);
-  }
-  body.append(meta, heading, createElement('p', {
-    className: 'news-summary',
-    text: localizedNewsValue(item.summary, lang),
-  }));
-  if (hasDetail) {
-    body.append(createElement('a', {
-      className: 'news-read-more',
-      text: lang === 'ja' ? 'è©³ã—ãèª­ã‚€' : 'Read more',
-      attributes: { href: newsDetailHref(item), 'aria-label': `${lang === 'ja' ? 'è©³ã—ãèª­ã‚€' : 'Read more'}: ${localizedNewsValue(item.title, lang)}` },
-    }));
-  }
-  card.append(body);
-  return card;
-}
-
-function appendNewsLink(parent, item, lang) {
-  const label = localizedNewsValue(item.label || item.title, lang);
-  const external = safeExternalUrl(item.url);
-  if (external) {
-    appendExternalLink(parent, label, external);
-    return;
-  }
-  const internal = safeInternalPath(item.url);
-  if (internal) parent.append(createElement('a', { text: label, attributes: { href: internal } }));
-}
-
-window.NewsUI = {
-  appendNewsLink,
-  formatNewsDate,
-  localizedNewsValue,
-  newsHasDetail,
-  publishedNews,
-  renderNewsCard,
-};
+KŠHOˆ‹™]K›ØØ[PÛÛ\\™JK™]JJNÂŸB‚™[˜İ[Ûˆ™]ÜÒ\Ñ]Z[
+][K[™ÊHÂˆ™]\›ˆ›ÛÛX[Šˆ
+\œ˜^Kš\Ğ\œ˜^J][OË˜ÛÛ[Ë–Û[™×JH	‰ˆ][K˜ÛÛ[Û[™×K›[™İ
+Bˆ][OË™™X]\™Y[XYÙBˆ
+\œ˜^Kš\Ğ\œ˜^J][OËš[XYÙ\ÊH	‰ˆ][Kš[XYÙ\Ë›[™İ
+Bˆ
+\œ˜^Kš\Ğ\œ˜^J][OË›[šÜÊH	‰ˆ][K›[šÜË›[™İ
+Bˆ
+\œ˜^Kš\Ğ\œ˜^J][OËœ™[]YX›XØ][ÛœÊH	‰ˆ][Kœ™[]YX›XØ][ÛœË›[™İ
+Bˆ
+\œ˜^Kš\Ğ\œ˜^J][OËœ™[]Y›Ú™XİÊH	‰ˆ][Kœ™[]Y›Ú™XİË›[™İ
+Bˆ
+NÂŸB‚™[˜İ[Ûˆ›Ü›X]™]ÜÑ]J][K[™ÊHÂˆÛÛœİ]SX™[HØØ[^™Y™]ÜÕ˜[YJ][K™]SX™[[™ÊNÂˆYˆ
+]SX™[
+H™]\›ˆ]SX™[ÂˆÛÛœİØØ[HH[™ÈOOH	Ú˜IÈÈ	Ú˜KR”	Èˆ	Ù[‹QĞ‰ÎÂˆÛÛœİÜ[ÛœÈHÈYX\ˆ	Û[Y\šXÉË[Ûˆ	ÜÚÜ	Ë^Nˆ	Û[Y\šXÉË[YV›Û™Nˆ	ÕUÉÈNÂˆÛÛœİİ\H™]È]J	Ú][K™]_UŒŒ˜
+NÂˆYˆ
+[X™\‹š\Ó˜SŠİ\™Ù][YJ
+JJH™]\›ˆ][K™]NÂˆÛÛœİİ\^H™]È[‘]U[YQ›Ü›X]
+ØØ[KÜ[ÛœÊK™›Ü›X]
+İ\
+NÂˆYˆ
+Z][K™]Q[™][K™]Q[™OOH][K™]JH™]\›ˆİ\^ÂˆÛÛœİ[™H™]È]J	Ú][K™]Q[™UŒŒ˜
+NÂˆYˆ
+[X™\‹š\Ó˜SŠ[™™Ù][YJ
+JJH™]\›ˆİ\^Âˆ™]\›ˆ	Üİ\^H8 $È	Û™]È[‘]U[YQ›Ü›X]
+ØØ[KÜ[ÛœÊK™›Ü›X]
+[™
+_XÂŸB‚™[˜İ[Ûˆ™]ÜÑ]Z[™YŠ][JHÂˆ™]\›ˆ™]ÜËY]Z[š[ÚYIÙ[˜ÛÙUT’PÛÛ\Û™[
+][KšY
+_XÂŸB‚™[˜İ[Ûˆ™]ÜÒ[XYÙJ][JHÂˆ™]\›ˆ][K[X›˜Z[][K™™X]\™Y[XYÙH[ÂŸB‚™[˜İ[Ûˆ™[™\“™]ÜĞØ\™
+][K[™ËÛÛ\XİH˜[ÙJHÂˆÛÛœİØ\™HÜ™X]Q[[Y[
+	ÛIËÈÛ\ÜÓ˜[YNˆÛÛ\XİÈ	Û™]ÜËXØ\™™]ÜËXØ\™KXÛÛ\Xİ	Èˆ	Û™]ÜËXØ\™	ÈJNÂˆÛÛœİ\Ñ]Z[H™]ÜÒ\Ñ]Z[
+][K[™ÊNÂˆÛÛœİ[XYÙHH™]ÜÒ[XYÙJ][JNÂˆÛÛœİ[XYÙTÛİ\˜ÙHHØY™R[XYÙTÛİ\˜ÙJ[XYÙOËœÜ˜ÊNÂˆYˆ
+[XYÙTÛİ\˜ÙJHÂˆÛÛœİØ\™[XYÙHHÜ™X]Q[[Y[
+	Ú[YÉËÂˆÛ\ÜÓ˜[YNˆ	Û™]ÜËXØ\™Z[XYÙIËˆ]šX]\ÎˆÂˆÜ˜Îˆ[XYÙTÛİ\˜ÙKˆ[ˆØØ[^™Y™]ÜÕ˜[YJ[XYÙK˜[[™ÊKˆØY[™Îˆ	Û^IËˆXÛÙ[™Îˆ	Ø\Ş[˜ÉËˆKˆJNÂˆYˆ
+\Ñ]Z[
+HÂˆÛÛœİ[XYÙS[šÈHÜ™X]Q[[Y[
+	ØIËÂˆÛ\ÜÓ˜[YNˆ	Û™]ÜËXØ\™Z[XYÙK[[šÉËˆ]šX]\ÎˆÂˆ™Yˆ™]ÜÑ]Z[™YŠ][JKˆ	Ø\šXK[X™[	ÎˆØØ[^™Y™]ÜÕ˜[YJ][K]K[™ÊKˆKˆJNÂˆ[XYÙS[šË˜\[™
+Ø\™[XYÙJNÂˆØ\™˜\[™
+[XYÙS[šÊNÂˆH[ÙHÂˆØ\™˜\[™
+Ø\™[XYÙJNÂˆBˆB‚ˆÛÛœİ›ÙHHÜ™X]Q[[Y[
+	Ù]‰ËÈÛ\ÜÓ˜[YNˆ	Û™]ÜËXØ\™X›ÙIÈJNÂˆÛÛœİY]HHÜ™X]Q[[Y[
+	Ù]‰ËÈÛ\ÜÓ˜[YNˆ	Û™]ÜË[Y]IÈJNÂˆY]K˜\[™
+ˆÜ™X]Q[[Y[
+	İ[YIËÂˆÛ\ÜÓ˜[YNˆ	Û™]ÜËY]IËˆ^ˆ›Ü›X]™]ÜÑ]J][K[™ÊKˆ]šX]\ÎˆÈ]][YNˆ][K™]HKˆJKˆÜ™X]Q[[Y[
+	ÜÜ[‰ËÂˆÛ\ÜÓ˜[YNˆ	Û™]ÜËXØ]YÛÜIËˆ^ˆØØ[^™Y™]ÜÕ˜[YJ][K˜Ø]YÛÜK[™ÊKˆJKˆ
+NÂ‚ˆÛÛœİXY[™ÈHÜ™X]Q[[Y[
+	ÚÉËÈÛ\ÜÓ˜[YNˆ	Û™]ÜË]]IÈJNÂˆYˆ
+\Ñ]Z[
+HÂˆXY[™Ë˜\[™
+Ü™X]Q[[Y[
+	ØIËÂˆ^ˆØØ[^™Y™]ÜÕ˜[YJ][K]K[™ÊKˆ]šX]\ÎˆÈ™Yˆ™]ÜÑ]Z[™YŠ][JHKˆJJNÂˆH[ÙHÂˆXY[™Ë^ÛÛ[HØØ[^™Y™]ÜÕ˜[YJ][K]K[™ÊNÂˆBˆ›ÙK˜\[™
+Y]KXY[™ËÜ™X]Q[[Y[
+	Ü	ËÂˆÛ\ÜÓ˜[YNˆ	Û™]ÜË\İ[[X\IËˆ^ˆØØ[^™Y™]ÜÕ˜[YJ][Kœİ[[X\K[™ÊKˆJJNÂˆYˆ
+\Ñ]Z[
+HÂˆ›ÙK˜\[™
+Ü™X]Q[[Y[
+	ØIËÂˆÛ\ÜÓ˜[YNˆ	Û™]ÜË\™XY[[Ü™IËˆ^ˆ[™ÈOOH	Ú˜IÈÈ	ú*løàeøàcú*«xà 	Èˆ	Ô™XY[Ü™IËˆ]šX]\ÎˆÈ™Yˆ™]ÜÑ]Z[™YŠ][JK	Ø\šXK[X™[	Îˆ	Û[™ÈOOH	Ú˜IÈÈ	ú*løàeøàcú*«xà 	Èˆ	Ô™XY[Ü™IßNˆ	ÛØØ[^™Y™]ÜÕ˜[YJ][K]K[™Ê_XKˆJJNÂˆBˆØ\™˜\[™
+›ÙJNÂˆ™]\›ˆØ\™ÂŸB‚™[˜İ[Ûˆ\[™™]ÜÓ[šÊ\™[][K[™ÊHÂˆÛÛœİX™[HØØ[^™Y™]ÜÕ˜[YJ][K›X™[][K]K[™ÊNÂˆÛÛœİ^\›˜[HØY™Q^\›˜[\›
+][K\›
+NÂˆYˆ
+^\›˜[
+HÂˆ\[™^\›˜[[šÊ\™[X™[^\›˜[
+NÂˆ™]\›ÂˆBˆÛÛœİ[\›˜[HØY™R[\›˜[]
+][K\›
+NÂˆYˆ
+[\›˜[
+H\™[˜\[™
+Ü™X]Q[[Y[
+	ØIËÈ^ˆX™[]šX]\ÎˆÈ™Yˆ[\›˜[HJJNÂŸB‚Ú[™İË“™]ÜÕRHHÂˆ\[™™]ÜÓ[šËˆ›Ü›X]™]ÜÑ]KˆØØ[^™Y™]ÜÕ˜[YKˆ™]ÜÒ\Ñ]Z[ˆX›\ÚY™]ÜËˆ™[™\“™]ÜĞØ\™ŸNÂ

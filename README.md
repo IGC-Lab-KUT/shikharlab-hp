@@ -42,10 +42,11 @@ data/           ← ここを編集するだけでサイトが更新される
 }
 ```
 
-任意項目として `dateEnd`、`thumbnail`、`featuredImage`、`images`、`links`、
+任意項目として `dateEnd`、英日併記の `dateLabel`、`thumbnail`、`featuredImage`、`images`、`links`、
 `relatedPublications`、`relatedProjects`、`author`、`lastUpdated` を使用できます。画像は
 `{ "src": "data/imgs/photo.jpg", "alt": { "en": "...", "ja": "..." }, "caption": { ... } }`
-の形式で設定します。外部リンクには `https://` の確認済みURLだけを使用してください。
+の形式で設定します。記事ページの写真はクリックすると原寸比で拡大表示されます。複数の写真は
+矢印キーでも切り替えられ、Escapeキーで閉じられます。外部リンクには `https://` の確認済みURLだけを使用してください。
 
 ### メンバーを追加する
 `data/members.json` の該当カテゴリ（`pi` / `researchCollaborators` / `phd` / `master` / `bachelor` / `alumni`）に追加:

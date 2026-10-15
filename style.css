@@ -850,6 +850,12 @@ main > section > h2 {
   grid-template-columns: 1fr;
 }
 
+.news-card-image-link {
+  display: block;
+  min-height: 10rem;
+  overflow: hidden;
+}
+
 .news-card-image {
   width: 100%;
   height: 100%;
@@ -994,7 +1000,8 @@ main > section > h2 {
   display: block;
   width: 100%;
   border-radius: var(--radius-md);
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .news-featured-image img {
@@ -1023,8 +1030,94 @@ main > section > h2 {
   gap: 1rem;
 }
 
-.news-article-image img {
-  aspect-ratio: 4 / 3;
+.news-image-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  cursor: zoom-in;
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-md);
+}
+
+.news-image-button:focus-visible {
+  outline: 3px solid var(--color-blue);
+  outline-offset: 3px;
+}
+
+.news-lightbox {
+  width: min(94vw, 78rem);
+  max-width: none;
+  max-height: 94vh;
+  padding: 3.25rem 4.5rem 1rem;
+  color: white;
+  background: rgba(7, 18, 38, 0.98);
+  border: 0;
+  border-radius: var(--radius-md);
+}
+
+.news-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.82);
+}
+
+.news-lightbox-frame {
+  display: grid;
+  place-items: center;
+}
+
+.news-lightbox img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(94vh - 8.5rem);
+  object-fit: contain;
+}
+
+.news-lightbox-caption,
+.news-lightbox-counter {
+  margin: 0.6rem 0 0;
+  text-align: center;
+}
+
+.news-lightbox-counter {
+  color: #d9e5ef;
+  font-size: 0.85rem;
+}
+
+.news-lightbox-close,
+.news-lightbox-nav {
+  position: absolute;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  color: white;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  font: inherit;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.news-lightbox-close {
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.news-lightbox-nav {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.news-lightbox-previous {
+  left: 0.75rem;
+}
+
+.news-lightbox-next {
+  right: 0.75rem;
+}
+
+.lightbox-open {
+  overflow: hidden;
 }
 
 .news-related {
@@ -1323,6 +1416,19 @@ main > section > h2 {
 
   .news-card-image {
     max-height: 13rem;
+  }
+
+  .news-lightbox {
+    padding: 3.25rem 0.75rem 1rem;
+  }
+
+  .news-lightbox-nav {
+    top: auto;
+    bottom: 0.75rem;
+  }
+
+  .news-lightbox-frame {
+    padding-bottom: 3.25rem;
   }
 
   .news-card-body,
