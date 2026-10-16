@@ -8,7 +8,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
   <link rel="icon" href="LOGO.PNG" type="image/png">
   <title>Publications - Shikhar Lab</title>
-  <link rel="stylesheet" href="style.css?v=20261014.6">
+  <link rel="stylesheet" href="style.css?v=20261016.1">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -17,12 +17,35 @@
   <main id="main-content">
     <section>
       <h1 class="page-title">Publications</h1>
+      <form class="publication-filters" id="publication-filters" role="search">
+        <label for="publication-search">
+          Search publications
+          <input id="publication-search" type="search" placeholder="Title, author, or keyword" autocomplete="off" aria-controls="publications-container">
+        </label>
+        <label for="publication-year-filter">
+          Year
+          <select id="publication-year-filter" aria-controls="publications-container">
+            <option value="">All years</option>
+          </select>
+        </label>
+        <label for="publication-type-filter">
+          Publication type
+          <select id="publication-type-filter" aria-controls="publications-container">
+            <option value="">All types</option>
+            <option value="journal">Journal articles</option>
+            <option value="conference">Conference papers</option>
+            <option value="bookChapter">Book chapters</option>
+          </select>
+        </label>
+        <button class="publication-filter-reset" id="publication-filter-reset" type="reset">Reset</button>
+      </form>
+      <p class="publication-filter-status" id="publication-filter-status" aria-live="polite"></p>
       <div id="publications-container"></div>
     </section>
   </main>
 
   <div id="footer-placeholder"></div>
   <script src="js/common.js?v=20261015.1"></script>
-  <script src="js/publications.js?v=20261014.4"></script>
+  <script src="js/publications.js?v=20261016.1"></script>
 </body>
 </html>
