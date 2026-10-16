@@ -37,6 +37,15 @@
             <option value="bookChapter">Book chapters</option>
           </select>
         </label>
+        <label for="publication-sort">
+          Sort by
+          <select id="publication-sort" aria-controls="publications-container">
+            <option value="year-desc">Year: Newest first</option>
+            <option value="year-asc">Year: Oldest first</option>
+            <option value="citations-desc">Citations: Highest first</option>
+            <option value="citations-asc">Citations: Lowest first</option>
+          </select>
+        </label>
         <button class="publication-filter-reset" id="publication-filter-reset" type="reset">Reset</button>
       </form>
       <p class="publication-filter-status" id="publication-filter-status" aria-live="polite"></p>
@@ -46,6 +55,6 @@
 
   <div id="footer-placeholder"></div>
   <script src="js/common.js?v=20261015.1"></script>
-  <script src="js/publications.js?v=20261016.2"></script>
+  <script src="js/publications.js?v=20261016.3"></script>
 </body>
 </html>
