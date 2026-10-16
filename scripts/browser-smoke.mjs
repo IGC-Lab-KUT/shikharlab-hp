@@ -9,6 +9,7 @@ const playwrightModule = await import(moduleName.startsWith('/') ? pathToFileURL
 const { chromium } = playwrightModule.default || playwrightModule;
 
 const newsData = JSON.parse(await readFile(resolve('data/news.json'), 'utf8'));
+const publicationData = JSON.parse(await readFile(resolve('data/publications.json'), 'utf8'));
 const detailedNewsIds = newsData.items
   .filter(item => item.status === 'published' && (
     item.content?.en?.length
@@ -43,6 +44,7 @@ const browser = await chromium.launch({
 
 for (const viewport of viewports) {
   const context = await browser.newContext({ viewport });
+  await context.grantPermissions(['clipboard-read', 'clipboard-write'], { origin: baseUrl });
   for (const pagePath of pages) {
     const page = await context.newPage();
     const consoleErrors = [];
@@ -81,6 +83,33 @@ for (const viewport of viewports) {
       if (!(await page.locator('#news-article-intro').textContent())?.trim()) failures.push(`${viewport.name} ${pagePath}: missing article introduction`);
       if (await page.locator('.status-message--error').count()) failures.push(`${viewport.name} ${pagePath}: article was not rendered`);
     }
+    if (pagePath.endsWith('publications.html')) {
+      const publicationItems = page.locator('.publication-item');
+      if (await publicationItems.count() !== publicationData.length) {
+        failures.push(`${viewport.name} ${pagePath}: expected ${publicationData.length} publications`);
+      }
+
+      await page.locator('#publication-search').fill('Quantum-Secured Federated Learning');
+      if (await publicationItems.count() !== 1) failures.push(`${viewport.name} ${pagePath}: title search did not return one result`);
+
+      await page.locator('#publication-filter-reset').click();
+      await page.waitForFunction(expected => document.querySelectorAll('.publication-item').length === expected, publicationData.length);
+      await page.locator('#publication-year-filter').selectOption('2015');
+      if (await publicationItems.count() !== 1) failures.push(`${viewport.name} ${pagePath}: year filter did not return one result`);
+
+      await page.locator('#publication-filter-reset').click();
+      await page.waitForFunction(expected => document.querySelectorAll('.publication-item').length === expected, publicationData.length);
+      await page.locator('#publication-type-filter').selectOption('bookChapter');
+      if (await publicationItems.count() !== 1) failures.push(`${viewport.name} ${pagePath}: type filter did not return one result`);
+
+      await page.locator('#publication-filter-reset').click();
+      await page.waitForFunction(expected => document.querySelectorAll('.publication-item').length === expected, publicationData.length);
+      await page.locator('.citation-copy-button').first().click();
+      const firstPublication = publicationData[0];
+      const expectedCitation = `${firstPublication.authors}. “${firstPublication.title}.” ${firstPublication.venue} (${firstPublication.year}). ${firstPublication.url}`;
+      const copiedCitation = await page.evaluate(() => navigator.clipboard.readText());
+      if (copiedCitation !== expectedCitation) failures.push(`${viewport.name} ${pagePath}: copied citation did not match publication metadata`);
+    }
 
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
     if (overflow) failures.push(`${viewport.name} ${pagePath}: horizontal overflow`);
@@ -105,7 +134,7 @@ for (const viewport of viewports) {
       }
     }
 
-    if (['index.html', 'pi.html', 'projects.html', 'opportunities.html', 'lab-life.html', 'news.html', 'ja/index.html', 'ja/pi.html', 'ja/projects.html', 'ja/opportunities.html', 'ja/lab-life.html', 'ja/news.html'].includes(pagePath)) {
+    if (['index.html', 'pi.html', 'publications.html', 'projects.html', 'opportunities.html', 'lab-life.html', 'news.html', 'ja/index.html', 'ja/pi.html', 'ja/publications.html', 'ja/projects.html', 'ja/opportunities.html', 'ja/lab-life.html', 'ja/news.html'].includes(pagePath)) {
       const name = pagePath.replaceAll('/', '-').replaceAll('?', '-').replaceAll('=', '-').replace('.html', '') || 'index';
       await page.screenshot({ path: resolve(outputDirectory, `${name}-${viewport.name}.png`), fullPage: true });
     }
