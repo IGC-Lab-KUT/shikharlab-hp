@@ -48,7 +48,7 @@
       "nameEn": "Haruki Mitsui",
       "roleEn": "First-year master's student",
       "roleJa": "修士課程1年生",
-      "photo": ""
+      "photo": "data/imgs/haruki-mitsui.webp"
     }
   ],
   "alumni": [],
@@ -93,7 +93,7 @@
       "nameEn": "Haruto Kawabata",
       "roleEn": "Third-year bachelor's student",
       "roleJa": "学部3年生",
-      "photo": ""
+      "photo": "data/imgs/Kawabata.JPG"
     },
 		{
 			"nameJa": "西口 隼翔",
