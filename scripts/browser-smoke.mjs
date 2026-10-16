@@ -10,6 +10,7 @@ const { chromium } = playwrightModule.default || playwrightModule;
 
 const newsData = JSON.parse(await readFile(resolve('data/news.json'), 'utf8'));
 const publicationData = JSON.parse(await readFile(resolve('data/publications.json'), 'utf8'));
+const openAlexData = JSON.parse(await readFile(resolve('data/openalex-citations.json'), 'utf8'));
 const detailedNewsIds = newsData.items
   .filter(item => item.status === 'published' && (
     item.content?.en?.length
@@ -87,6 +88,24 @@ for (const viewport of viewports) {
       const publicationItems = page.locator('.publication-item');
       if (await publicationItems.count() !== publicationData.length) {
         failures.push(`${viewport.name} ${pagePath}: expected ${publicationData.length} publications`);
+      }
+      const citationLabels = page.locator('.openalex-citation');
+      if (await citationLabels.count() !== publicationData.length) {
+        failures.push(`${viewport.name} ${pagePath}: expected one OpenAlex citation status per publication`);
+      }
+      const matchedCount = openAlexData.entries.filter(entry => entry.matchStatus === 'matched').length;
+      if (await page.locator('a.openalex-citation[href^="https://openalex.org/W"]').count() !== matchedCount) {
+        failures.push(`${viewport.name} ${pagePath}: verified OpenAlex links did not match generated data`);
+      }
+      const unmatchedCount = openAlexData.entries.length - matchedCount;
+      if (await page.locator('.openalex-citation--unmatched').count() !== unmatchedCount) {
+        failures.push(`${viewport.name} ${pagePath}: unmatched publications were not displayed separately from zero citations`);
+      }
+      if (openAlexData.entries.some(entry => entry.matchStatus === 'matched' && entry.citedByCount === 0)) {
+        const zeroLabel = pagePath.startsWith('ja/') ? 'OpenAlex 被引用数: 0' : 'OpenAlex citations: 0';
+        if (!await page.getByText(zeroLabel, { exact: true }).count()) {
+          failures.push(`${viewport.name} ${pagePath}: verified zero-citation publication was not displayed as 0`);
+        }
       }
 
       await page.locator('#publication-search').fill('Quantum-Secured Federated Learning');

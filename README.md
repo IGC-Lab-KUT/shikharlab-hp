@@ -125,6 +125,56 @@ researchmap は確認済みURLを表示しています。ResearchGate は本人�
 `url` は論文ページへのリンク（なければ空文字列）。
 `type` は `journal`（論文誌）、`conference`（国際会議）、`bookChapter`（書籍章）のいずれかを指定します。
 
+### OpenAlex 被引用数を更新する
+
+公開ページの被引用数は `data/openalex-citations.json` から読み込まれます。このファイルは生成物であり、
+`data/publications.json` の題目・著者・掲載先・年・既存リンクを上書きしません。一致が確認できない業績は
+被引用数を `0` とせず、英語・日本語ページの両方で `—` と表示します。
+
+自動更新には OpenAlex の API キーが必要です。
+
+1. OpenAlex で API キーを取得します。
+2. GitHub の **Settings → Secrets and variables → Actions → New repository secret** を開きます。
+3. 名前を `OPENALEX_API_KEY` とし、値に API キーを保存します。
+4. **Settings → Actions → General → Workflow permissions** で **Read and write permissions** と
+   **Allow GitHub Actions to create and approve pull requests** を有効にします。このワークフローは承認を自動実行しませんが、
+   更新用プルリクエストの作成権限にこの設定が必要です。
+5. **Actions → Refresh OpenAlex citations → Run workflow** から初回更新を実行します。
+
+ワークフローは毎月1日 02:23 UTC（日本時間 11:23）にも実行されます。正常終了すると
+`automation/openalex-citations` ブランチのプルリクエストを作成または更新します。生成データも構造変更として
+CODEOWNERS のレビュー対象になるため、内容を確認してからマージしてください。API キーは Actions の実行環境だけで
+使用され、ブラウザー、ログ、JSONには保存されません。
+
+ローカルで更新する場合:
+
+```bash
+OPENALEX_API_KEY='your-key' node scripts/update-openalex-citations.mjs
+node scripts/test-openalex.mjs
+node scripts/validate.mjs
+```
+
+照合方法は次のとおりです。
+
+- DOI が既存の `url` に含まれる場合は DOI で取得し、題目・著者・DOIを検証します。
+- DOI がない場合は題目を検索し、題目の完全一致、著者照合、発表年の一致をすべて満たす候補だけを採用します。
+- 候補がない場合、複数候補が残る場合、または検証に失敗した場合は自動採用しません。
+
+曖昧な業績を手動確認した場合は、`data/openalex-citations.json` に記録された `publicationKey` と、確認済みの
+OpenAlex Work ID（例: `W1234567890`）を `data/openalex-overrides.json` に追加します。
+
+```json
+{
+  "2024:normalized publication title": "W1234567890"
+}
+```
+
+次回更新時にスクリプトがそのレコードを再取得し、題目と著者を検証します。生成JSONを直接編集しないでください。
+
+APIが一時的に利用できない場合、レート制限（HTTP 429）と一時的なサーバーエラーは待機して再試行されます。
+再試行後も失敗した場合は処理を終了し、既存の有効な `data/openalex-citations.json` を保持します。
+`OPENALEX_API_KEY is not configured` の場合は Actions secret の名前と値を確認してください。
+
 ### 受賞情報を追加する
 `data/awards.json` に追加:
 ```json

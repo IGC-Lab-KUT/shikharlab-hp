@@ -31,6 +31,15 @@ function hasBilingualText(value) {
   return value && isNonEmptyString(value.en) && isNonEmptyString(value.ja);
 }
 
+function publicationKey(publication) {
+  const title = String(publication.title || '')
+    .normalize('NFKD')
+    .toLocaleLowerCase('en')
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .trim();
+  return `${publication.year}:${title}`;
+}
+
 function isSafeNewsImagePath(value) {
   return typeof value === 'string'
     && /^data\/imgs\/news-[A-Za-z0-9][A-Za-z0-9._-]*$/.test(value)
@@ -157,6 +166,43 @@ for (const path of jsonFiles) {
         for (const articlePage of ['news-detail.html', 'ja/news-detail.html']) {
           if (!existsSync(join(root, articlePage))) failures.push(`data/news.json: detailed news requires ${articlePage}`);
         }
+      }
+    }
+
+    if (relative(root, path) === 'data/openalex-citations.json') {
+      const publications = JSON.parse(readFileSync(join(root, 'data/publications.json'), 'utf8'));
+      const expectedKeys = new Set(publications.map(publicationKey));
+      if (data.schemaVersion !== 1 || data.source !== 'https://openalex.org' || !Array.isArray(data.entries)) {
+        failures.push('data/openalex-citations.json: expected schemaVersion 1, the official OpenAlex source, and an entries array');
+      }
+      if (!Number.isFinite(Date.parse(data.updatedAt))) failures.push('data/openalex-citations.json: updatedAt must be an ISO timestamp');
+      if ((data.entries || []).length !== publications.length) failures.push('data/openalex-citations.json: every publication must have exactly one citation-status entry');
+      const citationKeys = new Set();
+      for (const [index, entry] of (data.entries || []).entries()) {
+        const prefix = `data/openalex-citations.json: entry ${index + 1}`;
+        if (!expectedKeys.has(entry.publicationKey)) failures.push(`${prefix}: publicationKey does not match data/publications.json`);
+        if (citationKeys.has(entry.publicationKey)) failures.push(`${prefix}: duplicate publicationKey`);
+        citationKeys.add(entry.publicationKey);
+        if (!['matched', 'unmatched', 'ambiguous', 'invalid'].includes(entry.matchStatus)) failures.push(`${prefix}: invalid matchStatus`);
+        if (!Number.isFinite(Date.parse(entry.checkedAt))) failures.push(`${prefix}: checkedAt must be an ISO timestamp`);
+        if (entry.matchStatus === 'matched') {
+          if (!/^W\d+$/.test(entry.openAlexId || '')) failures.push(`${prefix}: matched entry requires a valid OpenAlex work ID`);
+          if (entry.openAlexUrl !== `https://openalex.org/${entry.openAlexId}`) failures.push(`${prefix}: matched entry requires the canonical OpenAlex URL`);
+          if (!Number.isInteger(entry.citedByCount) || entry.citedByCount < 0) failures.push(`${prefix}: citedByCount must be a non-negative integer`);
+        } else if (entry.openAlexId !== null || entry.openAlexUrl !== null || entry.citedByCount !== null) {
+          failures.push(`${prefix}: unmatched entry must not contain trusted citation data`);
+        }
+        if (Object.keys(entry).some(key => /(?:api.?key|secret|token)/i.test(key))) failures.push(`${prefix}: credentials must never be stored in generated data`);
+      }
+    }
+
+    if (relative(root, path) === 'data/openalex-overrides.json') {
+      const publications = JSON.parse(readFileSync(join(root, 'data/publications.json'), 'utf8'));
+      const expectedKeys = new Set(publications.map(publicationKey));
+      if (!data || typeof data !== 'object' || Array.isArray(data)) failures.push('data/openalex-overrides.json: expected an object');
+      else for (const [key, id] of Object.entries(data)) {
+        if (!expectedKeys.has(key)) failures.push(`data/openalex-overrides.json: unknown publication key ${key}`);
+        if (!/^(?:https:\/\/openalex\.org\/)?W\d+$/i.test(id)) failures.push(`data/openalex-overrides.json: invalid OpenAlex work ID for ${key}`);
       }
     }
   } catch (error) {
