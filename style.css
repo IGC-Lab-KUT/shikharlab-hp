@@ -957,7 +957,7 @@ main > section > h2 {
 .publication-filters {
   display: grid;
   align-items: end;
-  grid-template-columns: minmax(14rem, 2fr) repeat(2, minmax(10rem, 1fr)) auto;
+  grid-template-columns: minmax(14rem, 2fr) repeat(3, minmax(10rem, 1fr)) auto;
   margin-bottom: 0.75rem;
   gap: 1rem;
 }
@@ -1478,6 +1478,14 @@ main > section > h2 {
   .nav-links a {
     padding: 0.7rem 0.85rem;
   }
+
+  .publication-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .publication-filters label:first-child {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 38rem) {
@@ -1540,6 +1548,10 @@ main > section > h2 {
 
   .publication-filters {
     grid-template-columns: 1fr;
+  }
+
+  .publication-filters label:first-child {
+    grid-column: auto;
   }
 
   .publication-filter-reset {

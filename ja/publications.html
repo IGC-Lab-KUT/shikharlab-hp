@@ -37,6 +37,15 @@
             <option value="bookChapter">書籍章</option>
           </select>
         </label>
+        <label for="publication-sort">
+          並び順
+          <select id="publication-sort" aria-controls="publications-container">
+            <option value="year-desc">発表年：新しい順</option>
+            <option value="year-asc">発表年：古い順</option>
+            <option value="citations-desc">被引用数：多い順</option>
+            <option value="citations-asc">被引用数：少ない順</option>
+          </select>
+        </label>
         <button class="publication-filter-reset" id="publication-filter-reset" type="reset">リセット</button>
       </form>
       <p class="publication-filter-status" id="publication-filter-status" aria-live="polite"></p>
@@ -46,6 +55,6 @@
 
   <div id="footer-placeholder"></div>
   <script src="../js/common.js?v=20261015.1"></script>
-  <script src="../js/publications.js?v=20261016.2"></script>
+  <script src="../js/publications.js?v=20261016.3"></script>
 </body>
 </html>

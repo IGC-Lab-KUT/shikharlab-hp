@@ -23,6 +23,8 @@ jobs:
           node-version: 22
       - name: Validate website data and files
         run: node scripts/validate.mjs
+      - name: Test publication sorting
+        run: node scripts/test-publication-sorting.mjs
       - name: Classify pull-request scope
         if: github.event_name == 'pull_request'
         run: node scripts/check-news-scope.mjs --base "${{ github.event.pull_request.base.sha }}" --head "${{ github.event.pull_request.head.sha }}"

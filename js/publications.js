@@ -17,6 +17,9 @@ const PUBLICATION_LABELS = {
   },
 };
 
+const PUBLICATION_SORTS = new Set(['year-desc', 'year-asc', 'citations-desc', 'citations-asc']);
+const DEFAULT_PUBLICATION_SORT = 'year-desc';
+
 function publicationKey(publication) {
   const normalizedTitle = String(publication.title || '')
     .normalize('NFKD')
@@ -41,6 +44,31 @@ function groupedByYear(items) {
     (groups[item.year] ||= []).push(item);
     return groups;
   }, {});
+}
+
+function validPublicationSort(value) {
+  return PUBLICATION_SORTS.has(value) ? value : DEFAULT_PUBLICATION_SORT;
+}
+
+function citationCount(publication, citations) {
+  const count = citations.get(publicationKey(publication))?.citedByCount;
+  return Number.isInteger(count) && count >= 0 ? count : null;
+}
+
+function sortPublications(items, sort, citations) {
+  const mode = validPublicationSort(sort);
+  return [...items].sort((a, b) => {
+    if (mode.startsWith('citations-')) {
+      const aCount = citationCount(a, citations);
+      const bCount = citationCount(b, citations);
+      if (aCount === null && bCount !== null) return 1;
+      if (aCount !== null && bCount === null) return -1;
+      if (aCount !== bCount) return mode === 'citations-desc' ? bCount - aCount : aCount - bCount;
+    } else if (a.year !== b.year) {
+      return mode === 'year-asc' ? a.year - b.year : b.year - a.year;
+    }
+    return a.originalIndex - b.originalIndex;
+  });
 }
 
 function citationText(publication) {
@@ -127,10 +155,16 @@ function normalizedSearchText(publication) {
   return `${publication.title} ${publication.authors} ${keywords}`.toLocaleLowerCase();
 }
 
-function renderPublicationSections(items, labels, citations) {
+function renderPublicationSections(items, labels, citations, sort) {
+  if (sort.startsWith('citations-')) {
+    const list = createElement('ul', { className: 'publication-list publication-ranking' });
+    list.append(...items.map(item => publicationItem(item, labels, citations)));
+    return [list];
+  }
+
   const groups = groupedByYear(items);
   return Object.keys(groups)
-    .sort((a, b) => Number(b) - Number(a))
+    .sort((a, b) => sort === 'year-asc' ? Number(a) - Number(b) : Number(b) - Number(a))
     .map(year => {
       const section = createElement('section', { className: 'year-section' });
       section.append(createElement('h2', { text: year }));
@@ -156,10 +190,12 @@ async function renderPublications() {
       }),
     ]);
     const citations = citationIndex(citationData);
+    const publications = data.map((publication, originalIndex) => ({ ...publication, originalIndex }));
     const form = document.getElementById('publication-filters');
     const search = document.getElementById('publication-search');
     const yearFilter = document.getElementById('publication-year-filter');
     const typeFilter = document.getElementById('publication-type-filter');
+    const sortControl = document.getElementById('publication-sort');
     const status = document.getElementById('publication-filter-status');
     const params = new URLSearchParams(window.location.search);
     const years = [...new Set(data.map(item => String(item.year)))].sort((a, b) => Number(b) - Number(a));
@@ -167,38 +203,78 @@ async function renderPublications() {
     yearFilter.append(...years.map(year => createElement('option', { text: year, attributes: { value: year } })));
     if (years.includes(params.get('year'))) yearFilter.value = params.get('year');
     if (['journal', 'conference', 'bookChapter'].includes(params.get('type'))) typeFilter.value = params.get('type');
+    sortControl.value = validPublicationSort(params.get('sort'));
     search.value = params.get('q') || '';
 
-    const update = () => {
+    let searchHistoryTimer;
+
+    const currentParams = () => {
+      const nextParams = new URLSearchParams();
+      if (search.value.trim()) nextParams.set('q', search.value.trim());
+      if (yearFilter.value) nextParams.set('year', yearFilter.value);
+      if (typeFilter.value) nextParams.set('type', typeFilter.value);
+      if (sortControl.value !== DEFAULT_PUBLICATION_SORT) nextParams.set('sort', sortControl.value);
+      return nextParams;
+    };
+
+    const syncLanguageLink = queryString => {
+      const languageLink = document.querySelector('.language-link');
+      if (!languageLink) return;
+      const languageUrl = new URL(languageLink.href, window.location.href);
+      languageUrl.search = queryString;
+      languageLink.href = languageUrl.href;
+    };
+
+    const writeUrl = mode => {
+      const queryString = currentParams().toString();
+      syncLanguageLink(queryString);
+      const url = `${window.location.pathname}${queryString ? `?${queryString}` : ''}`;
+      if (`${window.location.pathname}${window.location.search}` === url) return;
+      window.history[mode === 'push' ? 'pushState' : 'replaceState'](null, '', url);
+    };
+
+    const update = (historyMode = 'replace') => {
       const query = search.value.trim().toLocaleLowerCase();
-      const filtered = data.filter(publication => (
+      const filtered = publications.filter(publication => (
         (!query || normalizedSearchText(publication).includes(query))
         && (!yearFilter.value || String(publication.year) === yearFilter.value)
         && (!typeFilter.value || publication.type === typeFilter.value)
       ));
+      const sorted = sortPublications(filtered, sortControl.value, citations);
 
-      const sections = renderPublicationSections(filtered, labels, citations);
+      const sections = renderPublicationSections(sorted, labels, citations, sortControl.value);
       container.replaceChildren(...(sections.length ? sections : [createElement('p', {
         className: 'publication-empty',
         text: labels.noResults,
       })]));
       status.textContent = lang === 'ja'
-        ? `${data.length}件中${filtered.length}件の研究業績を表示しています。`
-        : `Showing ${filtered.length} of ${data.length} publications.`;
-
-      const nextParams = new URLSearchParams();
-      if (search.value.trim()) nextParams.set('q', search.value.trim());
-      if (yearFilter.value) nextParams.set('year', yearFilter.value);
-      if (typeFilter.value) nextParams.set('type', typeFilter.value);
-      const queryString = nextParams.toString();
-      window.history.replaceState(null, '', `${window.location.pathname}${queryString ? `?${queryString}` : ''}`);
+        ? `${publications.length}件中${filtered.length}件の研究業績を表示しています。`
+        : `Showing ${filtered.length} of ${publications.length} publications.`;
+      syncLanguageLink(currentParams().toString());
+      if (historyMode !== 'none') writeUrl(historyMode);
     };
 
-    search.addEventListener('input', update);
-    yearFilter.addEventListener('change', update);
-    typeFilter.addEventListener('change', update);
+    search.addEventListener('input', () => {
+      update('none');
+      window.clearTimeout(searchHistoryTimer);
+      searchHistoryTimer = window.setTimeout(() => writeUrl('push'), 350);
+    });
+    yearFilter.addEventListener('change', () => update('push'));
+    typeFilter.addEventListener('change', () => update('push'));
+    sortControl.addEventListener('change', () => update('push'));
     form.addEventListener('submit', event => event.preventDefault());
-    form.addEventListener('reset', () => window.setTimeout(update));
+    form.addEventListener('reset', () => {
+      window.clearTimeout(searchHistoryTimer);
+      window.setTimeout(() => update('push'));
+    });
+    window.addEventListener('popstate', () => {
+      const restored = new URLSearchParams(window.location.search);
+      search.value = restored.get('q') || '';
+      yearFilter.value = years.includes(restored.get('year')) ? restored.get('year') : '';
+      typeFilter.value = ['journal', 'conference', 'bookChapter'].includes(restored.get('type')) ? restored.get('type') : '';
+      sortControl.value = validPublicationSort(restored.get('sort'));
+      update('none');
+    });
     update();
   } catch (error) {
     console.error(error);
@@ -206,4 +282,13 @@ async function renderPublications() {
   }
 }
 
-renderPublications();
+if (typeof module !== 'undefined') {
+  module.exports = {
+    citationIndex,
+    publicationKey,
+    sortPublications,
+    validPublicationSort,
+  };
+}
+
+if (typeof document !== 'undefined') renderPublications();

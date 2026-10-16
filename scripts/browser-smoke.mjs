@@ -11,6 +11,25 @@ const { chromium } = playwrightModule.default || playwrightModule;
 const newsData = JSON.parse(await readFile(resolve('data/news.json'), 'utf8'));
 const publicationData = JSON.parse(await readFile(resolve('data/publications.json'), 'utf8'));
 const openAlexData = JSON.parse(await readFile(resolve('data/openalex-citations.json'), 'utf8'));
+const normalizeTitle = title => String(title || '')
+  .normalize('NFKD')
+  .toLocaleLowerCase('en')
+  .replace(/[^\p{L}\p{N}]+/gu, ' ')
+  .trim();
+const publicationKey = publication => `${publication.year}:${normalizeTitle(publication.title)}`;
+const citationCounts = new Map(openAlexData.entries
+  .filter(entry => entry.matchStatus === 'matched' && Number.isInteger(entry.citedByCount))
+  .map(entry => [entry.publicationKey, entry.citedByCount]));
+const citationSortedTitles = direction => publicationData
+  .map((publication, originalIndex) => ({ publication, originalIndex, count: citationCounts.get(publicationKey(publication)) }))
+  .sort((a, b) => {
+    const aMissing = !Number.isInteger(a.count);
+    const bMissing = !Number.isInteger(b.count);
+    if (aMissing !== bMissing) return aMissing ? 1 : -1;
+    if (!aMissing && a.count !== b.count) return direction === 'desc' ? b.count - a.count : a.count - b.count;
+    return a.originalIndex - b.originalIndex;
+  })
+  .map(({ publication }) => publication.title);
 const detailedNewsIds = newsData.items
   .filter(item => item.status === 'published' && (
     item.content?.en?.length
@@ -123,6 +142,73 @@ for (const viewport of viewports) {
 
       await page.locator('#publication-filter-reset').click();
       await page.waitForFunction(expected => document.querySelectorAll('.publication-item').length === expected, publicationData.length);
+      const sortControl = page.locator('#publication-sort');
+      const publicationTitles = () => page.locator('.publication-item h4').allTextContents();
+
+      await sortControl.selectOption('year-asc');
+      const oldestYear = Math.min(...publicationData.map(item => item.year));
+      if ((await publicationTitles())[0] !== publicationData.find(item => item.year === oldestYear)?.title) {
+        failures.push(`${viewport.name} ${pagePath}: oldest-year sorting was incorrect`);
+      }
+
+      await sortControl.selectOption('citations-desc');
+      if (JSON.stringify(await publicationTitles()) !== JSON.stringify(citationSortedTitles('desc'))) {
+        failures.push(`${viewport.name} ${pagePath}: descending citation sorting was incorrect`);
+      }
+
+      await sortControl.selectOption('citations-asc');
+      if (JSON.stringify(await publicationTitles()) !== JSON.stringify(citationSortedTitles('asc'))) {
+        failures.push(`${viewport.name} ${pagePath}: ascending citation sorting did not keep zero valid and missing values last`);
+      }
+
+      await page.locator('#publication-year-filter').selectOption('2026');
+      await page.locator('#publication-type-filter').selectOption('conference');
+      const expectedCombined = publicationData.filter(item => item.year === 2026 && item.type === 'conference').length;
+      if (await publicationItems.count() !== expectedCombined) {
+        failures.push(`${viewport.name} ${pagePath}: combined sorting and filtering returned the wrong count`);
+      }
+
+      const sharedUrl = `${baseUrl}/${pagePath}?year=2026&type=conference&sort=citations-asc`;
+      await page.goto(sharedUrl, { waitUntil: 'networkidle' });
+      if (await page.locator('#publication-year-filter').inputValue() !== '2026'
+        || await page.locator('#publication-type-filter').inputValue() !== 'conference'
+        || await page.locator('#publication-sort').inputValue() !== 'citations-asc') {
+        failures.push(`${viewport.name} ${pagePath}: shared URL state was not restored`);
+      }
+      const languageHref = await page.locator('.language-link').getAttribute('href');
+      if (!languageHref?.includes('year=2026') || !languageHref.includes('type=conference') || !languageHref.includes('sort=citations-asc')) {
+        failures.push(`${viewport.name} ${pagePath}: language switch did not preserve publication state`);
+      }
+
+      await page.locator('#publication-sort').selectOption('citations-desc');
+      await page.locator('#publication-year-filter').selectOption('');
+      await page.goBack();
+      if (await page.locator('#publication-year-filter').inputValue() !== '2026') {
+        failures.push(`${viewport.name} ${pagePath}: browser Back did not restore filter state`);
+      }
+      await page.goForward();
+      if (await page.locator('#publication-year-filter').inputValue() !== '') {
+        failures.push(`${viewport.name} ${pagePath}: browser Forward did not restore filter state`);
+      }
+
+      await page.goto(`${baseUrl}/${pagePath}?sort=invalid`, { waitUntil: 'networkidle' });
+      if (await page.locator('#publication-sort').inputValue() !== 'year-desc' || new URL(page.url()).searchParams.has('sort')) {
+        failures.push(`${viewport.name} ${pagePath}: invalid sort did not safely fall back to the default`);
+      }
+
+      const expectedSortLabel = pagePath.startsWith('ja/') ? '並び順' : 'Sort by';
+      if (!await page.getByText(expectedSortLabel, { exact: true }).count()) {
+        failures.push(`${viewport.name} ${pagePath}: localized sorting label was missing`);
+      }
+
+      await page.locator('#publication-search').fill('network');
+      await page.locator('#publication-sort').selectOption('citations-desc');
+      await page.locator('#publication-filter-reset').click();
+      await page.waitForFunction(expected => document.querySelectorAll('.publication-item').length === expected, publicationData.length);
+      if (await page.locator('#publication-sort').inputValue() !== 'year-desc' || new URL(page.url()).search) {
+        failures.push(`${viewport.name} ${pagePath}: reset did not restore default controls and URL`);
+      }
+
       await page.locator('.citation-copy-button').first().click();
       const firstPublication = publicationData[0];
       const expectedCitation = `${firstPublication.authors}. “${firstPublication.title}.” ${firstPublication.venue} (${firstPublication.year}). ${firstPublication.url}`;
