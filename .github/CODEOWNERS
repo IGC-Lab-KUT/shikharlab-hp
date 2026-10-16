@@ -1,6 +1,9 @@
 # Structural website changes require review from the Principal Investigator.
 * @kundan201
 
+# This workflow receives OPENALEX_API_KEY and must always retain PI review.
+/.github/workflows/refresh-openalex-citations.yml @kundan201
+
 # Routine news content and approved news photographs intentionally have no
 # code owner, so contributors with Write access can merge valid news-only PRs
 # without professor approval. The last matching pattern takes precedence.

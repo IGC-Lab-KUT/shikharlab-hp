@@ -1,0 +1,68 @@
+name: Refresh OpenAlex citations
+
+on:
+  schedule:
+    - cron: '23 2 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: openalex-citation-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Require the OpenAlex API key
+        run: |
+          if [ -z "$OPENALEX_API_KEY" ]; then
+            echo 'OPENALEX_API_KEY is not configured. Add it as a repository Actions secret.' >&2
+            exit 1
+          fi
+      - name: Test matching and failure handling
+        run: node scripts/test-openalex.mjs
+      - name: Refresh citation data
+        run: node scripts/update-openalex-citations.mjs
+      - name: Validate generated data and website files
+        run: node scripts/validate.mjs
+      - name: Create or update citation refresh pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- data/openalex-citations.json; then
+            echo 'OpenAlex citation data is already current.'
+            exit 0
+          fi
+
+          branch='automation/openalex-citations'
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/openalex-citations.json
+          git commit -m 'Refresh OpenAlex citation counts'
+          git push --force origin "HEAD:refs/heads/$branch"
+
+          existing_pr="$(gh pr list --head "$branch" --base main --state open --json number --jq '.[0].number // empty')"
+          if [ -z "$existing_pr" ]; then
+            gh pr create \
+              --base main \
+              --head "$branch" \
+              --title 'Refresh OpenAlex citation counts' \
+              --body 'Automated monthly refresh of verified OpenAlex citation counts. Unmatched and ambiguous publications remain displayed as — and require manual review.'
+          else
+            echo "Updated existing pull request #$existing_pr."
+          fi
