@@ -58,7 +58,7 @@
         "ja": "2026年8月1日・2日に高知工科大学で開催されたオープンキャンパスにおいて、研究室の学部3年生（B3）が高校生や保護者の方々に研究内容を紹介し、説明を行いました。"
       },
       "featuredImage": {
-        "src": "data/imgs/opencampus2026-1.jpg",
+        "src": "data/imgs/news-2026-open-campus-1.jpg",
         "alt": {
           "en": "Research posters displayed by the laboratory",
           "ja": "研究室の研究ポスター展示"
@@ -70,7 +70,7 @@
       },
       "images": [
         {
-          "src": "data/imgs/opencampus2026-2.jpg",
+          "src": "data/imgs/news-2026-open-campus-2.jpg",
           "alt": {
             "en": "A laboratory student explains research using a poster",
             "ja": "研究室の学生がポスターを用いて研究内容を説明する様子"
@@ -81,7 +81,7 @@
           }
         },
         {
-          "src": "data/imgs/opencampus2026-3.jpg",
+          "src": "data/imgs/news-2026-open-campus-3.jpg",
           "alt": {
             "en": "Visitors listen to a research presentation by a laboratory student",
             "ja": "来場者が研究室の学生による説明を聞く様子"
