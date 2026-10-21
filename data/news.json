@@ -5,8 +5,15 @@
       "id": "2026-10-yuto-morioka-nit-meghalaya-visit",
       "date": "2026-10-01",
       "dateEnd": "2026-12-31",
-      "dateLabel": { "en": "October–December 2026", "ja": "2026年10月～12月" },
-      "category": { "id": "research-visit", "en": "Research Visit", "ja": "研究滞在" },
+      "dateLabel": {
+        "en": "October–December 2026",
+        "ja": "2026年10月～12月"
+      },
+      "category": {
+        "id": "research-visit",
+        "en": "Research Visit",
+        "ja": "研究滞在"
+      },
       "title": {
         "en": "Yuto Morioka begins a visiting research stay at NIT Meghalaya",
         "ja": "森岡悠人がNIT Meghalayaで客員研究滞在を開始"
@@ -30,10 +37,73 @@
       "lastUpdated": "2026-10-15"
     },
     {
+      "id": "2026-08-open-campus",
+      "date": "2026-08-01",
+      "dateEnd": "2026-08-02",
+      "dateLabel": {
+        "en": "August 1–2, 2026",
+        "ja": "2026年8月1日〜2日"
+      },
+      "category": {
+        "id": "lab-event",
+        "en": "Lab Event",
+        "ja": "研究室イベント"
+      },
+      "title": {
+        "en": "Laboratory Students Introduce Their Research at Open Campus",
+        "ja": "オープンキャンパスで研究室の研究を紹介"
+      },
+      "summary": {
+        "en": "During the Open Campus event held at Kochi University of Technology on August 1–2, 2026, third-year undergraduate students from our laboratory introduced their research to visiting high school students and their parents or guardians.",
+        "ja": "2026年8月1日・2日に高知工科大学で開催されたオープンキャンパスにおいて、研究室の学部3年生（B3）が高校生や保護者の方々に研究内容を紹介し、説明を行いました。"
+      },
+      "featuredImage": {
+        "src": "data/imgs/opencampus2026-1.jpg",
+        "alt": {
+          "en": "Research posters displayed by the laboratory",
+          "ja": "研究室の研究ポスター展示"
+        },
+        "caption": {
+          "en": "Research posters displayed by the laboratory",
+          "ja": "研究室の研究ポスター展示"
+        }
+      },
+      "images": [
+        {
+          "src": "data/imgs/opencampus2026-2.jpg",
+          "alt": {
+            "en": "A laboratory student explains research using a poster",
+            "ja": "研究室の学生がポスターを用いて研究内容を説明する様子"
+          },
+          "caption": {
+            "en": "A laboratory student explains research using a poster",
+            "ja": "研究室の学生がポスターを用いて研究内容を説明する様子"
+          }
+        },
+        {
+          "src": "data/imgs/opencampus2026-3.jpg",
+          "alt": {
+            "en": "Visitors listen to a research presentation by a laboratory student",
+            "ja": "来場者が研究室の学生による説明を聞く様子"
+          },
+          "caption": {
+            "en": "Visitors listen to a research presentation by a laboratory student",
+            "ja": "来場者が研究室の学生による説明を聞く様子"
+          }
+        }
+      ],
+      "status": "published",
+      "lastUpdated": "2026-10-21"
+    },
+    {
       "id": "2026-06-ieee-vtc-spring-presentations",
       "date": "2026-06-09",
       "dateEnd": "2026-06-12",
-      "category": { "id": "conference-presentation", "en": "Conference Presentation", "ja": "国際会議発表" },
+      "category": {
+        "id": "conference-presentation",
+        "en": "Conference Presentation",
+        "ja": "国際会議発表"
+      },
       "title": {
         "en": "Two papers presented at IEEE VTC 2026-Spring",
         "ja": "IEEE VTC 2026-Springで2件の研究成果を発表"
@@ -56,11 +126,17 @@
       },
       "links": [
         {
-          "label": { "en": "IEEE VTC 2026-Spring official website", "ja": "IEEE VTC 2026-Spring 公式サイト" },
+          "label": {
+            "en": "IEEE VTC 2026-Spring official website",
+            "ja": "IEEE VTC 2026-Spring 公式サイト"
+          },
           "url": "https://events.vtsociety.org/vtc2026-spring/"
         },
         {
-          "label": { "en": "6G SAGA workshop program", "ja": "6G SAGAワークショッププログラム" },
+          "label": {
+            "en": "6G SAGA workshop program",
+            "ja": "6G SAGAワークショッププログラム"
+          },
           "url": "https://events.vtsociety.org/vtc2026-spring/conference-sessions/workshops-currently-available/w2-2nd-international-workshop-on-intelligent-aerial-and-spaceborne-systems-for-6g-6g-saga-communication-sensing-and-autonomy-for-mobility/"
         }
       ],
@@ -72,7 +148,11 @@
       "id": "2026-05-ieee-icc-presentations",
       "date": "2026-05-24",
       "dateEnd": "2026-05-28",
-      "category": { "id": "conference-presentation", "en": "Conference Presentation", "ja": "国際会議発表" },
+      "category": {
+        "id": "conference-presentation",
+        "en": "Conference Presentation",
+        "ja": "国際会議発表"
+      },
       "title": {
         "en": "Three papers presented at IEEE ICC 2026 and ICC Workshops",
         "ja": "IEEE ICC 2026およびICC Workshopsで3件の研究成果を発表"
@@ -141,21 +221,33 @@
       ],
       "links": [
         {
-          "label": { "en": "IEEE ICC 2026 official website", "ja": "IEEE ICC 2026 公式サイト" },
+          "label": {
+            "en": "IEEE ICC 2026 official website",
+            "ja": "IEEE ICC 2026 公式サイト"
+          },
           "url": "https://icc2026.ieee-icc.org/"
         }
       ],
       "relatedPublications": [
         {
-          "title": { "en": "Deep Reinforcement Learning for Interference Suppression in RIS-Aided Space-Air-Ground Integrated Networks", "ja": "Deep Reinforcement Learning for Interference Suppression in RIS-Aided Space-Air-Ground Integrated Networks" },
+          "title": {
+            "en": "Deep Reinforcement Learning for Interference Suppression in RIS-Aided Space-Air-Ground Integrated Networks",
+            "ja": "Deep Reinforcement Learning for Interference Suppression in RIS-Aided Space-Air-Ground Integrated Networks"
+          },
           "url": "https://ieeexplore.ieee.org/document/11586530"
         },
         {
-          "title": { "en": "Energy-Efficient Dynamic Spectrum Allocation for Massive THz IoT Networks Using Quantum Approximate Optimization Algorithm", "ja": "Energy-Efficient Dynamic Spectrum Allocation for Massive THz IoT Networks Using Quantum Approximate Optimization Algorithm" },
+          "title": {
+            "en": "Energy-Efficient Dynamic Spectrum Allocation for Massive THz IoT Networks Using Quantum Approximate Optimization Algorithm",
+            "ja": "Energy-Efficient Dynamic Spectrum Allocation for Massive THz IoT Networks Using Quantum Approximate Optimization Algorithm"
+          },
           "url": "https://ieeexplore.ieee.org/document/11587626"
         },
         {
-          "title": { "en": "Federated Meta-Learning for Ultra-Fast Resource Allocation in Dense Cell-Free Massive MIMO 6G Networks", "ja": "Federated Meta-Learning for Ultra-Fast Resource Allocation in Dense Cell-Free Massive MIMO 6G Networks" },
+          "title": {
+            "en": "Federated Meta-Learning for Ultra-Fast Resource Allocation in Dense Cell-Free Massive MIMO 6G Networks",
+            "ja": "Federated Meta-Learning for Ultra-Fast Resource Allocation in Dense Cell-Free Massive MIMO 6G Networks"
+          },
           "url": "https://ieeexplore.ieee.org/document/11587010"
         }
       ],
@@ -166,7 +258,11 @@
     {
       "id": "2026-05-ieee-infocom-workshops-presentation",
       "date": "2026-05-18",
-      "category": { "id": "conference-presentation", "en": "Conference Presentation", "ja": "国際会議発表" },
+      "category": {
+        "id": "conference-presentation",
+        "en": "Conference Presentation",
+        "ja": "国際会議発表"
+      },
       "title": {
         "en": "Research on jamming-resilient LEO satellite-IoT networks presented at IEEE INFOCOM Workshops 2026",
         "ja": "IEEE INFOCOM Workshops 2026で耐ジャミングLEO衛星IoTネットワークに関する研究を発表"
@@ -211,7 +307,10 @@
       ],
       "relatedPublications": [
         {
-          "title": { "en": "Q-FLAP: Quantum-Secured Federated Learning with Adaptive Protection for Jamming-Resilient LEO Satellite-IoT Networks", "ja": "Q-FLAP: Quantum-Secured Federated Learning with Adaptive Protection for Jamming-Resilient LEO Satellite-IoT Networks" },
+          "title": {
+            "en": "Q-FLAP: Quantum-Secured Federated Learning with Adaptive Protection for Jamming-Resilient LEO Satellite-IoT Networks",
+            "ja": "Q-FLAP: Quantum-Secured Federated Learning with Adaptive Protection for Jamming-Resilient LEO Satellite-IoT Networks"
+          },
           "url": "https://ieeexplore.ieee.org/document/11571279"
         }
       ],
@@ -222,7 +321,11 @@
     {
       "id": "2026-05-yuto-morioka-conference-presentation",
       "date": "2026-05-14",
-      "category": { "id": "research-presentation", "en": "Research Presentation", "ja": "研究発表" },
+      "category": {
+        "id": "research-presentation",
+        "en": "Research Presentation",
+        "ja": "研究発表"
+      },
       "title": {
         "en": "Yuto Morioka presented research on aerial vehicle path planning",
         "ja": "森岡悠人が飛行体の経路計画に関する研究を発表"
@@ -254,11 +357,17 @@
       },
       "links": [
         {
-          "label": { "en": "Official IEICE presentation record", "ja": "電子情報通信学会 発表情報" },
+          "label": {
+            "en": "Official IEICE presentation record",
+            "ja": "電子情報通信学会 発表情報"
+          },
           "url": "https://www.ieice.org/publications/ken/summary.php?contribution_id=143655&society_cd=CS&ken_id=CS&year=2026&presen_date=2026-05-14&schedule_id=8989&lang=en&expandable=1"
         },
         {
-          "label": { "en": "IEICE paper download information", "ja": "電子情報通信学会 原稿ダウンロード情報" },
+          "label": {
+            "en": "IEICE paper download information",
+            "ja": "電子情報通信学会 原稿ダウンロード情報"
+          },
           "url": "https://ken.ieice.org/ken/download/20260514ecuu/eng/"
         }
       ],
@@ -268,9 +377,19 @@
     {
       "id": "2026-04-cherry-blossom-welcome-gathering",
       "date": "2026-04-24",
-      "dateLabel": { "en": "2 and 24 April 2026", "ja": "2026年4月2日・24日" },
-      "category": { "id": "lab-event", "en": "Lab Event", "ja": "研究室イベント" },
-      "title": { "en": "Cherry blossom viewing and welcome gathering", "ja": "お花見と新入生歓迎会" },
+      "dateLabel": {
+        "en": "2 and 24 April 2026",
+        "ja": "2026年4月2日・24日"
+      },
+      "category": {
+        "id": "lab-event",
+        "en": "Lab Event",
+        "ja": "研究室イベント"
+      },
+      "title": {
+        "en": "Cherry blossom viewing and welcome gathering",
+        "ja": "お花見と新入生歓迎会"
+      },
       "summary": {
         "en": "Lab members gathered at the university to enjoy the cherry blossoms, and we later held a welcome gathering for new students.",
         "ja": "大学で研究室メンバーとお花見を楽しみ、その後、新入生歓迎会を開催しました。"
@@ -303,7 +422,11 @@
       "id": "2025-12-ieee-globecom-presentations",
       "date": "2025-12-08",
       "dateEnd": "2025-12-12",
-      "category": { "id": "conference-presentation", "en": "Conference Presentation", "ja": "国際会議発表" },
+      "category": {
+        "id": "conference-presentation",
+        "en": "Conference Presentation",
+        "ja": "国際会議発表"
+      },
       "title": {
         "en": "Two papers presented at IEEE GLOBECOM 2025 and GLOBECOM Workshops",
         "ja": "IEEE GLOBECOM 2025およびGLOBECOM Workshopsで2件の研究成果を発表"
@@ -350,17 +473,26 @@
       ],
       "links": [
         {
-          "label": { "en": "IEEE GLOBECOM 2025 official website", "ja": "IEEE GLOBECOM 2025 公式サイト" },
+          "label": {
+            "en": "IEEE GLOBECOM 2025 official website",
+            "ja": "IEEE GLOBECOM 2025 公式サイト"
+          },
           "url": "https://globecom2025.ieee-globecom.org/"
         }
       ],
       "relatedPublications": [
         {
-          "title": { "en": "Hybrid Trajectory Prediction for Robust THz Beam Alignment in Mobile Networks", "ja": "Hybrid Trajectory Prediction for Robust THz Beam Alignment in Mobile Networks" },
+          "title": {
+            "en": "Hybrid Trajectory Prediction for Robust THz Beam Alignment in Mobile Networks",
+            "ja": "Hybrid Trajectory Prediction for Robust THz Beam Alignment in Mobile Networks"
+          },
           "url": "https://ieeexplore.ieee.org/document/11590891"
         },
         {
-          "title": { "en": "Mitigating Multi-Layer Jamming Attacks in Satellite-Air-Ground Integrated Networks", "ja": "Mitigating Multi-Layer Jamming Attacks in Satellite-Air-Ground Integrated Networks" },
+          "title": {
+            "en": "Mitigating Multi-Layer Jamming Attacks in Satellite-Air-Ground Integrated Networks",
+            "ja": "Mitigating Multi-Layer Jamming Attacks in Satellite-Air-Ground Integrated Networks"
+          },
           "url": "https://ieeexplore.ieee.org/document/11432509"
         }
       ],
@@ -372,7 +504,11 @@
       "id": "2025-06-ieee-vtc-spring-presentation",
       "date": "2025-06-17",
       "dateEnd": "2025-06-20",
-      "category": { "id": "conference-presentation", "en": "Conference Presentation", "ja": "国際会議発表" },
+      "category": {
+        "id": "conference-presentation",
+        "en": "Conference Presentation",
+        "ja": "国際会議発表"
+      },
       "title": {
         "en": "WiGig channel analysis presented at IEEE VTC 2025-Spring",
         "ja": "IEEE VTC 2025-SpringでWiGigチャネル解析に関する研究を発表"
@@ -404,13 +540,19 @@
       },
       "links": [
         {
-          "label": { "en": "IEEE VTC 2025-Spring official website", "ja": "IEEE VTC 2025-Spring 公式サイト" },
+          "label": {
+            "en": "IEEE VTC 2025-Spring official website",
+            "ja": "IEEE VTC 2025-Spring 公式サイト"
+          },
           "url": "https://events.vtsociety.org/vtc2025-spring/"
         }
       ],
       "relatedPublications": [
         {
-          "title": { "en": "Empirical Analysis of Statistical Variation in Channel Data of WiGig Networks Towards 6G", "ja": "Empirical Analysis of Statistical Variation in Channel Data of WiGig Networks Towards 6G" },
+          "title": {
+            "en": "Empirical Analysis of Statistical Variation in Channel Data of WiGig Networks Towards 6G",
+            "ja": "Empirical Analysis of Statistical Variation in Channel Data of WiGig Networks Towards 6G"
+          },
           "url": "https://doi.org/10.1109/VTC2025-Spring65109.2025.11174633"
         }
       ],
