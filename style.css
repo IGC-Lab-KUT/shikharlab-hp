@@ -695,6 +695,27 @@ main > section > h2 {
   margin-top: 1.5rem;
 }
 
+.funding-list--page {
+  max-width: 58rem;
+}
+
+.funding-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  border-left: 0.35rem solid var(--color-blue);
+}
+
+.funding-callout h2,
+.funding-callout p:last-child {
+  margin-bottom: 0;
+}
+
+.funding-callout .button-link {
+  flex: 0 0 auto;
+}
+
 .funding-group > h3 {
   margin-bottom: 0.75rem;
   color: var(--color-navy);
@@ -1631,6 +1652,11 @@ main > section > h2 {
   .funding-details {
     grid-template-columns: 1fr;
     gap: 0.1rem;
+  }
+
+  .funding-callout {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .funding-details dd:not(:last-child) {

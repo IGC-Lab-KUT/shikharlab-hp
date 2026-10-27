@@ -47,8 +47,8 @@ const articlePages = detailedNewsIds.flatMap(id => [
   `ja/news-detail.html?id=${encodeURIComponent(id)}`,
 ]);
 const pages = [
-  'index.html', 'members.html', 'pi.html', 'publications.html', 'projects.html', 'awards.html', 'opportunities.html', 'lab-life.html', 'news.html',
-  'ja/index.html', 'ja/members.html', 'ja/pi.html', 'ja/publications.html', 'ja/projects.html', 'ja/opportunities.html', 'ja/lab-life.html', 'ja/news.html',
+  'index.html', 'members.html', 'pi.html', 'publications.html', 'projects.html', 'funding.html', 'awards.html', 'opportunities.html', 'lab-life.html', 'news.html',
+  'ja/index.html', 'ja/members.html', 'ja/pi.html', 'ja/publications.html', 'ja/projects.html', 'ja/funding.html', 'ja/opportunities.html', 'ja/lab-life.html', 'ja/news.html',
   ...articlePages,
 ];
 const viewports = [
@@ -89,6 +89,8 @@ for (const viewport of viewports) {
       'ja/projects.html': ['.research-area-card', 6],
       'pi.html': ['#pi-contributions .compact-publication-item', 1],
       'ja/pi.html': ['#pi-contributions .compact-publication-item', 1],
+      'funding.html': ['#funding-list .funding-item', fundingData.grants.length],
+      'ja/funding.html': ['#funding-list .funding-item', fundingData.grants.length],
       'opportunities.html': ['.pathway-card', 3],
       'ja/opportunities.html': ['.pathway-card', 3],
       'lab-life.html': ['.lab-gallery-item', 5],
@@ -99,14 +101,14 @@ for (const viewport of viewports) {
     if (expectedContent && await page.locator(expectedContent[0]).count() < expectedContent[1]) {
       failures.push(`${viewport.name} ${pagePath}: missing rendered content`);
     }
-    if (['pi.html', 'ja/pi.html'].includes(pagePath)) {
-      if (await page.locator('#pi-funding .funding-item').count() !== fundingData.grants.length) {
+    if (['funding.html', 'ja/funding.html'].includes(pagePath)) {
+      if (await page.locator('#funding-list .funding-item').count() !== fundingData.grants.length) {
         failures.push(`${viewport.name} ${pagePath}: expected ${fundingData.grants.length} funding records`);
       }
-      if (await page.locator('#pi-funding .funding-group').count() !== 2) {
+      if (await page.locator('#funding-list .funding-group').count() !== 2) {
         failures.push(`${viewport.name} ${pagePath}: funding records were not grouped into ongoing and completed sections`);
       }
-      const fundingText = await page.locator('#pi-funding').innerText();
+      const fundingText = await page.locator('#funding-list').innerText();
       const expectedHeadings = pagePath.startsWith('ja/')
         ? ['実施中の研究助成', '終了した研究助成']
         : ['Ongoing grants', 'Completed grants'];
@@ -119,6 +121,12 @@ for (const viewport of viewports) {
       if (/(?:¥|円|\byen\b|grant amount|funding amount|direct costs?|indirect costs?)/i.test(fundingText)) {
         failures.push(`${viewport.name} ${pagePath}: public funding display exposed a funding amount`);
       }
+    }
+    if (['pi.html', 'ja/pi.html'].includes(pagePath) && await page.locator('a[href="funding.html"]').count() !== 1) {
+      failures.push(`${viewport.name} ${pagePath}: missing funding portfolio link`);
+    }
+    if (['projects.html', 'ja/projects.html'].includes(pagePath) && await page.locator('.funding-callout a[href="funding.html"]').count() !== 1) {
+      failures.push(`${viewport.name} ${pagePath}: missing research-page funding callout`);
     }
     if (pagePath.includes('news-detail.html?id=')) {
       if (!(await page.locator('#news-article-title').textContent())?.trim()) failures.push(`${viewport.name} ${pagePath}: missing article title`);
@@ -261,7 +269,7 @@ for (const viewport of viewports) {
       }
     }
 
-    if (['index.html', 'pi.html', 'publications.html', 'projects.html', 'opportunities.html', 'lab-life.html', 'news.html', 'ja/index.html', 'ja/pi.html', 'ja/publications.html', 'ja/projects.html', 'ja/opportunities.html', 'ja/lab-life.html', 'ja/news.html'].includes(pagePath)) {
+    if (['index.html', 'pi.html', 'publications.html', 'projects.html', 'funding.html', 'opportunities.html', 'lab-life.html', 'news.html', 'ja/index.html', 'ja/pi.html', 'ja/publications.html', 'ja/projects.html', 'ja/funding.html', 'ja/opportunities.html', 'ja/lab-life.html', 'ja/news.html'].includes(pagePath)) {
       const name = pagePath.replaceAll('/', '-').replaceAll('?', '-').replaceAll('=', '-').replace('.html', '') || 'index';
       await page.screenshot({ path: resolve(outputDirectory, `${name}-${viewport.name}.png`), fullPage: true });
     }
