@@ -29,29 +29,6 @@ function serviceItem(item) {
   return row;
 }
 
-function fundingItem(item, lang) {
-  const row = createElement('article', { className: 'funding-item' });
-  const details = createElement('dl', { className: 'funding-details' });
-  const labels = lang === 'ja'
-    ? { role: '役割', institution: '機関', agency: '助成機関', amount: '研究費' }
-    : { role: 'Role', institution: 'Institution', agency: 'Funding agency', amount: 'Grant amount' };
-
-  Object.entries(labels).forEach(([key, label]) => {
-    if (!item[key]) return;
-    details.append(
-      createElement('dt', { text: label }),
-      createElement('dd', { text: item[key] }),
-    );
-  });
-
-  row.append(
-    createElement('p', { className: 'funding-period', text: item.period }),
-    createElement('h3', { text: item.title }),
-    details,
-  );
-  return row;
-}
-
 function teachingGroup(label, courses) {
   const group = createElement('section', { className: 'teaching-group' });
   const list = createElement('ul', { className: 'check-list' });
@@ -152,7 +129,6 @@ async function renderPiProfile() {
     document.getElementById('pi-interests').replaceChildren(
       ...profile.researchInterests.map(text => createElement('li', { text })),
     );
-    document.getElementById('pi-funding').replaceChildren(...(profile.funding || []).map(item => fundingItem(item, lang)));
     document.getElementById('pi-service').replaceChildren(...profile.professionalService.map(serviceItem));
 
     const selectedUrls = new Set(data.selectedPublicationUrls || []);

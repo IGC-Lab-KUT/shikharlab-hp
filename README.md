@@ -12,7 +12,8 @@ data/           ← ここを編集するだけでサイトが更新される
   publications.json - 論文一覧
   projects.json - プロジェクト一覧
   awards.json   - 受賞一覧
-  pi.json       - 指導教員プロフィール・学歴・職歴・研究費・学会活動・プロフィールリンク
+  pi.json       - 指導教員プロフィール・学歴・職歴・学会活動・プロフィールリンク
+  funding.json  - 研究助成・研究費（英語・日本語）
   research.json - 研究分野（英語・日本語）
   opportunities.json - 進学・共同研究・研究室紹介（英語・日本語）
 ```
@@ -77,7 +78,6 @@ Codex向けのリポジトリ固有ルールは [`AGENTS.md`](AGENTS.md) にあ�
 - `appointments`: 過去の職歴
 - `teaching`: 教育・研究指導（概要、学部・大学院の担当科目、大学公式情報へのリンク）
 - `researchInterests`: 研究関心
-- `funding`: 研究費・競争的資金（題目、役割、期間、機関、助成機関、金額）
 - `professionalService`: 編集・学会活動
 - `selectedPublicationUrls`: `data/publications.json` からプロフィールに掲載する論文URL
 - `profileLinks`: 学術プロフィールへのリンク
@@ -88,6 +88,19 @@ Codex向けのリポジトリ固有ルールは [`AGENTS.md`](AGENTS.md) にあ�
 
 現在、Google Scholar、ORCID、Scopus、IEEE Xplore、LinkedIn、大学教員プロフィール、
 researchmap は確認済みURLを表示しています。ResearchGate は本人の希望により掲載していません。
+
+### 研究助成・研究費を更新する
+
+`data/funding.json` の `grants` を編集します。各レコードには一意の `id`、`ongoing` または
+`completed` の `status`、並び順に使う `sortYear`、種別を表す `type`、および英語・日本語の
+表示情報を設定します。JSPS科研費には題目、制度、役割、所属機関、研究期間を、JST LOTUSには
+研究者、所属機関、受入機関、採択年、参加予定を記載します。表示は「実施中」「終了」の順で、
+各区分内は新しい年から並びます。
+
+この公開リポジトリのデータには、採択額、直接経費、間接経費、支出額を記載しないでください。
+金額情報は非公開の原資料で管理し、採択上限額を支出額として扱わないでください。
+全件は `funding.html` / `ja/funding.html` に表示され、研究ページと指導教員ページから案内します。
+研究助成の内容を更新するときはHTMLに重複して記載せず、`data/funding.json` だけを編集してください。
 
 ### 研究分野を更新する
 `data/research.json` の `areas` を編集します。各項目には英語・日本語のタイトルと説明を設定します。

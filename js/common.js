@@ -78,6 +78,7 @@ function renderHeader(config, lang) {
     { href: 'index.html', en: 'Home', ja: 'ホーム', hasJa: true },
     { href: 'members.html', en: 'Members', ja: 'メンバー', hasJa: true },
     { href: 'projects.html', en: 'Research', ja: '研究', hasJa: true },
+    { href: 'funding.html', en: 'Funding', ja: '研究助成', hasJa: true },
     { href: 'publications.html', en: 'Publications', ja: '業績', hasJa: true },
     { href: 'awards.html', en: 'Awards', ja: '受賞歴', hasJa: false },
     { href: 'opportunities.html', en: 'Join & Collaborate', ja: '進学・共同研究', hasJa: true },
@@ -86,7 +87,7 @@ function renderHeader(config, lang) {
 
   const header = createElement('header', { className: 'site-header' });
   const utility = createElement('div', { className: 'header-utility' });
-  const bilingualPages = new Set(['index.html', 'members.html', 'projects.html', 'publications.html', 'pi.html', 'opportunities.html', 'lab-life.html', 'news.html', 'news-detail.html']);
+  const bilingualPages = new Set(['index.html', 'members.html', 'projects.html', 'funding.html', 'publications.html', 'pi.html', 'opportunities.html', 'lab-life.html', 'news.html', 'news-detail.html']);
   const query = bilingualPages.has(currentPage) ? window.location.search : '';
   const languageUrl = lang === 'ja'
     ? `../${currentPage}${query}`
