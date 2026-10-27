@@ -11,6 +11,7 @@ const { chromium } = playwrightModule.default || playwrightModule;
 const newsData = JSON.parse(await readFile(resolve('data/news.json'), 'utf8'));
 const publicationData = JSON.parse(await readFile(resolve('data/publications.json'), 'utf8'));
 const openAlexData = JSON.parse(await readFile(resolve('data/openalex-citations.json'), 'utf8'));
+const fundingData = JSON.parse(await readFile(resolve('data/funding.json'), 'utf8'));
 const normalizeTitle = title => String(title || '')
   .normalize('NFKD')
   .toLocaleLowerCase('en')
@@ -97,6 +98,27 @@ for (const viewport of viewports) {
     }[pagePath];
     if (expectedContent && await page.locator(expectedContent[0]).count() < expectedContent[1]) {
       failures.push(`${viewport.name} ${pagePath}: missing rendered content`);
+    }
+    if (['pi.html', 'ja/pi.html'].includes(pagePath)) {
+      if (await page.locator('#pi-funding .funding-item').count() !== fundingData.grants.length) {
+        failures.push(`${viewport.name} ${pagePath}: expected ${fundingData.grants.length} funding records`);
+      }
+      if (await page.locator('#pi-funding .funding-group').count() !== 2) {
+        failures.push(`${viewport.name} ${pagePath}: funding records were not grouped into ongoing and completed sections`);
+      }
+      const fundingText = await page.locator('#pi-funding').innerText();
+      const expectedHeadings = pagePath.startsWith('ja/')
+        ? ['実施中の研究助成', '終了した研究助成']
+        : ['Ongoing grants', 'Completed grants'];
+      if (!expectedHeadings.every(heading => fundingText.includes(heading))) {
+        failures.push(`${viewport.name} ${pagePath}: localized funding group headings were missing`);
+      }
+      if (!fundingText.includes('Sayantan Bose') || !fundingText.includes('Shradha Kouloorkar')) {
+        failures.push(`${viewport.name} ${pagePath}: the two JST LOTUS awards were not rendered as separate records`);
+      }
+      if (/(?:¥|円|\byen\b|grant amount|funding amount|direct costs?|indirect costs?)/i.test(fundingText)) {
+        failures.push(`${viewport.name} ${pagePath}: public funding display exposed a funding amount`);
+      }
     }
     if (pagePath.includes('news-detail.html?id=')) {
       if (!(await page.locator('#news-article-title').textContent())?.trim()) failures.push(`${viewport.name} ${pagePath}: missing article title`);

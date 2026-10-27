@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-27",
+  "grants": [
+    {
+      "id": "kakenhi-jamming-mitigation-2026",
+      "status": "ongoing",
+      "sortYear": 2026,
+      "type": "kakenhi",
+      "title": {
+        "en": "Intelligent Multi-layer Jamming Mitigation for 6G-enabled Satellite-Aerial-Ground Networks",
+        "ja": "Intelligent Multi-layer Jamming Mitigation for 6G-enabled Satellite-Aerial-Ground Networks"
+      },
+      "program": {
+        "en": "Japan Society for the Promotion of Science (JSPS), KAKENHI",
+        "ja": "日本学術振興会（JSPS）科研費（KAKENHI）"
+      },
+      "role": {
+        "en": "Principal Investigator",
+        "ja": "研究代表者"
+      },
+      "institution": {
+        "en": "Kochi University of Technology, Japan",
+        "ja": "高知工科大学"
+      },
+      "period": {
+        "en": "2026–Present",
+        "ja": "2026年–現在"
+      }
+    },
+    {
+      "id": "jst-lotus-sayantan-bose-2026",
+      "status": "ongoing",
+      "sortYear": 2026,
+      "type": "lotus",
+      "title": {
+        "en": "JST LOTUS — International Research Collaboration",
+        "ja": "JST LOTUS — 国際研究連携"
+      },
+      "researcher": {
+        "en": "Sayantan Bose",
+        "ja": "Sayantan Bose"
+      },
+      "homeInstitution": {
+        "en": "National Institute of Technology Meghalaya, India",
+        "ja": "インド国立工科大学メガラヤ校（インド）"
+      },
+      "hostInstitution": {
+        "en": "Kochi University of Technology, Japan",
+        "ja": "高知工科大学"
+      },
+      "awardYear": {
+        "en": "2026",
+        "ja": "2026年"
+      },
+      "expectedJoining": {
+        "en": "January 2027",
+        "ja": "2027年1月"
+      }
+    },
+    {
+      "id": "jst-lotus-shradha-kouloorkar-2026",
+      "status": "ongoing",
+      "sortYear": 2026,
+      "type": "lotus",
+      "title": {
+        "en": "JST LOTUS — International Research Collaboration",
+        "ja": "JST LOTUS — 国際研究連携"
+      },
+      "researcher": {
+        "en": "Shradha Kouloorkar",
+        "ja": "Shradha Kouloorkar"
+      },
+      "homeInstitution": {
+        "en": "Indian Institute of Technology Hyderabad, India",
+        "ja": "インド工科大学ハイデラバード校（インド）"
+      },
+      "hostInstitution": {
+        "en": "Kochi University of Technology, Japan",
+        "ja": "高知工科大学"
+      },
+      "awardYear": {
+        "en": "2026",
+        "ja": "2026年"
+      },
+      "expectedJoining": {
+        "en": "January 2027",
+        "ja": "2027年1月"
+      }
+    },
+    {
+      "id": "kakenhi-human-centric-6g-2022",
+      "status": "completed",
+      "sortYear": 2022,
+      "type": "kakenhi",
+      "title": {
+        "en": "A Study on Intelligent and Secure Human-centric 6G Network Orchestration",
+        "ja": "A Study on Intelligent and Secure Human-centric 6G Network Orchestration"
+      },
+      "program": {
+        "en": "Japan Society for the Promotion of Science (JSPS), KAKENHI",
+        "ja": "日本学術振興会（JSPS）科研費（KAKENHI）"
+      },
+      "role": {
+        "en": "Principal Investigator",
+        "ja": "研究代表者"
+      },
+      "institution": {
+        "en": "Tohoku University, Japan",
+        "ja": "東北大学"
+      },
+      "period": {
+        "en": "2022–2026",
+        "ja": "2022年–2026年"
+      }
+    },
+    {
+      "id": "kakenhi-iot-over-5g-2019",
+      "status": "completed",
+      "sortYear": 2019,
+      "type": "kakenhi",
+      "title": {
+        "en": "Energy Efficient Data Transmission Scheme for IoT over 5G",
+        "ja": "Energy Efficient Data Transmission Scheme for IoT over 5G"
+      },
+      "program": {
+        "en": "Japan Society for the Promotion of Science (JSPS), KAKENHI",
+        "ja": "日本学術振興会（JSPS）科研費（KAKENHI）"
+      },
+      "role": {
+        "en": "Principal Investigator",
+        "ja": "研究代表者"
+      },
+      "institution": {
+        "en": "Tohoku University, Japan",
+        "ja": "東北大学"
+      },
+      "period": {
+        "en": "2019–2021",
+        "ja": "2019年–2021年"
+      }
+    }
+  ]
+}

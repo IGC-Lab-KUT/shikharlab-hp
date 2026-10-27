@@ -169,6 +169,61 @@ for (const path of jsonFiles) {
       }
     }
 
+    if (relative(root, path) === 'data/pi.json' && (data.en?.funding || data.ja?.funding)) {
+      failures.push('data/pi.json: funding records must be maintained only in data/funding.json');
+    }
+
+    if (relative(root, path) === 'data/funding.json') {
+      if (data.schemaVersion !== 1 || !isValidDate(data.updatedAt) || !Array.isArray(data.grants)) {
+        failures.push('data/funding.json: expected schemaVersion 1, a YYYY-MM-DD updatedAt date, and a grants array');
+      }
+      const requiredGrantIds = new Set([
+        'kakenhi-jamming-mitigation-2026',
+        'jst-lotus-sayantan-bose-2026',
+        'jst-lotus-shradha-kouloorkar-2026',
+        'kakenhi-human-centric-6g-2022',
+        'kakenhi-iot-over-5g-2019',
+      ]);
+      const ids = new Set();
+      let completedSectionStarted = false;
+      let previousYear = Infinity;
+      for (const [index, grant] of (data.grants || []).entries()) {
+        const prefix = `data/funding.json: grant ${index + 1}`;
+        if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(grant.id || '')) failures.push(`${prefix}: id must be a lowercase slug`);
+        if (ids.has(grant.id)) failures.push(`${prefix}: duplicate id ${grant.id}`);
+        ids.add(grant.id);
+        if (!['ongoing', 'completed'].includes(grant.status)) failures.push(`${prefix}: status must be ongoing or completed`);
+        if (!['kakenhi', 'lotus'].includes(grant.type)) failures.push(`${prefix}: type must be kakenhi or lotus`);
+        if (!Number.isInteger(grant.sortYear)) failures.push(`${prefix}: sortYear must be an integer`);
+        if (grant.sortYear > previousYear) failures.push(`${prefix}: grants must be in newest-first order`);
+        previousYear = grant.sortYear;
+        if (grant.status === 'completed') completedSectionStarted = true;
+        if (completedSectionStarted && grant.status === 'ongoing') failures.push(`${prefix}: ongoing grants must precede completed grants`);
+        if (!hasBilingualText(grant.title)) failures.push(`${prefix}: bilingual title is required`);
+
+        const requiredFields = grant.type === 'lotus'
+          ? ['researcher', 'homeInstitution', 'hostInstitution', 'awardYear', 'expectedJoining']
+          : ['program', 'role', 'institution', 'period'];
+        for (const field of requiredFields) {
+          if (!hasBilingualText(grant[field])) failures.push(`${prefix}: bilingual ${field} is required`);
+        }
+
+        const inspectPublicFields = value => {
+          if (!value || typeof value !== 'object') return;
+          for (const [key, child] of Object.entries(value)) {
+            if (/(?:amount|directCosts?|indirectCosts?|fundingCeiling|approvedFunding)/i.test(key)) {
+              failures.push(`${prefix}: public funding data must not include amounts or cost fields`);
+            }
+            inspectPublicFields(child);
+          }
+        };
+        inspectPublicFields(grant);
+      }
+      for (const id of requiredGrantIds) {
+        if (!ids.has(id)) failures.push(`data/funding.json: missing required grant ${id}`);
+      }
+    }
+
     if (relative(root, path) === 'data/openalex-citations.json') {
       const publications = JSON.parse(readFileSync(join(root, 'data/publications.json'), 'utf8'));
       const expectedKeys = new Set(publications.map(publicationKey));

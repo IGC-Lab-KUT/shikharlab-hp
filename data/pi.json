@@ -126,32 +126,6 @@
       "UAV and low-altitude communication networks",
       "Advanced WiFi systems"
     ],
-    "funding": [
-      {
-        "title": "Intelligent Multi-layer Jamming Mitigation for 6G-enabled Satellite-Aerial-Ground Networks",
-        "role": "Principal Investigator",
-        "period": "2026–Present",
-        "institution": "Kochi University of Technology, Japan",
-        "agency": "Ministry of Education, Culture, Sports, Science and Technology (MEXT), Japan (KAKENHI)",
-        "amount": "3,600,000 yen"
-      },
-      {
-        "title": "A Study on Intelligent and Secure Human-centric 6G Network Orchestration",
-        "role": "Principal Investigator",
-        "period": "2022–2026",
-        "institution": "Tohoku University, Japan",
-        "agency": "Ministry of Education, Culture, Sports, Science and Technology (MEXT), Japan (KAKENHI)",
-        "amount": "3,500,000 yen"
-      },
-      {
-        "title": "Energy Efficient Data Transmission Scheme for IoT over 5G",
-        "role": "Principal Investigator",
-        "period": "2019–2021",
-        "institution": "Tohoku University, Japan",
-        "agency": "Ministry of Education, Culture, Sports, Science and Technology (MEXT), Japan (KAKENHI)",
-        "amount": "1,700,000 yen"
-      }
-    ],
     "professionalService": [
       {
         "role": "Associate Editor",
@@ -261,32 +235,6 @@
       "無線・IoTセキュリティ",
       "UAV・低高度通信ネットワーク",
       "高度WiFiシステム"
-    ],
-    "funding": [
-      {
-        "title": "6G対応衛星・空・地上ネットワークにおける知的多層ジャミング緩和",
-        "role": "研究代表者",
-        "period": "2026年–現在",
-        "institution": "高知工科大学",
-        "agency": "文部科学省（MEXT）科研費（KAKENHI）",
-        "amount": "3,600,000円"
-      },
-      {
-        "title": "知的かつセキュアな人間中心6Gネットワークオーケストレーションに関する研究",
-        "role": "研究代表者",
-        "period": "2022年–2026年",
-        "institution": "東北大学",
-        "agency": "文部科学省（MEXT）科研費（KAKENHI）",
-        "amount": "3,500,000円"
-      },
-      {
-        "title": "5GにおけるIoT向け省エネルギーデータ伝送方式",
-        "role": "研究代表者",
-        "period": "2019年–2021年",
-        "institution": "東北大学",
-        "agency": "文部科学省（MEXT）科研費（KAKENHI）",
-        "amount": "1,700,000円"
-      }
     ],
     "professionalService": [
       {
