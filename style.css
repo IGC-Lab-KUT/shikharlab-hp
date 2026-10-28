@@ -1,3 +1,4 @@
+/opt/homebrew/Library/Homebrew/cmd/shellenv.sh: line 18: /bin/ps: Operation not permitted
 :root {
   --color-ink: #243342;
   --color-muted: #5d6a76;
@@ -123,7 +124,7 @@ a:hover {
   min-height: 4.7rem;
   margin: 0 auto;
   padding: 0.25rem 1.5rem 0.8rem;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .brand {
@@ -153,17 +154,18 @@ a:hover {
   align-items: center;
   margin: 0;
   padding: 0;
-  gap: clamp(0.25rem, 1.2vw, 1rem);
+  gap: clamp(0.2rem, 0.8vw, 0.65rem);
   list-style: none;
 }
 
 .nav-links a {
   display: block;
-  padding: 0.55rem 0.7rem;
+  padding: 0.55rem 0.5rem;
   color: #fff;
   border-radius: var(--radius-sm);
   font-size: 0.96rem;
   font-weight: 600;
+  white-space: nowrap;
   text-decoration: none;
   transition: background-color 160ms ease;
 }
@@ -1482,7 +1484,7 @@ main > section > h2 {
   margin: 0;
 }
 
-@media (max-width: 68rem) {
+@media (max-width: 72rem) {
   .header-utility {
     padding-inline: 1rem;
   }
