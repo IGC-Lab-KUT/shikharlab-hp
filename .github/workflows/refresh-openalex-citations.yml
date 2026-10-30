@@ -2,7 +2,7 @@ name: Refresh OpenAlex citations
 
 on:
   schedule:
-    - cron: '23 2 1 * *'
+    - cron: '0 0 * * 1'
   workflow_dispatch:
 
 permissions:
