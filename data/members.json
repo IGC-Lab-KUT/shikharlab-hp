@@ -11,22 +11,6 @@
     }
   ],
   "researchCollaborators": [],
-  "jstLotusFellows": [
-    {
-      "nameJa": "",
-      "nameEn": "Shradha Kouloorkar",
-      "roleEn": "JST LOTUS Fellow",
-      "roleJa": "JST LOTUSフェロー",
-      "photo": "data/imgs/shradha-kouloorkar-optimized.jpg"
-    },
-    {
-      "nameJa": "",
-      "nameEn": "Sayatan Bose",
-      "roleEn": "JST LOTUS Fellow",
-      "roleJa": "JST LOTUSフェロー",
-      "photo": "data/imgs/Sayantan Bose.jpg"
-    }
-  ],
   "phd": [
 	{
 	  "nameJa": "",
@@ -38,15 +22,15 @@
     {
       "nameJa": "",
       "nameEn": "Shradha Kouloorkar",
-      "roleEn": "PhD Student",
-      "roleJa": "博士課程学生",
+      "roleEn": "PhD (JST Fellow)",
+      "roleJa": "博士課程（JSTフェロー）",
       "photo": "data/imgs/shradha-kouloorkar-optimized.jpg"
 	},
     {
       "nameJa": "",
       "nameEn": "Sayatan Bose",
-      "roleEn": "PhD Student",
-      "roleJa": "博士課程学生",
+      "roleEn": "PhD (JST Fellow)",
+      "roleJa": "博士課程（JSTフェロー）",
       "photo": "data/imgs/Sayantan Bose.jpg"
 	}
   ],
