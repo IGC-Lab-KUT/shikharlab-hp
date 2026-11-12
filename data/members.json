@@ -14,17 +14,17 @@
   "jstLotusFellows": [
     {
       "nameJa": "",
-      "nameEn": "Sayatan Bose",
-      "roleEn": "JST LOTUS Fellow (PhD Student)",
-      "roleJa": "JST LOTUSフェロー（博士課程学生）",
-      "photo": "data/imgs/Sayantan Bose.jpg"
-    },
-    {
-      "nameJa": "",
       "nameEn": "Shradha Kouloorkar",
       "roleEn": "JST LOTUS Fellow (PhD Student)",
       "roleJa": "JST LOTUSフェロー（博士課程学生）",
       "photo": "data/imgs/shradha-kouloorkar-optimized.jpg"
+    },
+    {
+      "nameJa": "",
+      "nameEn": "Sayatan Bose",
+      "roleEn": "JST LOTUS Fellow (PhD Student)",
+      "roleJa": "JST LOTUSフェロー（博士課程学生）",
+      "photo": "data/imgs/Sayantan Bose.jpg"
     }
   ],
   "phd": [
