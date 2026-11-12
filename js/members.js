@@ -70,6 +70,7 @@ async function renderMembers() {
     const data = await fetchJson('data/members.json');
     renderMemberGroup(data, 'pi', 'pi-grid', 'pi-section', lang);
     renderMemberGroup(data, 'researchCollaborators', 'collaborators-grid', 'collaborators-section', lang);
+    renderMemberGroup(data, 'jstLotusFellows', 'jst-lotus-grid', 'jst-lotus-section', lang);
     renderMemberGroup(data, 'phd', 'phd-grid', 'phd-section', lang);
     renderMemberGroup(data, 'master', 'master-grid', 'master-section', lang);
     renderMemberGroup(data, 'bachelor', 'bachelor-grid', 'bachelor-section', lang);
