@@ -21,19 +21,18 @@
 	},
     {
       "nameJa": "",
-      "nameEn": "Sayatan Bose",
-      "roleEn": "PhD (International Collaborator)",
-      "roleJa": "博士課程（国際共同研究者）",
-      "photo": "data/imgs/Sayantan Bose.jpg"
-	},
-	{
-	   "nameJa": "",
-	   "nameEn": "Shradha Kouloorkar",
-	   "roleEn": "PhD (International Collaborator)",
-	   "roleJa": "博士課程（国際共同研究者）",
+      "nameEn": "Shradha Kouloorkar",
+      "roleEn": "PhD (JST LOTUS Fellow)",
+      "roleJa": "博士課程（JST LOTUSフェロー）",
       "photo": "data/imgs/shradha-kouloorkar-optimized.jpg"
+	},
+    {
+      "nameJa": "",
+      "nameEn": "Sayatan Bose",
+      "roleEn": "PhD (JST LOTUS Fellow)",
+      "roleJa": "博士課程（JST LOTUSフェロー）",
+      "photo": "data/imgs/Sayantan Bose.jpg"
 	}
-		
   ],
   "master": [
     {
