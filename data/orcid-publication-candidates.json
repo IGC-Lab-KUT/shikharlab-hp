@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "orcidId": "0000-0002-9905-3772",
+  "source": "https://orcid.org/0000-0002-9905-3772",
+  "sourceLastModifiedAt": "2026-11-13T20:54:12.122Z",
+  "candidates": [
+    {
+      "id": "doi:10.1109/tvt.2026.3753653",
+      "status": "candidate",
+      "orcidPutCode": 233390372,
+      "orcidType": "journal-article",
+      "orcidLastModifiedAt": "2026-11-13T20:54:12.122Z",
+      "discoveredAt": "2026-11-16T06:52:44.984Z",
+      "doi": "10.1109/tvt.2026.3753653",
+      "title": "Physics-Aware Spectrum Coordination in UAV Networks Via Explainable Distributed Learning",
+      "year": 2026,
+      "authors": [
+        "Omair Ahmad",
+        "Mostafa Fouda",
+        "Zubair Md Fadlullah",
+        "Shikhar Verma",
+        "Nei Kato"
+      ],
+      "venue": "IEEE Transactions on Vehicular Technology",
+      "url": "https://doi.org/10.1109/tvt.2026.3753653",
+      "suggestedPublication": {
+        "year": 2026,
+        "type": "journal",
+        "title": "Physics-Aware Spectrum Coordination in UAV Networks Via Explainable Distributed Learning",
+        "authors": "Omair Ahmad, Mostafa Fouda, Zubair Md Fadlullah, Shikhar Verma, Nei Kato",
+        "venue": "IEEE Transactions on Vehicular Technology",
+        "url": "https://doi.org/10.1109/tvt.2026.3753653"
+      }
+    }
+  ]
+}

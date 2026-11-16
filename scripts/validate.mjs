@@ -173,6 +173,30 @@ for (const path of jsonFiles) {
       failures.push('data/pi.json: funding records must be maintained only in data/funding.json');
     }
 
+    if (relative(root, path) === 'data/orcid-publication-candidates.json') {
+      if (data.schemaVersion !== 1 || !/^\d{4}-\d{4}-\d{4}-\d{3}[\dX]$/.test(data.orcidId || '') || !Array.isArray(data.candidates)) {
+        failures.push('data/orcid-publication-candidates.json: invalid top-level schema');
+      }
+      if (data.source !== `https://orcid.org/${data.orcidId}`) failures.push('data/orcid-publication-candidates.json: source must match the ORCID iD');
+      const candidateIds = new Set();
+      for (const [index, candidate] of (data.candidates || []).entries()) {
+        const prefix = `data/orcid-publication-candidates.json: candidate ${index + 1}`;
+        if (!isNonEmptyString(candidate.id) || candidateIds.has(candidate.id)) failures.push(`${prefix}: id must be unique and non-empty`);
+        candidateIds.add(candidate.id);
+        if (candidate.status !== 'candidate') failures.push(`${prefix}: status must be candidate`);
+        if (!Number.isInteger(candidate.orcidPutCode)) failures.push(`${prefix}: orcidPutCode must be an integer`);
+        if (!isNonEmptyString(candidate.title) || !Number.isInteger(candidate.year)) failures.push(`${prefix}: title and integer year are required`);
+        if (!Number.isFinite(Date.parse(candidate.discoveredAt))) failures.push(`${prefix}: discoveredAt must be an ISO timestamp`);
+        if (candidate.url && !/^https:\/\//i.test(candidate.url)) failures.push(`${prefix}: url must use HTTPS`);
+        if (candidate.suggestedPublication) {
+          const suggestion = candidate.suggestedPublication;
+          if (!['journal', 'conference', 'bookChapter'].includes(suggestion.type)) failures.push(`${prefix}: invalid suggested publication type`);
+          if (suggestion.title !== candidate.title || suggestion.year !== candidate.year) failures.push(`${prefix}: suggested title/year must match the candidate`);
+          if (![suggestion.authors, suggestion.venue, suggestion.url].every(isNonEmptyString)) failures.push(`${prefix}: suggested authors, venue, and url are required`);
+        }
+      }
+    }
+
     if (relative(root, path) === 'data/funding.json') {
       if (data.schemaVersion !== 1 || !isValidDate(data.updatedAt) || !Array.isArray(data.grants)) {
         failures.push('data/funding.json: expected schemaVersion 1, a YYYY-MM-DD updatedAt date, and a grants array');

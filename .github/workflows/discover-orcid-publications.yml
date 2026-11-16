@@ -1,0 +1,76 @@
+name: Discover ORCID publications
+
+on:
+  schedule:
+    - cron: '30 0 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: orcid-publication-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    env:
+      ORCID_ID: ${{ vars.ORCID_ID }}
+      ORCID_ACCESS_TOKEN: ${{ secrets.ORCID_ACCESS_TOKEN }}
+    steps:
+      - name: Create repository-scoped GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.OPENALEX_APP_CLIENT_ID }}
+          private-key: ${{ secrets.OPENALEX_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: ${{ github.event.repository.name }}
+          permission-contents: write
+          permission-pull-requests: write
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          token: ${{ steps.app-token.outputs.token }}
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test ORCID discovery and failure handling
+        run: node scripts/test-orcid-discovery.mjs
+      - name: Discover unpublished ORCID works
+        run: node scripts/discover-orcid-publications.mjs
+      - name: Validate generated candidates and website files
+        run: node scripts/validate.mjs
+      - name: Create or update publication candidate pull request
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          APP_SLUG: ${{ steps.app-token.outputs.app-slug }}
+        run: |
+          if git diff --quiet -- data/orcid-publication-candidates.json; then
+            echo 'No new or changed ORCID publication candidates.'
+            exit 0
+          fi
+
+          branch='automation/orcid-publications'
+          git config user.name "$APP_SLUG[bot]"
+          git config user.email "$APP_SLUG[bot]@users.noreply.github.com"
+          gh auth setup-git
+          git add data/orcid-publication-candidates.json
+          git commit -m 'Refresh ORCID publication candidates'
+          git push --force origin "HEAD:refs/heads/$branch"
+
+          existing_pr="$(gh pr list --head "$branch" --base main --state open --json number --jq '.[0].number // empty')"
+          if [ -z "$existing_pr" ]; then
+            gh pr create \
+              --base main \
+              --head "$branch" \
+              --title 'Review newly discovered ORCID publications' \
+              --body 'Automated discovery of public ORCID works that are not yet listed in data/publications.json. This pull request updates review candidates only; it does not publish or merge publication records automatically.'
+          else
+            echo "Updated existing pull request #$existing_pr."
+          fi
