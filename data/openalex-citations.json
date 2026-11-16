@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "https://openalex.org",
-  "updatedAt": "2026-11-10T07:36:17.974Z",
+  "updatedAt": "2026-11-16T04:47:12.116Z",
   "entries": [
     {
       "publicationKey": "2026:deep reinforcement learning framework for adaptive beamforming in ris aided high altitude platform based sagin",
@@ -20,7 +20,7 @@
         "doi": true,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2026:privacy embedded spectrum coordination in 6g v2x networks an attention driven multi agent learning approach",
@@ -39,7 +39,7 @@
         "doi": true,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2026:multi layer jamming detection and classification in 6g enabled satellite air ground integrated networks using machine learning",
@@ -58,7 +58,7 @@
         "doi": true,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2026:proactive handover management in 6g low altitude economy networks for aerial vehicles using artificial general intelligence",
@@ -77,7 +77,7 @@
         "doi": true,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2026:amadrl privacy aware attention based multiagent deep reinforcement learning for optimizing spectral allocation in 6g vehicular networks",
@@ -96,33 +96,45 @@
         "doi": true,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2026:latency aware intelligent handover approach for flying vehicles in low altitude economy networks",
       "title": "Latency-Aware Intelligent Handover Approach for Flying Vehicles in Low-Altitude Economy Networks",
       "year": 2026,
-      "matchStatus": "unmatched",
+      "matchStatus": "matched",
       "matchMethod": "title-author-year",
-      "openAlexId": null,
-      "openAlexUrl": null,
-      "doi": null,
-      "citedByCount": null,
-      "reason": "No candidate passed exact title, author, and publication-year verification.",
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "openAlexId": "W7226012553",
+      "openAlexUrl": "https://openalex.org/W7226012553",
+      "doi": "https://doi.org/10.1109/vtc2026-spring68026.2026.11757384",
+      "citedByCount": 0,
+      "verification": {
+        "title": true,
+        "authors": true,
+        "year": true,
+        "doi": null,
+        "accepted": true
+      },
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2026:ai native end to end link management over sagin via anomaly resilient prediction for 6g in flight communications",
       "title": "AI-Native End-to-End Link Management over SAGIN via Anomaly-Resilient Prediction for 6G In-Flight Communications",
       "year": 2026,
-      "matchStatus": "unmatched",
+      "matchStatus": "matched",
       "matchMethod": "title-author-year",
-      "openAlexId": null,
-      "openAlexUrl": null,
-      "doi": null,
-      "citedByCount": null,
-      "reason": "No candidate passed exact title, author, and publication-year verification.",
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "openAlexId": "W7226020947",
+      "openAlexUrl": "https://openalex.org/W7226020947",
+      "doi": "https://doi.org/10.1109/vtc2026-spring68026.2026.11757287",
+      "citedByCount": 0,
+      "verification": {
+        "title": true,
+        "authors": true,
+        "year": true,
+        "doi": null,
+        "accepted": true
+      },
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2026:deep reinforcement learning for interference suppression in ris aided space air ground integrated networks",
@@ -141,7 +153,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2026:q flap quantum secured federated learning with adaptive protection for jamming resilient leo satellite iot networks",
@@ -160,7 +172,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2026:energy efficient dynamic spectrum allocation for massive thz iot networks using quantum approximate optimization algorithm",
@@ -179,7 +191,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2026:federated meta learning for ultra fast resource allocation in dense cell free massive mimo 6g networks",
@@ -198,7 +210,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2025:joint optimization of irs and thz resource allocation in 6g iot networks an adaptive online maddpg approach",
@@ -217,7 +229,7 @@
         "doi": true,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2025:hybrid trajectory prediction for robust thz beam alignment in mobile networks",
@@ -236,7 +248,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2025:mitigating multi layer jamming attacks in satellite air ground integrated networks",
@@ -255,7 +267,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2025:novel breakout local search for offloading tasks in multi tiered cloud environment considering transmission and processing",
@@ -274,7 +286,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2025:ensemble learning based channel prediction for real world indoor 6g wigig networks",
@@ -293,7 +305,7 @@
         "doi": true,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2025:weather attenuation dataset generation method for prediction based control of non terrestrial high frequency wireless networks",
@@ -312,7 +324,7 @@
         "doi": true,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2025:empirical analysis of statistical variation in channel data of wigig networks towards 6g",
@@ -331,7 +343,7 @@
         "doi": true,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2024:an efficient beam searching in hybrid intelligent reflecting refracting surfaces irs aided mmwave 6g network",
@@ -342,7 +354,7 @@
       "openAlexId": "W4401943243",
       "openAlexUrl": "https://openalex.org/W4401943243",
       "doi": "https://doi.org/10.1109/tvt.2024.3450914",
-      "citedByCount": 36,
+      "citedByCount": 37,
       "verification": {
         "title": true,
         "authors": true,
@@ -350,7 +362,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2024:interference suppression in haps based space air ground integrated networks using a codebook based approach",
@@ -369,7 +381,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2024:simultaneous multiple connections and increased frequency efficiency using beam squint approach for irs based communication",
@@ -388,7 +400,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2024:smart handover with predicted user behavior using convolutional neural networks for wigig systems",
@@ -407,7 +419,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2024:traffic prediction based dynamic resource control strategy in haps mounted mec assisted satellite communication systems",
@@ -420,7 +432,7 @@
       "doi": null,
       "citedByCount": null,
       "reason": "No candidate passed exact title, author, and publication-year verification.",
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2023:a survey on multi ap coordination approaches over emerging wlans future directions and open challenges",
@@ -431,7 +443,7 @@
       "openAlexId": "W4389960977",
       "openAlexUrl": "https://openalex.org/W4389960977",
       "doi": "https://doi.org/10.1109/comst.2023.3344167",
-      "citedByCount": 100,
+      "citedByCount": 103,
       "verification": {
         "title": true,
         "authors": true,
@@ -439,7 +451,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2023:haps based interference suppression through null broadening with directivity control in space air ground integrated networks",
@@ -458,7 +470,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2021:a smart internet wide port scan approach for improving iot security under dynamic wlan environments",
@@ -477,7 +489,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2021:a network aware internet wide scan for security maximization of ipv6 enabled wlan iot devices",
@@ -490,7 +502,7 @@
       "doi": null,
       "citedByCount": null,
       "reason": "No candidate passed exact title, author, and publication-year verification.",
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2020:a novel iot aware wlan environment identification for efficient internet wide port scan",
@@ -509,7 +521,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2020:security analysis of network oblivious internet wide scan for ieee 802 11ah enabled iot",
@@ -528,7 +540,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2019:energy efficient group paging mechanism for qos constrained mobile iot devices over lte a pro networks under 5g",
@@ -547,7 +559,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2018:novel group paging scheme for improving energy efficiency of iot devices over lte a pro networks with qos considerations",
@@ -566,7 +578,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2017:a survey on network methodologies for real time analytics of massive iot data and open research issues",
@@ -585,7 +597,7 @@
         "doi": null,
         "accepted": true
       },
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     },
     {
       "publicationKey": "2015:reliability assessment of cyber physical systems a hardware software interaction perspective",
@@ -598,7 +610,7 @@
       "doi": null,
       "citedByCount": null,
       "reason": "No candidate passed exact title, author, and publication-year verification.",
-      "checkedAt": "2026-11-10T07:36:17.974Z"
+      "checkedAt": "2026-11-16T04:47:12.116Z"
     }
   ]
 }
