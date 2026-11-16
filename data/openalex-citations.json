@@ -4,6 +4,19 @@
   "updatedAt": "2026-11-16T04:47:12.116Z",
   "entries": [
     {
+      "publicationKey": "2026:physics aware spectrum coordination in uav networks via explainable distributed learning",
+      "title": "Physics-Aware Spectrum Coordination in UAV Networks Via Explainable Distributed Learning",
+      "year": 2026,
+      "matchStatus": "unmatched",
+      "matchMethod": "doi",
+      "openAlexId": null,
+      "openAlexUrl": null,
+      "doi": "10.1109/tvt.2026.3753653",
+      "citedByCount": null,
+      "reason": "New publication is awaiting the next OpenAlex refresh.",
+      "checkedAt": "2026-11-16T04:47:12.116Z"
+    },
+    {
       "publicationKey": "2026:deep reinforcement learning framework for adaptive beamforming in ris aided high altitude platform based sagin",
       "title": "Deep Reinforcement Learning Framework for Adaptive Beamforming in RIS-aided High Altitude Platform-Based SAGIN",
       "year": 2026,

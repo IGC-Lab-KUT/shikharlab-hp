@@ -2,6 +2,14 @@
   {
     "year": 2026,
     "type": "journal",
+    "title": "Physics-Aware Spectrum Coordination in UAV Networks Via Explainable Distributed Learning",
+    "authors": "Omair Ahmad, Mostafa Fouda, Zubair Md Fadlullah, Shikhar Verma, and Nei Kato",
+    "venue": "IEEE Transactions on Vehicular Technology",
+    "url": "https://doi.org/10.1109/TVT.2026.3753653"
+  },
+  {
+    "year": 2026,
+    "type": "journal",
     "title": "Deep Reinforcement Learning Framework for Adaptive Beamforming in RIS-aided High Altitude Platform-Based SAGIN",
     "authors": "Pujitha Mamillapalli, Shikhar Verma, Tiago K. Rodrigues, Abhinav Kumar, and Nei Kato",
     "venue": "IEEE Internet of Things Journal",
