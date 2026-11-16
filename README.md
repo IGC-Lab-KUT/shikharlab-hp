@@ -188,6 +188,37 @@ APIが一時的に利用できない場合、レート制限（HTTP 429）と一
 再試行後も失敗した場合は処理を終了し、既存の有効な `data/openalex-citations.json` を保持します。
 `OPENALEX_API_KEY is not configured` の場合は Actions secret の名前と値を確認してください。
 
+### ORCIDから新しい論文候補を確認する
+
+`Discover ORCID publications` GitHub Actionsは、PIの公開ORCIDレコード
+`0000-0002-9905-3772`を毎週月曜日9:30（日本時間）に確認します。手動実行も可能です。
+`data/publications.json`に同じDOIまたは同じ正規化済み題目がある業績は除外し、新しい候補だけを
+`data/orcid-publication-candidates.json`に保存します。
+
+候補ファイルは確認用の生成データです。ワークフローが`data/publications.json`を直接編集したり、
+ウェブサイトへ自動公開したり、プルリクエストを自動マージしたりすることはありません。新しい候補が
+見つかった場合は`automation/orcid-publications`ブランチのプルリクエストを作成または更新します。
+題目、著者、掲載誌・会議名、年、DOIを原資料と照合してから、確認済みレコードを手動で
+`data/publications.json`へ追加してください。
+
+既定のORCID iDを変更する場合は、GitHubの **Settings → Secrets and variables → Actions → Variables**
+で`ORCID_ID`を設定します。現在の公開Works APIは認証なしで読み取れますが、ORCIDの読み取りトークンを
+使用する場合はActions secret `ORCID_ACCESS_TOKEN`へ保存できます。トークンはログや生成JSONには保存されません。
+プルリクエスト作成には、OpenAlex更新と同じ`OPENALEX_APP_CLIENT_ID`変数と
+`OPENALEX_APP_PRIVATE_KEY` secretを使用します。
+
+ローカルで確認する場合:
+
+```bash
+node scripts/test-orcid-discovery.mjs
+node scripts/discover-orcid-publications.mjs
+node scripts/validate.mjs
+```
+
+ORCID APIがレート制限または一時的なエラーを返した場合は再試行します。最終的に失敗した場合、処理を
+失敗として終了し、既存の候補ファイルを保持します。著者、掲載先、種別などが不足している場合は
+`suggestedPublication`を作成せず、候補を手動確認対象として残します。
+
 ### 受賞情報を追加する
 `data/awards.json` に追加:
 ```json
