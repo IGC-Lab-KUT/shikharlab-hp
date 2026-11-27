@@ -2,6 +2,41 @@
   "schemaVersion": 2,
   "items": [
     {
+      "id": "2026-11-jst-lotus-funding",
+      "date": "2026-11-27",
+      "category": {
+        "id": "other",
+        "en": "Other",
+        "ja": "その他"
+      },
+      "title": {
+        "en": "GIC Lab Receives JST LOTUS Research Funding",
+        "ja": "GIC LabがJST LOTUSプログラムの研究助成に採択されました"
+      },
+      "summary": {
+        "en": "GIC Lab has received JST LOTUS Programme research funding to support international collaboration and academic exchange. Two researchers from India are expected to join in January 2027.",
+        "ja": "GIC Labは、国際共同研究と学術交流を促進するJST LOTUSプログラムの研究助成に採択されました。2027年1月にインドから2名の研究者が参加する予定です。"
+      },
+      "content": {
+        "en": [
+          "The Global Intelligent Communication Laboratory (GIC Lab) at Kochi University of Technology has received research funding through the JST LOTUS Programme to promote international research collaboration and academic exchange.",
+          "As part of this initiative, two researchers from India are expected to join GIC Lab in January 2027:",
+          "Sharadha Kouloorkar — Indian Institute of Technology Hyderabad (IIT Hyderabad), India",
+          "Sayantan Bose — National Institute of Technology Meghalaya (NIT Meghalaya), India",
+          "Their participation is expected to strengthen international research collaboration and contribute to the laboratory's ongoing research activities."
+        ],
+        "ja": [
+          "高知工科大学のGlobal Intelligent Communication Laboratory（GIC Lab）は、国際共同研究および学術交流の促進を目的とするJST LOTUSプログラムの研究助成に採択されました。",
+          "本プログラムの一環として、2027年1月より、インドの大学から以下の2名の研究者がGIC Labに参加する予定です。",
+          "Sharadha Kouloorkar — インド工科大学ハイデラバード校（IIT Hyderabad）",
+          "Sayantan Bose — インド国立工科大学メガラヤ校（NIT Meghalaya）",
+          "両名の参加を通じて、国際共同研究のさらなる推進と研究室における研究活動の発展が期待されます。"
+        ]
+      },
+      "status": "published",
+      "lastUpdated": "2026-11-27"
+    },
+    {
       "id": "2026-10-yuto-morioka-nit-meghalaya-visit",
       "date": "2026-10-01",
       "dateEnd": "2026-12-31",
